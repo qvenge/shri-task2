@@ -3,6 +3,7 @@ const path = require('path');
 const isProductionBuild = process.env.NODE_ENV === 'production';
 
 module.exports = {
+  // target: 'node',
   mode: isProductionBuild ? 'production' : 'development',
   context: path.resolve(__dirname, 'src'),
   entry: './prepareData.ts',
@@ -10,8 +11,12 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
+    library: {
+      name: 'prepareData',
+      type: 'umd',
+    },
   },
-  // devtool: !isProductionBuild ? 'inline-source-map' : undefined,
+  devtool: !isProductionBuild ? 'inline-source-map' : undefined,
   module: {
     rules: [
       {
