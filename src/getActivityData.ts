@@ -29,8 +29,8 @@ export default function getActivityData({
   currentCommits.forEach((commitId) => {
     const commit = entities.commits.get(commitId) as Commit;
     const date = new Date(commit.timestamp + timeOffset);
-    const hours = date.getUTCHours();
-    let day = date.getUTCDay();
+    const hours = date.getHours();
+    let day = date.getDay();
 
     if (day === 0) day = 6;
     else day -= 1;

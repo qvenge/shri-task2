@@ -8,13 +8,10 @@ import getChartData from './getChartData';
 import getDiagramData from './getDiagramData';
 import getActivityData from './getActivityData';
 
-// UTC
-const timeOffset = 3 * 60 * 60 * 1000;
+// const timeOffset = -4 * 60 * 60 * 1000; // для тестов
+const timeOffset = 0;
 
-export default function prepareData(
-  entityArray: RawEntity[],
-  { sprintId: selectedSprintId }: { sprintId: number },
-): StoryData {
+function prepareData(entityArray: RawEntity[], { sprintId: selectedSprintId }: { sprintId: number }): StoryData {
   // группирую сущности по типу и привожу их более удобному виду
   // теперь сущности ссылаются на другие сущности только по id
   const entities = processEntities(entityArray);
@@ -50,3 +47,5 @@ export default function prepareData(
     },
   ];
 }
+
+module.exports = prepareData;
