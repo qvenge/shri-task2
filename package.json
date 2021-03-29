@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "type-check": "tsc --noEmit \"src/**/*.ts\"",
     "type-check:watch": "npm run type-check -- --watch",
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "webpack",
     "emit-declaration": "tsc --emitDeclarationOnly",
     "lint": "eslint --debug \"src/**/*{.js,.ts}\"",
     "prettier": "prettier --check \"src/**/*{.js,.ts}\"",

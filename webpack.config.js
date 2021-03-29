@@ -12,11 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
     library: {
-      name: 'prepareData',
-      type: 'umd',
+      type: 'commonjs2',
     },
   },
-  devtool: !isProductionBuild ? 'inline-source-map' : undefined,
+  devtool: 'source-map',
   module: {
     rules: [
       {
