@@ -1,4 +1,4 @@
-import { CommitId, SprintId, EntityGroups, Summary, Commit, UserId } from './types';
+import { CommitId, SprintId, EntityGroups, Commit, UserId } from './types';
 
 export const groupCommitsBySprints = (entities: EntityGroups): Map<SprintId, Set<CommitId>> => {
   const sortedSprints = Array.from(entities.sprints.values()).sort(({ id: id1 }, { id: id2 }) => id1 - id2);
@@ -30,20 +30,24 @@ export const groupCommitsBySprints = (entities: EntityGroups): Map<SprintId, Set
 export const groupCommitsBySize = (entities: EntityGroups, commits: Set<CommitId>): CommitId[][] => {
   const groups: CommitId[][] = [[], [], [], []];
   commits.forEach((commitId) => {
-    const commit = entities.commits.get(commitId) as Commit;
-    const commitSize = commit.summaries.reduce((accum, summaryId) => {
-      const summary = entities.summaries.get(summaryId) as Summary;
-      return accum + summary.removed + summary.added;
-    }, 0);
+    const commit = entities.commits.get(commitId);
 
-    if (commitSize > 1000) {
-      groups[0].push(commitId);
-    } else if (commitSize > 500) {
-      groups[1].push(commitId);
-    } else if (commitSize > 100) {
-      groups[2].push(commitId);
-    } else {
-      groups[3].push(commitId);
+    if (commit) {
+      const commitSize = commit.summaries.reduce((accum, summaryId) => {
+        const summary = entities.summaries.get(summaryId);
+        return summary ? accum + summary.removed + summary.added : accum;
+      }, 0);
+
+      // чета тесты не проходили
+      if (commitSize > 0 && commitSize <= 100) {
+        groups[3].push(commitId);
+      } else if (commitSize >= 101 && commitSize <= 500) {
+        groups[2].push(commitId);
+      } else if (commitSize >= 501 && commitSize <= 1000) {
+        groups[1].push(commitId);
+      } else if (commitSize >= 1001) {
+        groups[0].push(commitId);
+      }
     }
   });
   return groups;

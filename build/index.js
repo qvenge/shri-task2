@@ -843,19 +843,22 @@ var groupCommitsBySize = function groupCommitsBySize(entities, commits) {
   var groups = [[], [], [], []];
   commits.forEach(function (commitId) {
     var commit = entities.commits.get(commitId);
-    var commitSize = commit.summaries.reduce(function (accum, summaryId) {
-      var summary = entities.summaries.get(summaryId);
-      return accum + summary.removed + summary.added;
-    }, 0);
 
-    if (commitSize > 1000) {
-      groups[0].push(commitId);
-    } else if (commitSize > 500) {
-      groups[1].push(commitId);
-    } else if (commitSize > 100) {
-      groups[2].push(commitId);
-    } else {
-      groups[3].push(commitId);
+    if (commit) {
+      var commitSize = commit.summaries.reduce(function (accum, summaryId) {
+        var summary = entities.summaries.get(summaryId);
+        return summary ? accum + summary.removed + summary.added : accum;
+      }, 0); // чета тесты не проходили
+
+      if (commitSize > 0 && commitSize <= 100) {
+        groups[3].push(commitId);
+      } else if (commitSize >= 101 && commitSize <= 500) {
+        groups[2].push(commitId);
+      } else if (commitSize >= 501 && commitSize <= 1000) {
+        groups[1].push(commitId);
+      } else if (commitSize >= 1001) {
+        groups[0].push(commitId);
+      }
     }
   });
   return groups;
