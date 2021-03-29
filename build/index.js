@@ -368,20 +368,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getDiagramData)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "../node_modules/core-js/modules/es.array.reduce.js");
-/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "./util.ts");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "../node_modules/core-js/modules/es.array.reduce.js");
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./util.ts");
+
 
 
 function getDiagramData(_ref) {
+  var _groupedCommits$get;
+
   var entities = _ref.entities,
       groupedCommits = _ref.groupedCommits,
       selectedSprintId = _ref.selectedSprintId;
   var currentSprint = entities.sprints.get(selectedSprintId);
-  var previousCommits = groupedCommits.get(selectedSprintId - 1);
+  var previousCommits = (_groupedCommits$get = groupedCommits.get(selectedSprintId - 1)) !== null && _groupedCommits$get !== void 0 ? _groupedCommits$get : new Set();
   var currentCommits = groupedCommits.get(selectedSprintId);
-  var sizeGroupedCurrentCommits = (0,_util__WEBPACK_IMPORTED_MODULE_1__.groupCommitsBySize)(entities, currentCommits);
-  var sizeGroupedPreviousCommits = (0,_util__WEBPACK_IMPORTED_MODULE_1__.groupCommitsBySize)(entities, previousCommits);
+  var sizeGroupedCurrentCommits = (0,_util__WEBPACK_IMPORTED_MODULE_2__.groupCommitsBySize)(entities, currentCommits);
+  var sizeGroupedPreviousCommits = (0,_util__WEBPACK_IMPORTED_MODULE_2__.groupCommitsBySize)(entities, previousCommits);
   var previousCommitsTotal = sizeGroupedCurrentCommits.map(function (commits) {
     return commits.length;
   });
@@ -401,14 +406,14 @@ function getDiagramData(_ref) {
   var categories = ['> 1001 строки', '501 — 1000 строк', '101 — 500 строк', '1 — 100 строк'].map(function (title, index) {
     return {
       title: title,
-      valueText: (0,_util__WEBPACK_IMPORTED_MODULE_1__.getOutput)(sizeGroupedCurrentCommits[index].length, ['коммит', 'коммита', 'коммитов']),
-      differenceText: (0,_util__WEBPACK_IMPORTED_MODULE_1__.getOutput)(differences[index], ['коммит', 'коммита', 'коммитов'])
+      valueText: (0,_util__WEBPACK_IMPORTED_MODULE_2__.getOutput)(sizeGroupedCurrentCommits[index].length, ['коммит', 'коммита', 'коммитов']),
+      differenceText: (0,_util__WEBPACK_IMPORTED_MODULE_2__.getOutput)(differences[index], ['коммит', 'коммита', 'коммитов'])
     };
   });
   return {
     title: 'Размер коммитов',
     subtitle: currentSprint.name,
-    totalText: (0,_util__WEBPACK_IMPORTED_MODULE_1__.getOutput)(currentCommits.size, ['коммит', 'коммита', 'коммитов']),
+    totalText: (0,_util__WEBPACK_IMPORTED_MODULE_2__.getOutput)(currentCommits.size, ['коммит', 'коммита', 'коммитов']),
     differenceText: "".concat(totalDifference, " \u0441 \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0441\u043F\u0440\u0438\u043D\u0442\u0430"),
     categories: categories
   };
