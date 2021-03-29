@@ -1,4 +1,4 @@
-import prepareData from '../src/prepareData';
+import { prepareData } from '../src/prepareData';
 import testInput from './input.json';
 import expectedOutput from './output.json';
 import { Entity } from '../src/types';

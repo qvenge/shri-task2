@@ -48,4 +48,4 @@ function prepareData(entityArray: RawEntity[], { sprintId: selectedSprintId }: {
   ];
 }
 
-module.exports = prepareData;
+module.exports = { prepareData };
