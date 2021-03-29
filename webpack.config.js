@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
-  devtool: !isProductionBuild ? 'inline-source-map' : undefined,
+  // devtool: !isProductionBuild ? 'inline-source-map' : undefined,
   module: {
     rules: [
       {
