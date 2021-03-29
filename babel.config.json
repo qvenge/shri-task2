@@ -1,0 +1,36 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        },
+        "useBuiltIns": "usage",
+        "corejs": { "version": "3.9.1", "proposals": true }
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "allowDeclareFields": true
+      }
+    ],
+    ["airbnb"]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "absoluteRuntime": false,
+        "corejs": { "version": 3, "proposals": true },
+        "helpers": true,
+        "regenerator": true,
+        "version": "^7.13.10"
+      }
+    ]
+  ]
+}

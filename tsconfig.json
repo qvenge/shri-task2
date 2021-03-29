@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "outDir": "./build/",
+    "lib": ["ESNext", "DOM"],
+    "target": "ES5",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "pretty": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationDir": "./build/types",
+    "declarationMap": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "build", ".vscode"]
+}
