@@ -11,7 +11,8 @@ import getActivityData from './getActivityData';
 // const timeOffset = -4 * 60 * 60 * 1000; // для тестов
 const timeOffset = 0;
 
-function prepareData(entityArray: RawEntity[], { sprintId: selectedSprintId }: { sprintId: number }): StoryData {
+// eslint-disable-next-line import/prefer-default-export
+export function prepareData(entityArray: RawEntity[], { sprintId: selectedSprintId }: { sprintId: number }): StoryData {
   // группирую сущности по типу и привожу их более удобному виду
   // теперь сущности ссылаются на другие сущности только по id
   const entities = processEntities(entityArray);
@@ -47,5 +48,3 @@ function prepareData(entityArray: RawEntity[], { sprintId: selectedSprintId }: {
     },
   ];
 }
-
-module.exports = { prepareData };
