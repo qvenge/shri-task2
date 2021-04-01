@@ -12,12 +12,15 @@ export default function getDiagramData({
   selectedSprintId: number;
 }): DiagramData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
+  const sortedSprints = Array.from(entities.sprints.keys()).sort((id1, id2) => id1 - id2);
+  const currentSprintIndex = sortedSprints.indexOf(selectedSprintId);
+  const previousSprintId = sortedSprints[currentSprintIndex - 1];
 
   const currentCommits = groupedCommits.get(selectedSprintId) as Set<CommitId>;
   const sizeGroupedCurrentCommits = groupCommitsBySize(entities, currentCommits);
   const currentCommitsTotal = sizeGroupedCurrentCommits.map((commits) => commits.length);
 
-  const previousCommits = groupedCommits.get(selectedSprintId - 1) ?? new Set();
+  const previousCommits = groupedCommits.get(previousSprintId) ?? new Set();
   const sizeGroupedPreviousCommits = groupCommitsBySize(entities, previousCommits);
   const previousCommitsTotal = sizeGroupedPreviousCommits.map((commits) => commits.length);
 
