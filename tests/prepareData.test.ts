@@ -145,7 +145,7 @@ describe('prepareData', () => {
     });
 
     describe('categories', () => {
-      it(`should have ${expectedTemplate.categories.length} users`, () => {
+      it(`should have ${expectedTemplate.categories.length} categories`, () => {
         expect(template.categories).toHaveLength(template.categories.length);
       });
 

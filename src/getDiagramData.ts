@@ -12,20 +12,24 @@ export default function getDiagramData({
   selectedSprintId: number;
 }): DiagramData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
-  const previousCommits = groupedCommits.get(selectedSprintId - 1) ?? new Set();
+
   const currentCommits = groupedCommits.get(selectedSprintId) as Set<CommitId>;
   const sizeGroupedCurrentCommits = groupCommitsBySize(entities, currentCommits);
+  const currentCommitsTotal = sizeGroupedCurrentCommits.map((commits) => commits.length);
+
+  const previousCommits = groupedCommits.get(selectedSprintId - 1) ?? new Set();
   const sizeGroupedPreviousCommits = groupCommitsBySize(entities, previousCommits);
-  const previousCommitsTotal = sizeGroupedCurrentCommits.map((commits) => commits.length);
-  const currentCommitsTotal = sizeGroupedPreviousCommits.map((commits) => commits.length);
+  const previousCommitsTotal = sizeGroupedPreviousCommits.map((commits) => commits.length);
+
   const differences: number[] = [];
 
   for (let i = 0; i < 4; ++i) {
-    const diff = previousCommitsTotal[i] - currentCommitsTotal[i];
+    const diff = currentCommitsTotal[i] - previousCommitsTotal[i];
     differences.push(diff);
   }
 
-  const totalDifference = differences.reduce((accum, diff) => accum + diff);
+  // const totalDifference = differences.reduce((accum, diff) => accum + diff);
+  const totalDifference = currentCommits.size - previousCommits.size;
   const categories = ['> 1001 строки', '501 — 1000 строк', '101 — 500 строк', '1 — 100 строк'].map((title, index) => ({
     title,
     valueText: getOutput(sizeGroupedCurrentCommits[index].length, ['коммит', 'коммита', 'коммитов']),

@@ -18,7 +18,7 @@ export const groupCommitsBySprints = (entities: EntityGroups): Map<SprintId, Set
         let finish = start + 1;
         while (finish < len && sortedCommits[finish].timestamp <= finishAt) finish += 1;
         sprintCommits = sortedCommits.slice(start, finish).map((commit) => commit.id);
-        sortedCommits = [...sortedCommits.slice(0, finish), ...sortedCommits.slice(finish)];
+        sortedCommits = [...sortedCommits.slice(0, start), ...sortedCommits.slice(finish)];
       }
 
       return [sprint.id, new Set(sprintCommits)];
