@@ -38,9 +38,9 @@ function processSummary(result: EntityGroups, summary: RawSummary | SummaryId): 
   }
 
   const { id } = summary;
+  const comments = summary.comments?.map((comment) => processComment(result, comment)) ?? [];
 
   if (!result.summaries.has(id)) {
-    const comments = summary.comments?.map((comment) => processComment(result, comment)) ?? [];
     result.summaries.set(id, { ...summary, comments });
   }
 
@@ -53,10 +53,10 @@ function processCommit(result: EntityGroups, commit: RawCommit | CommitId): Comm
   }
 
   const { id } = commit;
+  const author = processUser(result, commit.author);
+  const summaries = commit.summaries.map((summary) => processSummary(result, summary));
 
   if (!result.commits.has(id)) {
-    const author = processUser(result, commit.author);
-    const summaries = commit.summaries.map((summary) => processSummary(result, summary));
     result.commits.set(id, { ...commit, author, summaries });
   }
 
@@ -69,10 +69,10 @@ function processComment(result: EntityGroups, comment: RawComment | CommentId): 
   }
 
   const { id } = comment;
+  const author = processUser(result, comment.author);
+  const likes = comment.likes.map((user) => processUser(result, user));
 
   if (!result.comments.has(id)) {
-    const author = processUser(result, comment.author);
-    const likes = comment.likes.map((user) => processUser(result, user));
     result.comments.set(id, { ...comment, author, likes });
   }
 
@@ -85,16 +85,15 @@ function processIssue(result: EntityGroups, issue: RawIssue | IssueId): IssueId 
   }
 
   const { id } = issue;
+  const comments = issue.comments?.map((comment) => processComment(result, comment)) ?? [];
+
+  let resolvedBy;
+  if (issue.resolvedBy) {
+    resolvedBy = processUser(result, issue.resolvedBy);
+  }
 
   if (!result.issues.has(id)) {
-    const comments = issue.comments?.map((comment) => processComment(result, comment)) ?? [];
-    const castedIssue = { ...issue, comments } as Issue;
-
-    if (issue.resolvedBy) {
-      castedIssue.resolvedBy = processUser(result, issue.resolvedBy);
-    }
-
-    result.issues.set(id, castedIssue);
+    result.issues.set(id, { ...issue, comments, resolvedBy });
   }
 
   return id;
@@ -106,11 +105,11 @@ function processUser(result: EntityGroups, user: RawUser | UserId): UserId {
   }
 
   const { id } = user;
+  const friends = user.friends.map((friend) => processUser(result, friend));
+  const comments = user.comments?.map((comment) => processComment(result, comment)) ?? [];
+  const commits = user.commits?.map((commit) => processCommit(result, commit)) ?? [];
 
   if (!result.users.has(id)) {
-    const friends = user.friends.map((friend) => processUser(result, friend));
-    const comments = user.comments?.map((comment) => processComment(result, comment)) ?? [];
-    const commits = user.commits?.map((commit) => processCommit(result, commit)) ?? [];
     result.users.set(id, { ...user, friends, comments, commits });
   }
 
@@ -123,11 +122,11 @@ function processProject(result: EntityGroups, project: RawProject | ProjectId): 
   }
 
   const { id } = project;
+  const dependencies = project.dependencies.map((dep) => processProject(result, dep));
+  const issues = project.issues.map((issue) => processIssue(result, issue));
+  const commits = project.commits.map((commit) => processCommit(result, commit));
 
   if (!result.projects.has(id)) {
-    const dependencies = project.dependencies.map((dep) => processProject(result, dep));
-    const issues = project.issues.map((issue) => processIssue(result, issue));
-    const commits = project.commits.map((commit) => processCommit(result, commit));
     result.projects.set(id, { ...project, dependencies, issues, commits });
   }
 
