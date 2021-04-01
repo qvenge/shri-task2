@@ -603,18 +603,18 @@ function processSprint(result, sprint) {
 }
 
 function processSummary(result, summary) {
+  var _summary$comments$map, _summary$comments;
+
   if (typeof summary === 'number') {
     return summary;
   }
 
   var id = summary.id;
+  var comments = (_summary$comments$map = (_summary$comments = summary.comments) === null || _summary$comments === void 0 ? void 0 : _summary$comments.map(function (comment) {
+    return processComment(result, comment);
+  })) !== null && _summary$comments$map !== void 0 ? _summary$comments$map : [];
 
   if (!result.summaries.has(id)) {
-    var _summary$comments$map, _summary$comments;
-
-    var comments = (_summary$comments$map = (_summary$comments = summary.comments) === null || _summary$comments === void 0 ? void 0 : _summary$comments.map(function (comment) {
-      return processComment(result, comment);
-    })) !== null && _summary$comments$map !== void 0 ? _summary$comments$map : [];
     result.summaries.set(id, _objectSpread(_objectSpread({}, summary), {}, {
       comments: comments
     }));
@@ -629,12 +629,12 @@ function processCommit(result, commit) {
   }
 
   var id = commit.id;
+  var author = processUser(result, commit.author);
+  var summaries = commit.summaries.map(function (summary) {
+    return processSummary(result, summary);
+  });
 
   if (!result.commits.has(id)) {
-    var author = processUser(result, commit.author);
-    var summaries = commit.summaries.map(function (summary) {
-      return processSummary(result, summary);
-    });
     result.commits.set(id, _objectSpread(_objectSpread({}, commit), {}, {
       author: author,
       summaries: summaries
@@ -650,12 +650,12 @@ function processComment(result, comment) {
   }
 
   var id = comment.id;
+  var author = processUser(result, comment.author);
+  var likes = comment.likes.map(function (user) {
+    return processUser(result, user);
+  });
 
   if (!result.comments.has(id)) {
-    var author = processUser(result, comment.author);
-    var likes = comment.likes.map(function (user) {
-      return processUser(result, user);
-    });
     result.comments.set(id, _objectSpread(_objectSpread({}, comment), {}, {
       author: author,
       likes: likes
@@ -666,52 +666,51 @@ function processComment(result, comment) {
 }
 
 function processIssue(result, issue) {
+  var _issue$comments$map, _issue$comments;
+
   if (typeof issue === 'string') {
     return issue;
   }
 
   var id = issue.id;
+  var comments = (_issue$comments$map = (_issue$comments = issue.comments) === null || _issue$comments === void 0 ? void 0 : _issue$comments.map(function (comment) {
+    return processComment(result, comment);
+  })) !== null && _issue$comments$map !== void 0 ? _issue$comments$map : [];
+  var resolvedBy;
+
+  if (issue.resolvedBy) {
+    resolvedBy = processUser(result, issue.resolvedBy);
+  }
 
   if (!result.issues.has(id)) {
-    var _issue$comments$map, _issue$comments;
-
-    var comments = (_issue$comments$map = (_issue$comments = issue.comments) === null || _issue$comments === void 0 ? void 0 : _issue$comments.map(function (comment) {
-      return processComment(result, comment);
-    })) !== null && _issue$comments$map !== void 0 ? _issue$comments$map : [];
-
-    var castedIssue = _objectSpread(_objectSpread({}, issue), {}, {
-      comments: comments
-    });
-
-    if (issue.resolvedBy) {
-      castedIssue.resolvedBy = processUser(result, issue.resolvedBy);
-    }
-
-    result.issues.set(id, castedIssue);
+    result.issues.set(id, _objectSpread(_objectSpread({}, issue), {}, {
+      comments: comments,
+      resolvedBy: resolvedBy
+    }));
   }
 
   return id;
 }
 
 function processUser(result, user) {
+  var _user$comments$map, _user$comments, _user$commits$map, _user$commits;
+
   if (typeof user === 'number') {
     return user;
   }
 
   var id = user.id;
+  var friends = user.friends.map(function (friend) {
+    return processUser(result, friend);
+  });
+  var comments = (_user$comments$map = (_user$comments = user.comments) === null || _user$comments === void 0 ? void 0 : _user$comments.map(function (comment) {
+    return processComment(result, comment);
+  })) !== null && _user$comments$map !== void 0 ? _user$comments$map : [];
+  var commits = (_user$commits$map = (_user$commits = user.commits) === null || _user$commits === void 0 ? void 0 : _user$commits.map(function (commit) {
+    return processCommit(result, commit);
+  })) !== null && _user$commits$map !== void 0 ? _user$commits$map : [];
 
   if (!result.users.has(id)) {
-    var _user$comments$map, _user$comments, _user$commits$map, _user$commits;
-
-    var friends = user.friends.map(function (friend) {
-      return processUser(result, friend);
-    });
-    var comments = (_user$comments$map = (_user$comments = user.comments) === null || _user$comments === void 0 ? void 0 : _user$comments.map(function (comment) {
-      return processComment(result, comment);
-    })) !== null && _user$comments$map !== void 0 ? _user$comments$map : [];
-    var commits = (_user$commits$map = (_user$commits = user.commits) === null || _user$commits === void 0 ? void 0 : _user$commits.map(function (commit) {
-      return processCommit(result, commit);
-    })) !== null && _user$commits$map !== void 0 ? _user$commits$map : [];
     result.users.set(id, _objectSpread(_objectSpread({}, user), {}, {
       friends: friends,
       comments: comments,
@@ -728,17 +727,17 @@ function processProject(result, project) {
   }
 
   var id = project.id;
+  var dependencies = project.dependencies.map(function (dep) {
+    return processProject(result, dep);
+  });
+  var issues = project.issues.map(function (issue) {
+    return processIssue(result, issue);
+  });
+  var commits = project.commits.map(function (commit) {
+    return processCommit(result, commit);
+  });
 
   if (!result.projects.has(id)) {
-    var dependencies = project.dependencies.map(function (dep) {
-      return processProject(result, dep);
-    });
-    var issues = project.issues.map(function (issue) {
-      return processIssue(result, issue);
-    });
-    var commits = project.commits.map(function (commit) {
-      return processCommit(result, commit);
-    });
     result.projects.set(id, _objectSpread(_objectSpread({}, project), {}, {
       dependencies: dependencies,
       issues: issues,
