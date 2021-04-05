@@ -12,8 +12,13 @@ export default function getDiagramData({
   selectedSprintId: number;
 }): DiagramData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
-  const sortedSprints = Array.from(entities.sprints.keys()).sort((id1, id2) => id1 - id2);
+  // сортирую спринты по дате на всякий случай
+  const sortedSprints = Array.from(entities.sprints.values())
+    .sort(({ startAt: start1 }, { startAt: start2 }) => start1 - start2)
+    .map((sprint) => sprint.id);
+  // нахожу индекс текущего спринта
   const currentSprintIndex = sortedSprints.indexOf(selectedSprintId);
+  // id предыдущего спринта
   const previousSprintId = sortedSprints[currentSprintIndex - 1];
 
   const currentCommits = groupedCommits.get(selectedSprintId) ?? [];

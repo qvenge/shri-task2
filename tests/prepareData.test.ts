@@ -7,7 +7,7 @@ import { HeatMap, LeadersData, VoteData, ChartData, DiagramData, ActivityData, S
 
 describe('prepareData', () => {
   const sprintId = 977;
-  let output = prepareData(testInput as RawEntity[], { sprintId });
+  const output = prepareData(testInput as RawEntity[], { sprintId });
 
   describe('Leaders', () => {
     const expectedTemplate = expectedOutput[0].data as LeadersData;
