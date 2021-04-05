@@ -1,6 +1,6 @@
-import { CommitId, SprintId, EntityGroups, Commit, UserId } from './types';
+import { CommitId, SprintId, EntityGroups, Commit, UserId, Comment } from './types';
 
-export const groupCommitsBySprints = (entities: EntityGroups): Map<SprintId, Set<CommitId>> => {
+export const groupCommitsBySprints = (entities: EntityGroups): Map<SprintId, Commit[]> => {
   const sortedSprints = Array.from(entities.sprints.values()).sort(({ id: id1 }, { id: id2 }) => id1 - id2);
   let sortedCommits = Array.from(entities.commits.values()).sort(
     ({ timestamp: timestamp1 }, { timestamp: timestamp2 }) => timestamp1 - timestamp2,
@@ -12,59 +12,74 @@ export const groupCommitsBySprints = (entities: EntityGroups): Map<SprintId, Set
       const len = sortedCommits.length;
       const start = sortedCommits.findIndex(({ timestamp }) => startAt <= timestamp);
 
-      let sprintCommits: CommitId[] = [];
+      let sprintCommits: Commit[] = [];
 
       if (start !== -1) {
         let finish = start + 1;
         while (finish < len && sortedCommits[finish].timestamp <= finishAt) finish += 1;
-        sprintCommits = sortedCommits.slice(start, finish).map((commit) => commit.id);
+        sprintCommits = sortedCommits.slice(start, finish);
         sortedCommits = [...sortedCommits.slice(0, start), ...sortedCommits.slice(finish)];
       }
 
-      return [sprint.id, new Set(sprintCommits)];
+      return [sprint.id, sprintCommits];
     }),
   );
 };
 
-// немного захардкодил группы и их выбор
-export const groupCommitsBySize = (entities: EntityGroups, commits: Set<CommitId>): CommitId[][] => {
+export const groupCommitsBySize = (entities: EntityGroups, commits: Commit[]): CommitId[][] => {
   const groups: CommitId[][] = [[], [], [], []];
-  commits.forEach((commitId) => {
-    const commit = entities.commits.get(commitId);
 
+  commits.forEach((commit) => {
     if (commit) {
       const commitSize = commit.summaries.reduce((accum, summaryId) => {
         const summary = entities.summaries.get(summaryId);
         return summary ? accum + summary.removed + summary.added : accum;
       }, 0);
 
-      // чета тесты не проходили
-      if (commitSize > 0 && commitSize <= 100) {
-        groups[3].push(commitId);
-      } else if (commitSize >= 101 && commitSize <= 500) {
-        groups[2].push(commitId);
-      } else if (commitSize >= 501 && commitSize <= 1000) {
-        groups[1].push(commitId);
-      } else if (commitSize >= 1001) {
-        groups[0].push(commitId);
+      if (commitSize <= 100) {
+        groups[3].push(commit.id);
+      } else if (commitSize <= 500) {
+        groups[2].push(commit.id);
+      } else if (commitSize <= 1000) {
+        groups[1].push(commit.id);
+      } else {
+        groups[0].push(commit.id);
       }
     }
   });
+
   return groups;
 };
 
-export const groupCommitsByUsers = (entities: EntityGroups, commits: Set<CommitId>): Map<UserId, Set<CommitId>> => {
-  const result = new Map() as Map<UserId, Set<CommitId>>;
+export const groupCommitsByUsers = (commits: Commit[]): Map<UserId, Commit[]> => {
+  const result = new Map() as Map<UserId, Commit[]>;
 
-  commits.forEach((commitId) => {
-    const commit = entities.commits.get(commitId) as Commit;
+  commits.forEach((commit) => {
     let userCommits = result.get(commit.author);
 
     if (!userCommits) {
-      result.set(commit.author, (userCommits = new Set()));
+      userCommits = [];
+      result.set(commit.author, userCommits);
     }
 
-    userCommits.add(commitId);
+    userCommits.push(commit);
+  });
+
+  return result;
+};
+
+export const groupCommentsByUsers = (comments: Comment[]): Map<UserId, Comment[]> => {
+  const result = new Map() as Map<UserId, Comment[]>;
+
+  comments.forEach((comment) => {
+    let userCommits = result.get(comment.author);
+
+    if (!userCommits) {
+      userCommits = [];
+      result.set(comment.author, userCommits);
+    }
+
+    userCommits.push(comment);
   });
 
   return result;

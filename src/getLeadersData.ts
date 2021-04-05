@@ -1,4 +1,4 @@
-import { Sprint, SprintId, CommitId, EntityGroups, User } from './types';
+import { Sprint, SprintId, Commit, EntityGroups, User } from './types';
 import { LeadersData } from './stories';
 import { groupCommitsByUsers } from './util';
 
@@ -8,12 +8,13 @@ export default function getLeadersData({
   selectedSprintId,
 }: {
   entities: EntityGroups;
-  groupedCommits: Map<SprintId, Set<CommitId>>;
+  groupedCommits: Map<SprintId, Commit[]>;
   selectedSprintId: number;
 }): LeadersData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
-  const currentCommits = groupedCommits.get(selectedSprintId) as Set<CommitId>;
-  const commitsGroupedByUsers = groupCommitsByUsers(entities, currentCommits);
+  // ids коммитов текущего спринта
+  const currentCommits = groupedCommits.get(selectedSprintId) as Commit[];
+  const commitsGroupedByUsers = groupCommitsByUsers(currentCommits);
 
   const outputUsers = Array.from(commitsGroupedByUsers, ([userId, commits]) => {
     const userEntity = entities.users.get(userId) as User;
@@ -21,9 +22,12 @@ export default function getLeadersData({
       id: userId,
       name: userEntity.name,
       avatar: userEntity.avatar,
-      valueText: String(commits.size),
+      valueText: String(commits.length),
     };
   });
+
+  // сортируем пользователей по количеству коммитов
+  // если у пользователей одинаковое количество коммитов, то сортируем по их id
   outputUsers.sort((user1, user2) => {
     let val1 = Number(user1.valueText);
     let val2 = Number(user2.valueText);

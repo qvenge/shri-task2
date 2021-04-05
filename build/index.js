@@ -1,301 +1,56 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
-/*!**********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayLikeToArray)
-/* harmony export */ });
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js":
-/*!********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayWithHoles)
-/* harmony export */ });
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
-/*!***********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _arrayWithoutHoles)
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "../node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr);
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/defineProperty.js":
-/*!********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _defineProperty)
-/* harmony export */ });
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _iterableToArray)
-/* harmony export */ });
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js":
-/*!**************************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _iterableToArrayLimit)
-/* harmony export */ });
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/nonIterableRest.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/nonIterableRest.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _nonIterableRest)
-/* harmony export */ });
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
-/*!***********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _nonIterableSpread)
-/* harmony export */ });
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/slicedToArray.js":
-/*!*******************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/slicedToArray.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _slicedToArray)
-/* harmony export */ });
-/* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ "../node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js");
-/* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ "../node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js");
-/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
-/* harmony import */ var _nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableRest.js */ "../node_modules/@babel/runtime/helpers/esm/nonIterableRest.js");
-
-
-
-
-function _slicedToArray(arr, i) {
-  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__.default)();
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
-/*!***********************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _toConsumableArray)
-/* harmony export */ });
-/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ "../node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
-/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ "../node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
-/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
-/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ "../node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
-
-
-
-
-function _toConsumableArray(arr) {
-  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__.default)();
-}
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
-/*!********************************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _unsupportedIterableToArray)
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "../node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
-}
-
-/***/ }),
 
 /***/ "./getActivityData.ts":
 /*!****************************!*\
   !*** ./getActivityData.ts ***!
   \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getActivityData)
-/* harmony export */ });
-function getActivityData(_ref) {
-  var entities = _ref.entities,
-      groupedCommits = _ref.groupedCommits,
-      selectedSprintId = _ref.selectedSprintId,
-      timeOffset = _ref.timeOffset;
-  var currentSprint = entities.sprints.get(selectedSprintId);
-  var currentCommits = groupedCommits.get(selectedSprintId); // const arrayHeatMap = Array(7).fill(Array(24).fill(0));
 
-  var arrayHeatMap = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-  currentCommits.forEach(function (commitId) {
-    var commit = entities.commits.get(commitId);
-    var date = new Date(commit.timestamp + timeOffset);
-    var hours = date.getHours();
-    var day = date.getDay();
-    if (day === 0) day = 6;else day -= 1;
-    arrayHeatMap[day][hours] += 1;
-  });
-  var heatMap = {
-    mon: arrayHeatMap[0],
-    tue: arrayHeatMap[1],
-    wed: arrayHeatMap[2],
-    thu: arrayHeatMap[3],
-    fri: arrayHeatMap[4],
-    sat: arrayHeatMap[5],
-    sun: arrayHeatMap[6]
-  };
-  return {
-    title: 'Коммиты',
-    subtitle: currentSprint.name,
-    data: heatMap
-  };
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+function getActivityData(_a) {
+    var entities = _a.entities, groupedCommits = _a.groupedCommits, selectedSprintId = _a.selectedSprintId, timeOffset = _a.timeOffset;
+    var currentSprint = entities.sprints.get(selectedSprintId);
+    var currentCommits = groupedCommits.get(selectedSprintId);
+    // const arrayHeatMap = Array(7).fill(Array(24).fill(0));
+    var arrayHeatMap = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ];
+    currentCommits.forEach(function (commit) {
+        var date = new Date(commit.timestamp + timeOffset);
+        var hours = date.getHours();
+        var day = date.getDay();
+        if (day === 0)
+            day = 6;
+        else
+            day -= 1;
+        arrayHeatMap[day][hours] += 1;
+    });
+    var heatMap = {
+        mon: arrayHeatMap[0],
+        tue: arrayHeatMap[1],
+        wed: arrayHeatMap[2],
+        thu: arrayHeatMap[3],
+        fri: arrayHeatMap[4],
+        sat: arrayHeatMap[5],
+        sun: arrayHeatMap[6],
+    };
+    return {
+        title: 'Коммиты',
+        subtitle: currentSprint.name,
+        data: heatMap,
+    };
 }
+exports.default = getActivityData;
+
 
 /***/ }),
 
@@ -303,57 +58,41 @@ function getActivityData(_ref) {
 /*!*************************!*\
   !*** ./getChartData.ts ***!
   \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getChartData)
-/* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "../node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "../node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/***/ ((__unused_webpack_module, exports) => {
 
 
-
-function getChartData(_ref) {
-  var entities = _ref.entities,
-      groupedCommits = _ref.groupedCommits,
-      selectedSprintId = _ref.selectedSprintId,
-      outputUsers = _ref.outputUsers;
-  var currentSprint = entities.sprints.get(selectedSprintId);
-  var sortedSprints = Array.from(entities.sprints.values()).sort(function (_ref2, _ref3) {
-    var id1 = _ref2.id;
-    var id2 = _ref3.id;
-    return id1 - id2;
-  });
-  var outputValues = sortedSprints.map(function (sprint) {
-    var group = groupedCommits.get(sprint.id);
-    var result = {
-      title: sprint.id.toString(),
-      value: group.size
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+function getChartData(_a) {
+    var entities = _a.entities, groupedCommits = _a.groupedCommits, selectedSprintId = _a.selectedSprintId, outputUsers = _a.outputUsers;
+    var currentSprint = entities.sprints.get(selectedSprintId);
+    var sortedSprints = Array.from(entities.sprints.values()).sort(function (_a, _b) {
+        var id1 = _a.id;
+        var id2 = _b.id;
+        return id1 - id2;
+    });
+    var outputValues = sortedSprints.map(function (sprint) {
+        var group = groupedCommits.get(sprint.id);
+        var result = {
+            title: sprint.id.toString(),
+            value: group.length,
+        };
+        if (sprint.name) {
+            result.hint = sprint.name;
+        }
+        if (sprint.id === selectedSprintId) {
+            result.active = true;
+        }
+        return result;
+    });
+    return {
+        title: 'Коммиты',
+        subtitle: currentSprint.name,
+        values: outputValues,
+        users: outputUsers,
     };
-
-    if (sprint.name) {
-      result.hint = sprint.name;
-    }
-
-    if (sprint.id === selectedSprintId) {
-      result.active = true;
-    }
-
-    return result;
-  });
-  return {
-    title: 'Коммиты',
-    subtitle: currentSprint.name,
-    values: outputValues,
-    users: outputUsers
-  };
 }
+exports.default = getChartData;
+
 
 /***/ }),
 
@@ -361,67 +100,45 @@ function getChartData(_ref) {
 /*!***************************!*\
   !*** ./getDiagramData.ts ***!
   \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getDiagramData)
-/* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "../node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./util.ts");
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
-
-function getDiagramData(_ref) {
-  var _groupedCommits$get;
-
-  var entities = _ref.entities,
-      groupedCommits = _ref.groupedCommits,
-      selectedSprintId = _ref.selectedSprintId;
-  var currentSprint = entities.sprints.get(selectedSprintId);
-  var sortedSprints = Array.from(entities.sprints.keys()).sort(function (id1, id2) {
-    return id1 - id2;
-  });
-  var currentSprintIndex = sortedSprints.indexOf(selectedSprintId);
-  var previousSprintId = sortedSprints[currentSprintIndex - 1];
-  var currentCommits = groupedCommits.get(selectedSprintId);
-  var sizeGroupedCurrentCommits = (0,_util__WEBPACK_IMPORTED_MODULE_2__.groupCommitsBySize)(entities, currentCommits);
-  var currentCommitsTotal = sizeGroupedCurrentCommits.map(function (commits) {
-    return commits.length;
-  });
-  var previousCommits = (_groupedCommits$get = groupedCommits.get(previousSprintId)) !== null && _groupedCommits$get !== void 0 ? _groupedCommits$get : new Set();
-  var sizeGroupedPreviousCommits = (0,_util__WEBPACK_IMPORTED_MODULE_2__.groupCommitsBySize)(entities, previousCommits);
-  var previousCommitsTotal = sizeGroupedPreviousCommits.map(function (commits) {
-    return commits.length;
-  });
-  var differences = [];
-
-  for (var i = 0; i < 4; ++i) {
-    var diff = currentCommitsTotal[i] - previousCommitsTotal[i];
-    differences.push(diff);
-  } // const totalDifference = differences.reduce((accum, diff) => accum + diff);
-
-
-  var totalDifference = currentCommits.size - previousCommits.size;
-  var categories = ['> 1001 строки', '501 — 1000 строк', '101 — 500 строк', '1 — 100 строк'].map(function (title, index) {
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var util_1 = __webpack_require__(/*! ./util */ "./util.ts");
+function getDiagramData(_a) {
+    var _b, _c;
+    var entities = _a.entities, groupedCommits = _a.groupedCommits, selectedSprintId = _a.selectedSprintId;
+    var currentSprint = entities.sprints.get(selectedSprintId);
+    var sortedSprints = Array.from(entities.sprints.keys()).sort(function (id1, id2) { return id1 - id2; });
+    var currentSprintIndex = sortedSprints.indexOf(selectedSprintId);
+    var previousSprintId = sortedSprints[currentSprintIndex - 1];
+    var currentCommits = (_b = groupedCommits.get(selectedSprintId)) !== null && _b !== void 0 ? _b : [];
+    var sizeGroupedCurrentCommits = util_1.groupCommitsBySize(entities, currentCommits);
+    var currentCommitsTotal = sizeGroupedCurrentCommits.map(function (commits) { return commits.length; });
+    var previousCommits = (_c = groupedCommits.get(previousSprintId)) !== null && _c !== void 0 ? _c : [];
+    var sizeGroupedPreviousCommits = util_1.groupCommitsBySize(entities, previousCommits);
+    var previousCommitsTotal = sizeGroupedPreviousCommits.map(function (commits) { return commits.length; });
+    var differences = [];
+    for (var i = 0; i < 4; ++i) {
+        var diff = currentCommitsTotal[i] - previousCommitsTotal[i];
+        differences.push(diff);
+    }
+    var totalDifference = currentCommits.length - previousCommits.length;
+    var categories = ['> 1001 строки', '501 — 1000 строк', '101 — 500 строк', '1 — 100 строк'].map(function (title, index) { return ({
+        title: title,
+        valueText: util_1.getOutput(sizeGroupedCurrentCommits[index].length, ['коммит', 'коммита', 'коммитов']),
+        differenceText: util_1.getOutput(differences[index], ['коммит', 'коммита', 'коммитов']),
+    }); });
     return {
-      title: title,
-      valueText: (0,_util__WEBPACK_IMPORTED_MODULE_2__.getOutput)(sizeGroupedCurrentCommits[index].length, ['коммит', 'коммита', 'коммитов']),
-      differenceText: (0,_util__WEBPACK_IMPORTED_MODULE_2__.getOutput)(differences[index], ['коммит', 'коммита', 'коммитов'])
+        title: 'Размер коммитов',
+        subtitle: currentSprint.name,
+        totalText: util_1.getOutput(currentCommits.length, ['коммит', 'коммита', 'коммитов']),
+        differenceText: totalDifference + " \u0441 \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0441\u043F\u0440\u0438\u043D\u0442\u0430",
+        categories: categories,
     };
-  });
-  return {
-    title: 'Размер коммитов',
-    subtitle: currentSprint.name,
-    totalText: (0,_util__WEBPACK_IMPORTED_MODULE_2__.getOutput)(currentCommits.size, ['коммит', 'коммита', 'коммитов']),
-    differenceText: "".concat(totalDifference, " \u0441 \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0441\u043F\u0440\u0438\u043D\u0442\u0430"),
-    categories: categories
-  };
 }
+exports.default = getDiagramData;
+
 
 /***/ }),
 
@@ -429,58 +146,63 @@ function getDiagramData(_ref) {
 /*!***************************!*\
   !*** ./getLeadersData.ts ***!
   \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getLeadersData)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "../node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./util.ts");
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
-
-function getLeadersData(_ref) {
-  var entities = _ref.entities,
-      groupedCommits = _ref.groupedCommits,
-      selectedSprintId = _ref.selectedSprintId;
-  var currentSprint = entities.sprints.get(selectedSprintId);
-  var currentCommits = groupedCommits.get(selectedSprintId);
-  var commitsGroupedByUsers = (0,_util__WEBPACK_IMPORTED_MODULE_2__.groupCommitsByUsers)(entities, currentCommits);
-  var outputUsers = Array.from(commitsGroupedByUsers, function (_ref2) {
-    var _ref3 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__.default)(_ref2, 2),
-        userId = _ref3[0],
-        commits = _ref3[1];
-
-    var userEntity = entities.users.get(userId);
-    return {
-      id: userId,
-      name: userEntity.name,
-      avatar: userEntity.avatar,
-      valueText: String(commits.size)
-    };
-  });
-  outputUsers.sort(function (user1, user2) {
-    var val1 = Number(user1.valueText);
-    var val2 = Number(user2.valueText);
-
-    if (val1 === val2) {
-      val1 = user2.id;
-      val2 = user1.id;
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
     }
-
-    return val2 - val1;
-  });
-  return {
-    title: 'Больше всего коммитов',
-    subtitle: currentSprint.name,
-    emoji: '👑',
-    users: outputUsers
-  };
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var util_1 = __webpack_require__(/*! ./util */ "./util.ts");
+function getLeadersData(_a) {
+    var entities = _a.entities, groupedCommits = _a.groupedCommits, selectedSprintId = _a.selectedSprintId;
+    var currentSprint = entities.sprints.get(selectedSprintId);
+    // ids коммитов текущего спринта
+    var currentCommits = groupedCommits.get(selectedSprintId);
+    var commitsGroupedByUsers = util_1.groupCommitsByUsers(currentCommits);
+    var outputUsers = Array.from(commitsGroupedByUsers, function (_a) {
+        var _b = __read(_a, 2), userId = _b[0], commits = _b[1];
+        var userEntity = entities.users.get(userId);
+        return {
+            id: userId,
+            name: userEntity.name,
+            avatar: userEntity.avatar,
+            valueText: String(commits.length),
+        };
+    });
+    // сортируем пользователей по количеству коммитов
+    // если у пользователей одинаковое количество коммитов, то сортируем по их id
+    outputUsers.sort(function (user1, user2) {
+        var val1 = Number(user1.valueText);
+        var val2 = Number(user2.valueText);
+        if (val1 === val2) {
+            val1 = user2.id;
+            val2 = user1.id;
+        }
+        return val2 - val1;
+    });
+    return {
+        title: 'Больше всего коммитов',
+        subtitle: currentSprint.name,
+        emoji: '👑',
+        users: outputUsers,
+    };
 }
+exports.default = getLeadersData;
+
 
 /***/ }),
 
@@ -488,83 +210,126 @@ function getLeadersData(_ref) {
 /*!************************!*\
   !*** ./getVoteData.ts ***!
   \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getVoteData)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "../node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "../node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util */ "./util.ts");
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
-
-
-
-function getVoteData(_ref) {
-  var entities = _ref.entities,
-      selectedSprintId = _ref.selectedSprintId;
-  var currentSprint = entities.sprints.get(selectedSprintId);
-  var sprintComments = new Set();
-  entities.comments.forEach(function (comment) {
-    if (currentSprint.startAt <= comment.createdAt && comment.createdAt <= currentSprint.finishAt) {
-      sprintComments.add(comment.id);
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
     }
-  });
-  var commentsGroupedByUsers = new Map();
-  sprintComments.forEach(function (commentId) {
-    var comment = entities.comments.get(commentId);
-    var comments = commentsGroupedByUsers.get(comment.author);
-
-    if (!comments) {
-      commentsGroupedByUsers.set(comment.author, comments = new Set());
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
     }
-
-    comments.add(commentId);
-  });
-  var outputUsers = Array.from(commentsGroupedByUsers, function (_ref2) {
-    var _ref3 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__.default)(_ref2, 2),
-        userId = _ref3[0],
-        comments = _ref3[1];
-
-    var userEntity = entities.users.get(userId);
-    var value = 0;
-    comments.forEach(function (commentId) {
-      var comment = entities.comments.get(commentId);
-      value += comment.likes.length;
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var util_1 = __webpack_require__(/*! ./util */ "./util.ts");
+function getVoteData(_a) {
+    var entities = _a.entities, selectedSprintId = _a.selectedSprintId;
+    var currentSprint = entities.sprints.get(selectedSprintId);
+    // комментарии за текущий спринт
+    var currentSprintComments = Array.from(entities.comments.values()).filter(function (comment) { return currentSprint.startAt <= comment.createdAt && comment.createdAt <= currentSprint.finishAt; });
+    // группирую комментарии по авторам
+    var commentsGroupedByUsers = util_1.groupCommentsByUsers(currentSprintComments);
+    var outputUsers = Array.from(commentsGroupedByUsers, function (_a) {
+        var _b = __read(_a, 2), userId = _b[0], comments = _b[1];
+        var userEntity = entities.users.get(userId);
+        var value = comments.reduce(function (total, comment) { return total + comment.likes.length; }, 0);
+        return {
+            id: userId,
+            name: userEntity.name,
+            avatar: userEntity.avatar,
+            valueText: util_1.getOutput(value, ['голос', 'голоса', 'голосов']),
+        };
+    });
+    outputUsers.sort(function (user1, user2) {
+        var val1 = Number(user1.valueText.split(' ')[0]);
+        var val2 = Number(user2.valueText.split(' ')[0]);
+        if (val1 === val2) {
+            val1 = user2.id;
+            val2 = user1.id;
+        }
+        return val2 - val1;
     });
     return {
-      id: userId,
-      name: userEntity.name,
-      avatar: userEntity.avatar,
-      valueText: (0,_util__WEBPACK_IMPORTED_MODULE_4__.getOutput)(value, ['голос', 'голоса', 'голосов'])
+        title: 'Самый 🔎 внимательный разработчик',
+        subtitle: currentSprint.name,
+        emoji: '🔎',
+        users: outputUsers,
     };
-  });
-  outputUsers.sort(function (user1, user2) {
-    var val1 = Number(user1.valueText.split(' ')[0]);
-    var val2 = Number(user2.valueText.split(' ')[0]);
-
-    if (val1 === val2) {
-      val1 = user2.id;
-      val2 = user1.id;
-    }
-
-    return val2 - val1;
-  });
-  return {
-    title: 'Самый 🔎 внимательный разработчик',
-    subtitle: currentSprint.name,
-    emoji: '🔎',
-    users: outputUsers
-  };
 }
+exports.default = getVoteData;
+
+
+/***/ }),
+
+/***/ "./prepareData.ts":
+/*!************************!*\
+  !*** ./prepareData.ts ***!
+  \************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.prepareData = void 0;
+var processEntities_1 = __importDefault(__webpack_require__(/*! ./processEntities */ "./processEntities.ts"));
+var util_1 = __webpack_require__(/*! ./util */ "./util.ts");
+var getLeadersData_1 = __importDefault(__webpack_require__(/*! ./getLeadersData */ "./getLeadersData.ts"));
+var getVoteData_1 = __importDefault(__webpack_require__(/*! ./getVoteData */ "./getVoteData.ts"));
+var getChartData_1 = __importDefault(__webpack_require__(/*! ./getChartData */ "./getChartData.ts"));
+var getDiagramData_1 = __importDefault(__webpack_require__(/*! ./getDiagramData */ "./getDiagramData.ts"));
+var getActivityData_1 = __importDefault(__webpack_require__(/*! ./getActivityData */ "./getActivityData.ts"));
+// const timeOffset = -4 * 60 * 60 * 1000; // для тестов
+var timeOffset = 0;
+// eslint-disable-next-line import/prefer-default-export
+function prepareData(entityArray, _a) {
+    var selectedSprintId = _a.sprintId;
+    // группирую сущности по типу и привожу их более удобному виду
+    // теперь сущности ссылаются на другие сущности только по id
+    var entities = processEntities_1.default(entityArray);
+    // группирую коммиты по спринтам. На выходе Map<SprintId, Set<CommitId>>
+    var groupedCommits = util_1.groupCommitsBySprints(entities);
+    var leadersData = getLeadersData_1.default({ entities: entities, groupedCommits: groupedCommits, selectedSprintId: selectedSprintId });
+    var voteData = getVoteData_1.default({ entities: entities, selectedSprintId: selectedSprintId });
+    // в чарт передаю готовый список лидеров
+    var chartData = getChartData_1.default({ entities: entities, groupedCommits: groupedCommits, selectedSprintId: selectedSprintId, outputUsers: leadersData.users });
+    var diagramData = getDiagramData_1.default({ entities: entities, groupedCommits: groupedCommits, selectedSprintId: selectedSprintId });
+    var activityData = getActivityData_1.default({ entities: entities, groupedCommits: groupedCommits, selectedSprintId: selectedSprintId, timeOffset: timeOffset });
+    return [
+        {
+            alias: 'leaders',
+            data: leadersData,
+        },
+        {
+            alias: 'vote',
+            data: voteData,
+        },
+        {
+            alias: 'chart',
+            data: chartData,
+        },
+        {
+            alias: 'diagram',
+            data: diagramData,
+        },
+        {
+            alias: 'activity',
+            data: activityData,
+        },
+    ];
+}
+exports.prepareData = prepareData;
+
 
 /***/ }),
 
@@ -572,215 +337,147 @@ function getVoteData(_ref) {
 /*!****************************!*\
   !*** ./processEntities.ts ***!
   \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ processEntities)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/***/ (function(__unused_webpack_module, exports) {
 
 
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
-/* eslint-disable no-param-reassign */
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 function processSprint(result, sprint) {
-  if (typeof sprint === 'number') {
-    return sprint;
-  }
-
-  var id = sprint.id;
-
-  if (!result.sprints.has(id)) {
-    result.sprints.set(id, _objectSpread({}, sprint));
-  }
-
-  return id;
-}
-
-function processSummary(result, summary) {
-  var _summary$comments$map, _summary$comments;
-
-  if (typeof summary === 'number') {
-    return summary;
-  }
-
-  var id = summary.id;
-  var comments = (_summary$comments$map = (_summary$comments = summary.comments) === null || _summary$comments === void 0 ? void 0 : _summary$comments.map(function (comment) {
-    return processComment(result, comment);
-  })) !== null && _summary$comments$map !== void 0 ? _summary$comments$map : [];
-
-  if (!result.summaries.has(id)) {
-    result.summaries.set(id, _objectSpread(_objectSpread({}, summary), {}, {
-      comments: comments
-    }));
-  }
-
-  return id;
-}
-
-function processCommit(result, commit) {
-  if (typeof commit === 'string') {
-    return commit;
-  }
-
-  var id = commit.id;
-  var author = processUser(result, commit.author);
-  var summaries = commit.summaries.map(function (summary) {
-    return processSummary(result, summary);
-  });
-
-  if (!result.commits.has(id)) {
-    result.commits.set(id, _objectSpread(_objectSpread({}, commit), {}, {
-      author: author,
-      summaries: summaries
-    }));
-  }
-
-  return id;
-}
-
-function processComment(result, comment) {
-  if (typeof comment === 'string') {
-    return comment;
-  }
-
-  var id = comment.id;
-  var author = processUser(result, comment.author);
-  var likes = comment.likes.map(function (user) {
-    return processUser(result, user);
-  });
-
-  if (!result.comments.has(id)) {
-    result.comments.set(id, _objectSpread(_objectSpread({}, comment), {}, {
-      author: author,
-      likes: likes
-    }));
-  }
-
-  return id;
-}
-
-function processIssue(result, issue) {
-  var _issue$comments$map, _issue$comments;
-
-  if (typeof issue === 'string') {
-    return issue;
-  }
-
-  var id = issue.id;
-  var comments = (_issue$comments$map = (_issue$comments = issue.comments) === null || _issue$comments === void 0 ? void 0 : _issue$comments.map(function (comment) {
-    return processComment(result, comment);
-  })) !== null && _issue$comments$map !== void 0 ? _issue$comments$map : [];
-  var resolvedBy;
-
-  if (issue.resolvedBy) {
-    resolvedBy = processUser(result, issue.resolvedBy);
-  }
-
-  if (!result.issues.has(id)) {
-    result.issues.set(id, _objectSpread(_objectSpread({}, issue), {}, {
-      comments: comments,
-      resolvedBy: resolvedBy
-    }));
-  }
-
-  return id;
-}
-
-function processUser(result, user) {
-  var _user$comments$map, _user$comments, _user$commits$map, _user$commits;
-
-  if (typeof user === 'number') {
-    return user;
-  }
-
-  var id = user.id;
-  var friends = user.friends.map(function (friend) {
-    return processUser(result, friend);
-  });
-  var comments = (_user$comments$map = (_user$comments = user.comments) === null || _user$comments === void 0 ? void 0 : _user$comments.map(function (comment) {
-    return processComment(result, comment);
-  })) !== null && _user$comments$map !== void 0 ? _user$comments$map : [];
-  var commits = (_user$commits$map = (_user$commits = user.commits) === null || _user$commits === void 0 ? void 0 : _user$commits.map(function (commit) {
-    return processCommit(result, commit);
-  })) !== null && _user$commits$map !== void 0 ? _user$commits$map : [];
-
-  if (!result.users.has(id)) {
-    result.users.set(id, _objectSpread(_objectSpread({}, user), {}, {
-      friends: friends,
-      comments: comments,
-      commits: commits
-    }));
-  }
-
-  return id;
-}
-
-function processProject(result, project) {
-  if (typeof project === 'string') {
-    return project;
-  }
-
-  var id = project.id;
-  var dependencies = project.dependencies.map(function (dep) {
-    return processProject(result, dep);
-  });
-  var issues = project.issues.map(function (issue) {
-    return processIssue(result, issue);
-  });
-  var commits = project.commits.map(function (commit) {
-    return processCommit(result, commit);
-  });
-
-  if (!result.projects.has(id)) {
-    result.projects.set(id, _objectSpread(_objectSpread({}, project), {}, {
-      dependencies: dependencies,
-      issues: issues,
-      commits: commits
-    }));
-  }
-
-  return id;
-}
-
-function processEntities(entities) {
-  var result = {
-    projects: new Map(),
-    users: new Map(),
-    issues: new Map(),
-    comments: new Map(),
-    commits: new Map(),
-    summaries: new Map(),
-    sprints: new Map()
-  };
-  entities.forEach(function (entity) {
-    if (entity.type === 'Project') {
-      processProject(result, entity);
-    } else if (entity.type === 'User') {
-      processUser(result, entity);
-    } else if (entity.type === 'Issue') {
-      processIssue(result, entity);
-    } else if (entity.type === 'Comment') {
-      processComment(result, entity);
-    } else if (entity.type === 'Commit') {
-      processCommit(result, entity);
-    } else if (entity.type === 'Summary') {
-      processSummary(result, entity);
-    } else if (entity.type === 'Sprint') {
-      processSprint(result, entity);
+    if (typeof sprint === 'number') {
+        return sprint;
     }
-  });
-  return result;
+    var id = sprint.id;
+    if (!result.sprints.has(id)) {
+        result.sprints.set(id, __assign({}, sprint));
+    }
+    return id;
 }
+function processSummary(result, summary) {
+    var _a, _b;
+    if (typeof summary === 'number') {
+        return summary;
+    }
+    var id = summary.id;
+    var comments = (_b = (_a = summary.comments) === null || _a === void 0 ? void 0 : _a.map(function (comment) { return processComment(result, comment); })) !== null && _b !== void 0 ? _b : [];
+    if (!result.summaries.has(id)) {
+        result.summaries.set(id, __assign(__assign({}, summary), { comments: comments }));
+    }
+    return id;
+}
+function processCommit(result, commit) {
+    if (typeof commit === 'string') {
+        return commit;
+    }
+    var id = commit.id;
+    var author = processUser(result, commit.author);
+    var summaries = commit.summaries.map(function (summary) { return processSummary(result, summary); });
+    if (!result.commits.has(id)) {
+        result.commits.set(id, __assign(__assign({}, commit), { author: author, summaries: summaries }));
+    }
+    return id;
+}
+function processComment(result, comment) {
+    if (typeof comment === 'string') {
+        return comment;
+    }
+    var id = comment.id;
+    var author = processUser(result, comment.author);
+    var likes = comment.likes.map(function (user) { return processUser(result, user); });
+    if (!result.comments.has(id)) {
+        result.comments.set(id, __assign(__assign({}, comment), { author: author, likes: likes }));
+    }
+    return id;
+}
+function processIssue(result, issue) {
+    var _a, _b;
+    if (typeof issue === 'string') {
+        return issue;
+    }
+    var id = issue.id;
+    var comments = (_b = (_a = issue.comments) === null || _a === void 0 ? void 0 : _a.map(function (comment) { return processComment(result, comment); })) !== null && _b !== void 0 ? _b : [];
+    var resolvedBy;
+    if (issue.resolvedBy) {
+        resolvedBy = processUser(result, issue.resolvedBy);
+    }
+    if (!result.issues.has(id)) {
+        result.issues.set(id, __assign(__assign({}, issue), { comments: comments, resolvedBy: resolvedBy }));
+    }
+    return id;
+}
+function processUser(result, user) {
+    var _a, _b, _c, _d;
+    if (typeof user === 'number') {
+        return user;
+    }
+    var id = user.id;
+    var friends = user.friends.map(function (friend) { return processUser(result, friend); });
+    var comments = (_b = (_a = user.comments) === null || _a === void 0 ? void 0 : _a.map(function (comment) { return processComment(result, comment); })) !== null && _b !== void 0 ? _b : [];
+    var commits = (_d = (_c = user.commits) === null || _c === void 0 ? void 0 : _c.map(function (commit) { return processCommit(result, commit); })) !== null && _d !== void 0 ? _d : [];
+    if (!result.users.has(id)) {
+        result.users.set(id, __assign(__assign({}, user), { friends: friends, comments: comments, commits: commits }));
+    }
+    return id;
+}
+function processProject(result, project) {
+    if (typeof project === 'string') {
+        return project;
+    }
+    var id = project.id;
+    var dependencies = project.dependencies.map(function (dep) { return processProject(result, dep); });
+    var issues = project.issues.map(function (issue) { return processIssue(result, issue); });
+    var commits = project.commits.map(function (commit) { return processCommit(result, commit); });
+    if (!result.projects.has(id)) {
+        result.projects.set(id, __assign(__assign({}, project), { dependencies: dependencies, issues: issues, commits: commits }));
+    }
+    return id;
+}
+function processEntities(entities) {
+    var result = {
+        projects: new Map(),
+        users: new Map(),
+        issues: new Map(),
+        comments: new Map(),
+        commits: new Map(),
+        summaries: new Map(),
+        sprints: new Map(),
+    };
+    entities.forEach(function (entity) {
+        if (entity.type === 'Project') {
+            processProject(result, entity);
+        }
+        else if (entity.type === 'User') {
+            processUser(result, entity);
+        }
+        else if (entity.type === 'Issue') {
+            processIssue(result, entity);
+        }
+        else if (entity.type === 'Comment') {
+            processComment(result, entity);
+        }
+        else if (entity.type === 'Commit') {
+            processCommit(result, entity);
+        }
+        else if (entity.type === 'Summary') {
+            processSummary(result, entity);
+        }
+        else if (entity.type === 'Sprint') {
+            processSprint(result, entity);
+        }
+    });
+    return result;
+}
+exports.default = processEntities;
+
 
 /***/ }),
 
@@ -788,2684 +485,133 @@ function processEntities(entities) {
 /*!*****************!*\
   !*** ./util.ts ***!
   \*****************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "groupCommitsBySprints": () => (/* binding */ groupCommitsBySprints),
-/* harmony export */   "groupCommitsBySize": () => (/* binding */ groupCommitsBySize),
-/* harmony export */   "groupCommitsByUsers": () => (/* binding */ groupCommitsByUsers),
-/* harmony export */   "getOutput": () => (/* binding */ getOutput)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "../node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "../node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "../node_modules/core-js/modules/es.array.reduce.js");
-/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_3__);
+/***/ (function(__unused_webpack_module, exports) {
 
 
-
-
-var groupCommitsBySprints = function groupCommitsBySprints(entities) {
-  var sortedSprints = Array.from(entities.sprints.values()).sort(function (_ref, _ref2) {
-    var id1 = _ref.id;
-    var id2 = _ref2.id;
-    return id1 - id2;
-  });
-  var sortedCommits = Array.from(entities.commits.values()).sort(function (_ref3, _ref4) {
-    var timestamp1 = _ref3.timestamp;
-    var timestamp2 = _ref4.timestamp;
-    return timestamp1 - timestamp2;
-  });
-  return new Map(sortedSprints.map(function (sprint) {
-    var startAt = sprint.startAt,
-        finishAt = sprint.finishAt;
-    var len = sortedCommits.length;
-    var start = sortedCommits.findIndex(function (_ref5) {
-      var timestamp = _ref5.timestamp;
-      return startAt <= timestamp;
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getOutput = exports.groupCommentsByUsers = exports.groupCommitsByUsers = exports.groupCommitsBySize = exports.groupCommitsBySprints = void 0;
+var groupCommitsBySprints = function (entities) {
+    var sortedSprints = Array.from(entities.sprints.values()).sort(function (_a, _b) {
+        var id1 = _a.id;
+        var id2 = _b.id;
+        return id1 - id2;
     });
-    var sprintCommits = [];
-
-    if (start !== -1) {
-      var finish = start + 1;
-
-      while (finish < len && sortedCommits[finish].timestamp <= finishAt) {
-        finish += 1;
-      }
-
-      sprintCommits = sortedCommits.slice(start, finish).map(function (commit) {
-        return commit.id;
-      });
-      sortedCommits = [].concat((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__.default)(sortedCommits.slice(0, start)), (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__.default)(sortedCommits.slice(finish)));
-    }
-
-    return [sprint.id, new Set(sprintCommits)];
-  }));
-}; // немного захардкодил группы и их выбор
-
-var groupCommitsBySize = function groupCommitsBySize(entities, commits) {
-  var groups = [[], [], [], []];
-  commits.forEach(function (commitId) {
-    var commit = entities.commits.get(commitId);
-
-    if (commit) {
-      var commitSize = commit.summaries.reduce(function (accum, summaryId) {
-        var summary = entities.summaries.get(summaryId);
-        return summary ? accum + summary.removed + summary.added : accum;
-      }, 0); // чета тесты не проходили
-
-      if (commitSize > 0 && commitSize <= 100) {
-        groups[3].push(commitId);
-      } else if (commitSize >= 101 && commitSize <= 500) {
-        groups[2].push(commitId);
-      } else if (commitSize >= 501 && commitSize <= 1000) {
-        groups[1].push(commitId);
-      } else if (commitSize >= 1001) {
-        groups[0].push(commitId);
-      }
-    }
-  });
-  return groups;
-};
-var groupCommitsByUsers = function groupCommitsByUsers(entities, commits) {
-  var result = new Map();
-  commits.forEach(function (commitId) {
-    var commit = entities.commits.get(commitId);
-    var userCommits = result.get(commit.author);
-
-    if (!userCommits) {
-      result.set(commit.author, userCommits = new Set());
-    }
-
-    userCommits.add(commitId);
-  });
-  return result;
-};
-var getOutput = function getOutput(number, words) {
-  var num = Math.abs(number) % 100;
-
-  if (num > 19) {
-    num %= 10;
-  }
-
-  switch (num) {
-    case 1:
-      {
-        return "".concat(number, " ").concat(words[0]);
-      }
-
-    case 2:
-    case 3:
-    case 4:
-      {
-        return "".concat(number, " ").concat(words[1]);
-      }
-
-    default:
-      {
-        return "".concat(number, " ").concat(words[2]);
-      }
-  }
-};
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/a-function.js":
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/internals/a-function.js ***!
-  \*******************************************************/
-/***/ ((module) => {
-
-module.exports = function (it) {
-  if (typeof it != 'function') {
-    throw TypeError(String(it) + ' is not a function');
-  } return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/a-possible-prototype.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/internals/a-possible-prototype.js ***!
-  \*****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isObject = __webpack_require__(/*! ../internals/is-object */ "../node_modules/core-js/internals/is-object.js");
-
-module.exports = function (it) {
-  if (!isObject(it) && it !== null) {
-    throw TypeError("Can't set " + String(it) + ' as a prototype');
-  } return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/add-to-unscopables.js":
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/internals/add-to-unscopables.js ***!
-  \***************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-var create = __webpack_require__(/*! ../internals/object-create */ "../node_modules/core-js/internals/object-create.js");
-var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "../node_modules/core-js/internals/object-define-property.js");
-
-var UNSCOPABLES = wellKnownSymbol('unscopables');
-var ArrayPrototype = Array.prototype;
-
-// Array.prototype[@@unscopables]
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-if (ArrayPrototype[UNSCOPABLES] == undefined) {
-  definePropertyModule.f(ArrayPrototype, UNSCOPABLES, {
-    configurable: true,
-    value: create(null)
-  });
-}
-
-// add a key to Array.prototype[@@unscopables]
-module.exports = function (key) {
-  ArrayPrototype[UNSCOPABLES][key] = true;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/advance-string-index.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/internals/advance-string-index.js ***!
-  \*****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var charAt = __webpack_require__(/*! ../internals/string-multibyte */ "../node_modules/core-js/internals/string-multibyte.js").charAt;
-
-// `AdvanceStringIndex` abstract operation
-// https://tc39.es/ecma262/#sec-advancestringindex
-module.exports = function (S, index, unicode) {
-  return index + (unicode ? charAt(S, index).length : 1);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/an-object.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/an-object.js ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isObject = __webpack_require__(/*! ../internals/is-object */ "../node_modules/core-js/internals/is-object.js");
-
-module.exports = function (it) {
-  if (!isObject(it)) {
-    throw TypeError(String(it) + ' is not an object');
-  } return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/array-includes.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/array-includes.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "../node_modules/core-js/internals/to-indexed-object.js");
-var toLength = __webpack_require__(/*! ../internals/to-length */ "../node_modules/core-js/internals/to-length.js");
-var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "../node_modules/core-js/internals/to-absolute-index.js");
-
-// `Array.prototype.{ indexOf, includes }` methods implementation
-var createMethod = function (IS_INCLUDES) {
-  return function ($this, el, fromIndex) {
-    var O = toIndexedObject($this);
-    var length = toLength(O.length);
-    var index = toAbsoluteIndex(fromIndex, length);
-    var value;
-    // Array#includes uses SameValueZero equality algorithm
-    // eslint-disable-next-line no-self-compare -- NaN check
-    if (IS_INCLUDES && el != el) while (length > index) {
-      value = O[index++];
-      // eslint-disable-next-line no-self-compare -- NaN check
-      if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
-    } else for (;length > index; index++) {
-      if ((IS_INCLUDES || index in O) && O[index] === el) return IS_INCLUDES || index || 0;
-    } return !IS_INCLUDES && -1;
-  };
-};
-
-module.exports = {
-  // `Array.prototype.includes` method
-  // https://tc39.es/ecma262/#sec-array.prototype.includes
-  includes: createMethod(true),
-  // `Array.prototype.indexOf` method
-  // https://tc39.es/ecma262/#sec-array.prototype.indexof
-  indexOf: createMethod(false)
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/array-method-is-strict.js":
-/*!*******************************************************************!*\
-  !*** ../node_modules/core-js/internals/array-method-is-strict.js ***!
-  \*******************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-
-module.exports = function (METHOD_NAME, argument) {
-  var method = [][METHOD_NAME];
-  return !!method && fails(function () {
-    // eslint-disable-next-line no-useless-call,no-throw-literal -- required for testing
-    method.call(null, argument || function () { throw 1; }, 1);
-  });
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/array-reduce.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/internals/array-reduce.js ***!
-  \*********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var aFunction = __webpack_require__(/*! ../internals/a-function */ "../node_modules/core-js/internals/a-function.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "../node_modules/core-js/internals/to-object.js");
-var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "../node_modules/core-js/internals/indexed-object.js");
-var toLength = __webpack_require__(/*! ../internals/to-length */ "../node_modules/core-js/internals/to-length.js");
-
-// `Array.prototype.{ reduce, reduceRight }` methods implementation
-var createMethod = function (IS_RIGHT) {
-  return function (that, callbackfn, argumentsLength, memo) {
-    aFunction(callbackfn);
-    var O = toObject(that);
-    var self = IndexedObject(O);
-    var length = toLength(O.length);
-    var index = IS_RIGHT ? length - 1 : 0;
-    var i = IS_RIGHT ? -1 : 1;
-    if (argumentsLength < 2) while (true) {
-      if (index in self) {
-        memo = self[index];
-        index += i;
-        break;
-      }
-      index += i;
-      if (IS_RIGHT ? index < 0 : length <= index) {
-        throw TypeError('Reduce of empty array with no initial value');
-      }
-    }
-    for (;IS_RIGHT ? index >= 0 : length > index; index += i) if (index in self) {
-      memo = callbackfn(memo, self[index], index, O);
-    }
-    return memo;
-  };
-};
-
-module.exports = {
-  // `Array.prototype.reduce` method
-  // https://tc39.es/ecma262/#sec-array.prototype.reduce
-  left: createMethod(false),
-  // `Array.prototype.reduceRight` method
-  // https://tc39.es/ecma262/#sec-array.prototype.reduceright
-  right: createMethod(true)
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/classof-raw.js":
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/internals/classof-raw.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-var toString = {}.toString;
-
-module.exports = function (it) {
-  return toString.call(it).slice(8, -1);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/copy-constructor-properties.js":
-/*!************************************************************************!*\
-  !*** ../node_modules/core-js/internals/copy-constructor-properties.js ***!
-  \************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var ownKeys = __webpack_require__(/*! ../internals/own-keys */ "../node_modules/core-js/internals/own-keys.js");
-var getOwnPropertyDescriptorModule = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "../node_modules/core-js/internals/object-get-own-property-descriptor.js");
-var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "../node_modules/core-js/internals/object-define-property.js");
-
-module.exports = function (target, source) {
-  var keys = ownKeys(source);
-  var defineProperty = definePropertyModule.f;
-  var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
-    if (!has(target, key)) defineProperty(target, key, getOwnPropertyDescriptor(source, key));
-  }
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/correct-prototype-getter.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/internals/correct-prototype-getter.js ***!
-  \*********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-
-module.exports = !fails(function () {
-  function F() { /* empty */ }
-  F.prototype.constructor = null;
-  return Object.getPrototypeOf(new F()) !== F.prototype;
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/create-iterator-constructor.js":
-/*!************************************************************************!*\
-  !*** ../node_modules/core-js/internals/create-iterator-constructor.js ***!
-  \************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var IteratorPrototype = __webpack_require__(/*! ../internals/iterators-core */ "../node_modules/core-js/internals/iterators-core.js").IteratorPrototype;
-var create = __webpack_require__(/*! ../internals/object-create */ "../node_modules/core-js/internals/object-create.js");
-var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "../node_modules/core-js/internals/create-property-descriptor.js");
-var setToStringTag = __webpack_require__(/*! ../internals/set-to-string-tag */ "../node_modules/core-js/internals/set-to-string-tag.js");
-var Iterators = __webpack_require__(/*! ../internals/iterators */ "../node_modules/core-js/internals/iterators.js");
-
-var returnThis = function () { return this; };
-
-module.exports = function (IteratorConstructor, NAME, next) {
-  var TO_STRING_TAG = NAME + ' Iterator';
-  IteratorConstructor.prototype = create(IteratorPrototype, { next: createPropertyDescriptor(1, next) });
-  setToStringTag(IteratorConstructor, TO_STRING_TAG, false, true);
-  Iterators[TO_STRING_TAG] = returnThis;
-  return IteratorConstructor;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/create-non-enumerable-property.js":
-/*!***************************************************************************!*\
-  !*** ../node_modules/core-js/internals/create-non-enumerable-property.js ***!
-  \***************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../node_modules/core-js/internals/descriptors.js");
-var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "../node_modules/core-js/internals/object-define-property.js");
-var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "../node_modules/core-js/internals/create-property-descriptor.js");
-
-module.exports = DESCRIPTORS ? function (object, key, value) {
-  return definePropertyModule.f(object, key, createPropertyDescriptor(1, value));
-} : function (object, key, value) {
-  object[key] = value;
-  return object;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/create-property-descriptor.js":
-/*!***********************************************************************!*\
-  !*** ../node_modules/core-js/internals/create-property-descriptor.js ***!
-  \***********************************************************************/
-/***/ ((module) => {
-
-module.exports = function (bitmap, value) {
-  return {
-    enumerable: !(bitmap & 1),
-    configurable: !(bitmap & 2),
-    writable: !(bitmap & 4),
-    value: value
-  };
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/define-iterator.js":
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/internals/define-iterator.js ***!
-  \************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var $ = __webpack_require__(/*! ../internals/export */ "../node_modules/core-js/internals/export.js");
-var createIteratorConstructor = __webpack_require__(/*! ../internals/create-iterator-constructor */ "../node_modules/core-js/internals/create-iterator-constructor.js");
-var getPrototypeOf = __webpack_require__(/*! ../internals/object-get-prototype-of */ "../node_modules/core-js/internals/object-get-prototype-of.js");
-var setPrototypeOf = __webpack_require__(/*! ../internals/object-set-prototype-of */ "../node_modules/core-js/internals/object-set-prototype-of.js");
-var setToStringTag = __webpack_require__(/*! ../internals/set-to-string-tag */ "../node_modules/core-js/internals/set-to-string-tag.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-var redefine = __webpack_require__(/*! ../internals/redefine */ "../node_modules/core-js/internals/redefine.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "../node_modules/core-js/internals/is-pure.js");
-var Iterators = __webpack_require__(/*! ../internals/iterators */ "../node_modules/core-js/internals/iterators.js");
-var IteratorsCore = __webpack_require__(/*! ../internals/iterators-core */ "../node_modules/core-js/internals/iterators-core.js");
-
-var IteratorPrototype = IteratorsCore.IteratorPrototype;
-var BUGGY_SAFARI_ITERATORS = IteratorsCore.BUGGY_SAFARI_ITERATORS;
-var ITERATOR = wellKnownSymbol('iterator');
-var KEYS = 'keys';
-var VALUES = 'values';
-var ENTRIES = 'entries';
-
-var returnThis = function () { return this; };
-
-module.exports = function (Iterable, NAME, IteratorConstructor, next, DEFAULT, IS_SET, FORCED) {
-  createIteratorConstructor(IteratorConstructor, NAME, next);
-
-  var getIterationMethod = function (KIND) {
-    if (KIND === DEFAULT && defaultIterator) return defaultIterator;
-    if (!BUGGY_SAFARI_ITERATORS && KIND in IterablePrototype) return IterablePrototype[KIND];
-    switch (KIND) {
-      case KEYS: return function keys() { return new IteratorConstructor(this, KIND); };
-      case VALUES: return function values() { return new IteratorConstructor(this, KIND); };
-      case ENTRIES: return function entries() { return new IteratorConstructor(this, KIND); };
-    } return function () { return new IteratorConstructor(this); };
-  };
-
-  var TO_STRING_TAG = NAME + ' Iterator';
-  var INCORRECT_VALUES_NAME = false;
-  var IterablePrototype = Iterable.prototype;
-  var nativeIterator = IterablePrototype[ITERATOR]
-    || IterablePrototype['@@iterator']
-    || DEFAULT && IterablePrototype[DEFAULT];
-  var defaultIterator = !BUGGY_SAFARI_ITERATORS && nativeIterator || getIterationMethod(DEFAULT);
-  var anyNativeIterator = NAME == 'Array' ? IterablePrototype.entries || nativeIterator : nativeIterator;
-  var CurrentIteratorPrototype, methods, KEY;
-
-  // fix native
-  if (anyNativeIterator) {
-    CurrentIteratorPrototype = getPrototypeOf(anyNativeIterator.call(new Iterable()));
-    if (IteratorPrototype !== Object.prototype && CurrentIteratorPrototype.next) {
-      if (!IS_PURE && getPrototypeOf(CurrentIteratorPrototype) !== IteratorPrototype) {
-        if (setPrototypeOf) {
-          setPrototypeOf(CurrentIteratorPrototype, IteratorPrototype);
-        } else if (typeof CurrentIteratorPrototype[ITERATOR] != 'function') {
-          createNonEnumerableProperty(CurrentIteratorPrototype, ITERATOR, returnThis);
-        }
-      }
-      // Set @@toStringTag to native iterators
-      setToStringTag(CurrentIteratorPrototype, TO_STRING_TAG, true, true);
-      if (IS_PURE) Iterators[TO_STRING_TAG] = returnThis;
-    }
-  }
-
-  // fix Array#{values, @@iterator}.name in V8 / FF
-  if (DEFAULT == VALUES && nativeIterator && nativeIterator.name !== VALUES) {
-    INCORRECT_VALUES_NAME = true;
-    defaultIterator = function values() { return nativeIterator.call(this); };
-  }
-
-  // define iterator
-  if ((!IS_PURE || FORCED) && IterablePrototype[ITERATOR] !== defaultIterator) {
-    createNonEnumerableProperty(IterablePrototype, ITERATOR, defaultIterator);
-  }
-  Iterators[NAME] = defaultIterator;
-
-  // export additional methods
-  if (DEFAULT) {
-    methods = {
-      values: getIterationMethod(VALUES),
-      keys: IS_SET ? defaultIterator : getIterationMethod(KEYS),
-      entries: getIterationMethod(ENTRIES)
-    };
-    if (FORCED) for (KEY in methods) {
-      if (BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME || !(KEY in IterablePrototype)) {
-        redefine(IterablePrototype, KEY, methods[KEY]);
-      }
-    } else $({ target: NAME, proto: true, forced: BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME }, methods);
-  }
-
-  return methods;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/descriptors.js":
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/internals/descriptors.js ***!
-  \********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-
-// Detect IE8's incomplete defineProperty implementation
-module.exports = !fails(function () {
-  return Object.defineProperty({}, 1, { get: function () { return 7; } })[1] != 7;
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/document-create-element.js":
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/internals/document-create-element.js ***!
-  \********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var isObject = __webpack_require__(/*! ../internals/is-object */ "../node_modules/core-js/internals/is-object.js");
-
-var document = global.document;
-// typeof document.createElement is 'object' in old IE
-var EXISTS = isObject(document) && isObject(document.createElement);
-
-module.exports = function (it) {
-  return EXISTS ? document.createElement(it) : {};
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/dom-iterables.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/internals/dom-iterables.js ***!
-  \**********************************************************/
-/***/ ((module) => {
-
-// iterable DOM collections
-// flag - `iterable` interface - 'entries', 'keys', 'values', 'forEach' methods
-module.exports = {
-  CSSRuleList: 0,
-  CSSStyleDeclaration: 0,
-  CSSValueList: 0,
-  ClientRectList: 0,
-  DOMRectList: 0,
-  DOMStringList: 0,
-  DOMTokenList: 1,
-  DataTransferItemList: 0,
-  FileList: 0,
-  HTMLAllCollection: 0,
-  HTMLCollection: 0,
-  HTMLFormElement: 0,
-  HTMLSelectElement: 0,
-  MediaList: 0,
-  MimeTypeArray: 0,
-  NamedNodeMap: 0,
-  NodeList: 1,
-  PaintRequestList: 0,
-  Plugin: 0,
-  PluginArray: 0,
-  SVGLengthList: 0,
-  SVGNumberList: 0,
-  SVGPathSegList: 0,
-  SVGPointList: 0,
-  SVGStringList: 0,
-  SVGTransformList: 0,
-  SourceBufferList: 0,
-  StyleSheetList: 0,
-  TextTrackCueList: 0,
-  TextTrackList: 0,
-  TouchList: 0
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/engine-is-node.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/engine-is-node.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var classof = __webpack_require__(/*! ../internals/classof-raw */ "../node_modules/core-js/internals/classof-raw.js");
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-
-module.exports = classof(global.process) == 'process';
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/engine-user-agent.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/engine-user-agent.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "../node_modules/core-js/internals/get-built-in.js");
-
-module.exports = getBuiltIn('navigator', 'userAgent') || '';
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/engine-v8-version.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/engine-v8-version.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ "../node_modules/core-js/internals/engine-user-agent.js");
-
-var process = global.process;
-var versions = process && process.versions;
-var v8 = versions && versions.v8;
-var match, version;
-
-if (v8) {
-  match = v8.split('.');
-  version = match[0] + match[1];
-} else if (userAgent) {
-  match = userAgent.match(/Edge\/(\d+)/);
-  if (!match || match[1] >= 74) {
-    match = userAgent.match(/Chrome\/(\d+)/);
-    if (match) version = match[1];
-  }
-}
-
-module.exports = version && +version;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/enum-bug-keys.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/internals/enum-bug-keys.js ***!
-  \**********************************************************/
-/***/ ((module) => {
-
-// IE8- don't enum bug keys
-module.exports = [
-  'constructor',
-  'hasOwnProperty',
-  'isPrototypeOf',
-  'propertyIsEnumerable',
-  'toLocaleString',
-  'toString',
-  'valueOf'
-];
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/export.js":
-/*!***************************************************!*\
-  !*** ../node_modules/core-js/internals/export.js ***!
-  \***************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var getOwnPropertyDescriptor = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "../node_modules/core-js/internals/object-get-own-property-descriptor.js").f;
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-var redefine = __webpack_require__(/*! ../internals/redefine */ "../node_modules/core-js/internals/redefine.js");
-var setGlobal = __webpack_require__(/*! ../internals/set-global */ "../node_modules/core-js/internals/set-global.js");
-var copyConstructorProperties = __webpack_require__(/*! ../internals/copy-constructor-properties */ "../node_modules/core-js/internals/copy-constructor-properties.js");
-var isForced = __webpack_require__(/*! ../internals/is-forced */ "../node_modules/core-js/internals/is-forced.js");
-
-/*
-  options.target      - name of the target object
-  options.global      - target is the global object
-  options.stat        - export as static methods of target
-  options.proto       - export as prototype methods of target
-  options.real        - real prototype method for the `pure` version
-  options.forced      - export even if the native feature is available
-  options.bind        - bind methods to the target, required for the `pure` version
-  options.wrap        - wrap constructors to preventing global pollution, required for the `pure` version
-  options.unsafe      - use the simple assignment of property instead of delete + defineProperty
-  options.sham        - add a flag to not completely full polyfills
-  options.enumerable  - export as enumerable property
-  options.noTargetGet - prevent calling a getter on target
-*/
-module.exports = function (options, source) {
-  var TARGET = options.target;
-  var GLOBAL = options.global;
-  var STATIC = options.stat;
-  var FORCED, target, key, targetProperty, sourceProperty, descriptor;
-  if (GLOBAL) {
-    target = global;
-  } else if (STATIC) {
-    target = global[TARGET] || setGlobal(TARGET, {});
-  } else {
-    target = (global[TARGET] || {}).prototype;
-  }
-  if (target) for (key in source) {
-    sourceProperty = source[key];
-    if (options.noTargetGet) {
-      descriptor = getOwnPropertyDescriptor(target, key);
-      targetProperty = descriptor && descriptor.value;
-    } else targetProperty = target[key];
-    FORCED = isForced(GLOBAL ? key : TARGET + (STATIC ? '.' : '#') + key, options.forced);
-    // contained in target
-    if (!FORCED && targetProperty !== undefined) {
-      if (typeof sourceProperty === typeof targetProperty) continue;
-      copyConstructorProperties(sourceProperty, targetProperty);
-    }
-    // add a flag to not completely full polyfills
-    if (options.sham || (targetProperty && targetProperty.sham)) {
-      createNonEnumerableProperty(sourceProperty, 'sham', true);
-    }
-    // extend global
-    redefine(target, key, sourceProperty, options);
-  }
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/fails.js":
-/*!**************************************************!*\
-  !*** ../node_modules/core-js/internals/fails.js ***!
-  \**************************************************/
-/***/ ((module) => {
-
-module.exports = function (exec) {
-  try {
-    return !!exec();
-  } catch (error) {
-    return true;
-  }
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js":
-/*!*******************************************************************************!*\
-  !*** ../node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
-  \*******************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-// TODO: Remove from `core-js@4` since it's moved to entry points
-__webpack_require__(/*! ../modules/es.regexp.exec */ "../node_modules/core-js/modules/es.regexp.exec.js");
-var redefine = __webpack_require__(/*! ../internals/redefine */ "../node_modules/core-js/internals/redefine.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-var regexpExec = __webpack_require__(/*! ../internals/regexp-exec */ "../node_modules/core-js/internals/regexp-exec.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-
-var SPECIES = wellKnownSymbol('species');
-
-var REPLACE_SUPPORTS_NAMED_GROUPS = !fails(function () {
-  // #replace needs built-in support for named groups.
-  // #match works fine because it just return the exec results, even if it has
-  // a "grops" property.
-  var re = /./;
-  re.exec = function () {
-    var result = [];
-    result.groups = { a: '7' };
-    return result;
-  };
-  return ''.replace(re, '$<a>') !== '7';
-});
-
-// IE <= 11 replaces $0 with the whole match, as if it was $&
-// https://stackoverflow.com/questions/6024666/getting-ie-to-replace-a-regex-with-the-literal-string-0
-var REPLACE_KEEPS_$0 = (function () {
-  return 'a'.replace(/./, '$0') === '$0';
-})();
-
-var REPLACE = wellKnownSymbol('replace');
-// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string
-var REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE = (function () {
-  if (/./[REPLACE]) {
-    return /./[REPLACE]('a', '$0') === '';
-  }
-  return false;
-})();
-
-// Chrome 51 has a buggy "split" implementation when RegExp#exec !== nativeExec
-// Weex JS has frozen built-in prototypes, so use try / catch wrapper
-var SPLIT_WORKS_WITH_OVERWRITTEN_EXEC = !fails(function () {
-  // eslint-disable-next-line regexp/no-empty-group -- required for testing
-  var re = /(?:)/;
-  var originalExec = re.exec;
-  re.exec = function () { return originalExec.apply(this, arguments); };
-  var result = 'ab'.split(re);
-  return result.length !== 2 || result[0] !== 'a' || result[1] !== 'b';
-});
-
-module.exports = function (KEY, length, exec, sham) {
-  var SYMBOL = wellKnownSymbol(KEY);
-
-  var DELEGATES_TO_SYMBOL = !fails(function () {
-    // String methods call symbol-named RegEp methods
-    var O = {};
-    O[SYMBOL] = function () { return 7; };
-    return ''[KEY](O) != 7;
-  });
-
-  var DELEGATES_TO_EXEC = DELEGATES_TO_SYMBOL && !fails(function () {
-    // Symbol-named RegExp methods call .exec
-    var execCalled = false;
-    var re = /a/;
-
-    if (KEY === 'split') {
-      // We can't use real regex here since it causes deoptimization
-      // and serious performance degradation in V8
-      // https://github.com/zloirock/core-js/issues/306
-      re = {};
-      // RegExp[@@split] doesn't call the regex's exec method, but first creates
-      // a new one. We need to return the patched regex when creating the new one.
-      re.constructor = {};
-      re.constructor[SPECIES] = function () { return re; };
-      re.flags = '';
-      re[SYMBOL] = /./[SYMBOL];
-    }
-
-    re.exec = function () { execCalled = true; return null; };
-
-    re[SYMBOL]('');
-    return !execCalled;
-  });
-
-  if (
-    !DELEGATES_TO_SYMBOL ||
-    !DELEGATES_TO_EXEC ||
-    (KEY === 'replace' && !(
-      REPLACE_SUPPORTS_NAMED_GROUPS &&
-      REPLACE_KEEPS_$0 &&
-      !REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE
-    )) ||
-    (KEY === 'split' && !SPLIT_WORKS_WITH_OVERWRITTEN_EXEC)
-  ) {
-    var nativeRegExpMethod = /./[SYMBOL];
-    var methods = exec(SYMBOL, ''[KEY], function (nativeMethod, regexp, str, arg2, forceStringMethod) {
-      if (regexp.exec === regexpExec) {
-        if (DELEGATES_TO_SYMBOL && !forceStringMethod) {
-          // The native String method already delegates to @@method (this
-          // polyfilled function), leasing to infinite recursion.
-          // We avoid it by directly calling the native @@method method.
-          return { done: true, value: nativeRegExpMethod.call(regexp, str, arg2) };
-        }
-        return { done: true, value: nativeMethod.call(str, regexp, arg2) };
-      }
-      return { done: false };
-    }, {
-      REPLACE_KEEPS_$0: REPLACE_KEEPS_$0,
-      REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE: REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE
+    var sortedCommits = Array.from(entities.commits.values()).sort(function (_a, _b) {
+        var timestamp1 = _a.timestamp;
+        var timestamp2 = _b.timestamp;
+        return timestamp1 - timestamp2;
     });
-    var stringMethod = methods[0];
-    var regexMethod = methods[1];
-
-    redefine(String.prototype, KEY, stringMethod);
-    redefine(RegExp.prototype, SYMBOL, length == 2
-      // 21.2.5.8 RegExp.prototype[@@replace](string, replaceValue)
-      // 21.2.5.11 RegExp.prototype[@@split](string, limit)
-      ? function (string, arg) { return regexMethod.call(string, this, arg); }
-      // 21.2.5.6 RegExp.prototype[@@match](string)
-      // 21.2.5.9 RegExp.prototype[@@search](string)
-      : function (string) { return regexMethod.call(string, this); }
-    );
-  }
-
-  if (sham) createNonEnumerableProperty(RegExp.prototype[SYMBOL], 'sham', true);
+    return new Map(sortedSprints.map(function (sprint) {
+        var startAt = sprint.startAt, finishAt = sprint.finishAt;
+        var len = sortedCommits.length;
+        var start = sortedCommits.findIndex(function (_a) {
+            var timestamp = _a.timestamp;
+            return startAt <= timestamp;
+        });
+        var sprintCommits = [];
+        if (start !== -1) {
+            var finish = start + 1;
+            while (finish < len && sortedCommits[finish].timestamp <= finishAt)
+                finish += 1;
+            sprintCommits = sortedCommits.slice(start, finish);
+            sortedCommits = __spreadArray(__spreadArray([], __read(sortedCommits.slice(0, start))), __read(sortedCommits.slice(finish)));
+        }
+        return [sprint.id, sprintCommits];
+    }));
 };
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/get-built-in.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/internals/get-built-in.js ***!
-  \*********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var path = __webpack_require__(/*! ../internals/path */ "../node_modules/core-js/internals/path.js");
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-
-var aFunction = function (variable) {
-  return typeof variable == 'function' ? variable : undefined;
+exports.groupCommitsBySprints = groupCommitsBySprints;
+var groupCommitsBySize = function (entities, commits) {
+    var groups = [[], [], [], []];
+    commits.forEach(function (commit) {
+        if (commit) {
+            var commitSize = commit.summaries.reduce(function (accum, summaryId) {
+                var summary = entities.summaries.get(summaryId);
+                return summary ? accum + summary.removed + summary.added : accum;
+            }, 0);
+            if (commitSize <= 100) {
+                groups[3].push(commit.id);
+            }
+            else if (commitSize <= 500) {
+                groups[2].push(commit.id);
+            }
+            else if (commitSize <= 1000) {
+                groups[1].push(commit.id);
+            }
+            else {
+                groups[0].push(commit.id);
+            }
+        }
+    });
+    return groups;
 };
-
-module.exports = function (namespace, method) {
-  return arguments.length < 2 ? aFunction(path[namespace]) || aFunction(global[namespace])
-    : path[namespace] && path[namespace][method] || global[namespace] && global[namespace][method];
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/global.js":
-/*!***************************************************!*\
-  !*** ../node_modules/core-js/internals/global.js ***!
-  \***************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var check = function (it) {
-  return it && it.Math == Math && it;
-};
-
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-module.exports =
-  /* global globalThis -- safe */
-  check(typeof globalThis == 'object' && globalThis) ||
-  check(typeof window == 'object' && window) ||
-  check(typeof self == 'object' && self) ||
-  check(typeof __webpack_require__.g == 'object' && __webpack_require__.g) ||
-  // eslint-disable-next-line no-new-func -- fallback
-  (function () { return this; })() || Function('return this')();
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/has.js":
-/*!************************************************!*\
-  !*** ../node_modules/core-js/internals/has.js ***!
-  \************************************************/
-/***/ ((module) => {
-
-var hasOwnProperty = {}.hasOwnProperty;
-
-module.exports = function (it, key) {
-  return hasOwnProperty.call(it, key);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/hidden-keys.js":
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/internals/hidden-keys.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-module.exports = {};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/html.js":
-/*!*************************************************!*\
-  !*** ../node_modules/core-js/internals/html.js ***!
-  \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "../node_modules/core-js/internals/get-built-in.js");
-
-module.exports = getBuiltIn('document', 'documentElement');
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/ie8-dom-define.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/ie8-dom-define.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../node_modules/core-js/internals/descriptors.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-var createElement = __webpack_require__(/*! ../internals/document-create-element */ "../node_modules/core-js/internals/document-create-element.js");
-
-// Thank's IE8 for his funny defineProperty
-module.exports = !DESCRIPTORS && !fails(function () {
-  return Object.defineProperty(createElement('div'), 'a', {
-    get: function () { return 7; }
-  }).a != 7;
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/indexed-object.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/indexed-object.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-var classof = __webpack_require__(/*! ../internals/classof-raw */ "../node_modules/core-js/internals/classof-raw.js");
-
-var split = ''.split;
-
-// fallback for non-array-like ES3 and non-enumerable old V8 strings
-module.exports = fails(function () {
-  // throws an error in rhino, see https://github.com/mozilla/rhino/issues/346
-  // eslint-disable-next-line no-prototype-builtins -- safe
-  return !Object('z').propertyIsEnumerable(0);
-}) ? function (it) {
-  return classof(it) == 'String' ? split.call(it, '') : Object(it);
-} : Object;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/inspect-source.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/inspect-source.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var store = __webpack_require__(/*! ../internals/shared-store */ "../node_modules/core-js/internals/shared-store.js");
-
-var functionToString = Function.toString;
-
-// this helper broken in `3.4.1-3.4.4`, so we can't use `shared` helper
-if (typeof store.inspectSource != 'function') {
-  store.inspectSource = function (it) {
-    return functionToString.call(it);
-  };
-}
-
-module.exports = store.inspectSource;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/internal-state.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/internal-state.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var NATIVE_WEAK_MAP = __webpack_require__(/*! ../internals/native-weak-map */ "../node_modules/core-js/internals/native-weak-map.js");
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var isObject = __webpack_require__(/*! ../internals/is-object */ "../node_modules/core-js/internals/is-object.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-var objectHas = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var shared = __webpack_require__(/*! ../internals/shared-store */ "../node_modules/core-js/internals/shared-store.js");
-var sharedKey = __webpack_require__(/*! ../internals/shared-key */ "../node_modules/core-js/internals/shared-key.js");
-var hiddenKeys = __webpack_require__(/*! ../internals/hidden-keys */ "../node_modules/core-js/internals/hidden-keys.js");
-
-var WeakMap = global.WeakMap;
-var set, get, has;
-
-var enforce = function (it) {
-  return has(it) ? get(it) : set(it, {});
-};
-
-var getterFor = function (TYPE) {
-  return function (it) {
-    var state;
-    if (!isObject(it) || (state = get(it)).type !== TYPE) {
-      throw TypeError('Incompatible receiver, ' + TYPE + ' required');
-    } return state;
-  };
-};
-
-if (NATIVE_WEAK_MAP) {
-  var store = shared.state || (shared.state = new WeakMap());
-  var wmget = store.get;
-  var wmhas = store.has;
-  var wmset = store.set;
-  set = function (it, metadata) {
-    metadata.facade = it;
-    wmset.call(store, it, metadata);
-    return metadata;
-  };
-  get = function (it) {
-    return wmget.call(store, it) || {};
-  };
-  has = function (it) {
-    return wmhas.call(store, it);
-  };
-} else {
-  var STATE = sharedKey('state');
-  hiddenKeys[STATE] = true;
-  set = function (it, metadata) {
-    metadata.facade = it;
-    createNonEnumerableProperty(it, STATE, metadata);
-    return metadata;
-  };
-  get = function (it) {
-    return objectHas(it, STATE) ? it[STATE] : {};
-  };
-  has = function (it) {
-    return objectHas(it, STATE);
-  };
-}
-
-module.exports = {
-  set: set,
-  get: get,
-  has: has,
-  enforce: enforce,
-  getterFor: getterFor
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/is-forced.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/is-forced.js ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-
-var replacement = /#|\.prototype\./;
-
-var isForced = function (feature, detection) {
-  var value = data[normalize(feature)];
-  return value == POLYFILL ? true
-    : value == NATIVE ? false
-    : typeof detection == 'function' ? fails(detection)
-    : !!detection;
-};
-
-var normalize = isForced.normalize = function (string) {
-  return String(string).replace(replacement, '.').toLowerCase();
-};
-
-var data = isForced.data = {};
-var NATIVE = isForced.NATIVE = 'N';
-var POLYFILL = isForced.POLYFILL = 'P';
-
-module.exports = isForced;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/is-object.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/is-object.js ***!
-  \******************************************************/
-/***/ ((module) => {
-
-module.exports = function (it) {
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/is-pure.js":
-/*!****************************************************!*\
-  !*** ../node_modules/core-js/internals/is-pure.js ***!
-  \****************************************************/
-/***/ ((module) => {
-
-module.exports = false;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/is-regexp.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/is-regexp.js ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isObject = __webpack_require__(/*! ../internals/is-object */ "../node_modules/core-js/internals/is-object.js");
-var classof = __webpack_require__(/*! ../internals/classof-raw */ "../node_modules/core-js/internals/classof-raw.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-
-var MATCH = wellKnownSymbol('match');
-
-// `IsRegExp` abstract operation
-// https://tc39.es/ecma262/#sec-isregexp
-module.exports = function (it) {
-  var isRegExp;
-  return isObject(it) && ((isRegExp = it[MATCH]) !== undefined ? !!isRegExp : classof(it) == 'RegExp');
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/iterators-core.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/internals/iterators-core.js ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-var getPrototypeOf = __webpack_require__(/*! ../internals/object-get-prototype-of */ "../node_modules/core-js/internals/object-get-prototype-of.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "../node_modules/core-js/internals/is-pure.js");
-
-var ITERATOR = wellKnownSymbol('iterator');
-var BUGGY_SAFARI_ITERATORS = false;
-
-var returnThis = function () { return this; };
-
-// `%IteratorPrototype%` object
-// https://tc39.es/ecma262/#sec-%iteratorprototype%-object
-var IteratorPrototype, PrototypeOfArrayIteratorPrototype, arrayIterator;
-
-if ([].keys) {
-  arrayIterator = [].keys();
-  // Safari 8 has buggy iterators w/o `next`
-  if (!('next' in arrayIterator)) BUGGY_SAFARI_ITERATORS = true;
-  else {
-    PrototypeOfArrayIteratorPrototype = getPrototypeOf(getPrototypeOf(arrayIterator));
-    if (PrototypeOfArrayIteratorPrototype !== Object.prototype) IteratorPrototype = PrototypeOfArrayIteratorPrototype;
-  }
-}
-
-var NEW_ITERATOR_PROTOTYPE = IteratorPrototype == undefined || fails(function () {
-  var test = {};
-  // FF44- legacy iterators case
-  return IteratorPrototype[ITERATOR].call(test) !== test;
-});
-
-if (NEW_ITERATOR_PROTOTYPE) IteratorPrototype = {};
-
-// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-if ((!IS_PURE || NEW_ITERATOR_PROTOTYPE) && !has(IteratorPrototype, ITERATOR)) {
-  createNonEnumerableProperty(IteratorPrototype, ITERATOR, returnThis);
-}
-
-module.exports = {
-  IteratorPrototype: IteratorPrototype,
-  BUGGY_SAFARI_ITERATORS: BUGGY_SAFARI_ITERATORS
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/iterators.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/iterators.js ***!
-  \******************************************************/
-/***/ ((module) => {
-
-module.exports = {};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/native-symbol.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/internals/native-symbol.js ***!
-  \**********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var IS_NODE = __webpack_require__(/*! ../internals/engine-is-node */ "../node_modules/core-js/internals/engine-is-node.js");
-var V8_VERSION = __webpack_require__(/*! ../internals/engine-v8-version */ "../node_modules/core-js/internals/engine-v8-version.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-
-module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
-  /* global Symbol -- required for testing */
-  return !Symbol.sham &&
-    // Chrome 38 Symbol has incorrect toString conversion
-    // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
-    (IS_NODE ? V8_VERSION === 38 : V8_VERSION > 37 && V8_VERSION < 41);
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/native-weak-map.js":
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/internals/native-weak-map.js ***!
-  \************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "../node_modules/core-js/internals/inspect-source.js");
-
-var WeakMap = global.WeakMap;
-
-module.exports = typeof WeakMap === 'function' && /native code/.test(inspectSource(WeakMap));
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-create.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/internals/object-create.js ***!
-  \**********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var defineProperties = __webpack_require__(/*! ../internals/object-define-properties */ "../node_modules/core-js/internals/object-define-properties.js");
-var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ "../node_modules/core-js/internals/enum-bug-keys.js");
-var hiddenKeys = __webpack_require__(/*! ../internals/hidden-keys */ "../node_modules/core-js/internals/hidden-keys.js");
-var html = __webpack_require__(/*! ../internals/html */ "../node_modules/core-js/internals/html.js");
-var documentCreateElement = __webpack_require__(/*! ../internals/document-create-element */ "../node_modules/core-js/internals/document-create-element.js");
-var sharedKey = __webpack_require__(/*! ../internals/shared-key */ "../node_modules/core-js/internals/shared-key.js");
-
-var GT = '>';
-var LT = '<';
-var PROTOTYPE = 'prototype';
-var SCRIPT = 'script';
-var IE_PROTO = sharedKey('IE_PROTO');
-
-var EmptyConstructor = function () { /* empty */ };
-
-var scriptTag = function (content) {
-  return LT + SCRIPT + GT + content + LT + '/' + SCRIPT + GT;
-};
-
-// Create object with fake `null` prototype: use ActiveX Object with cleared prototype
-var NullProtoObjectViaActiveX = function (activeXDocument) {
-  activeXDocument.write(scriptTag(''));
-  activeXDocument.close();
-  var temp = activeXDocument.parentWindow.Object;
-  activeXDocument = null; // avoid memory leak
-  return temp;
-};
-
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
-var NullProtoObjectViaIFrame = function () {
-  // Thrash, waste and sodomy: IE GC bug
-  var iframe = documentCreateElement('iframe');
-  var JS = 'java' + SCRIPT + ':';
-  var iframeDocument;
-  iframe.style.display = 'none';
-  html.appendChild(iframe);
-  // https://github.com/zloirock/core-js/issues/475
-  iframe.src = String(JS);
-  iframeDocument = iframe.contentWindow.document;
-  iframeDocument.open();
-  iframeDocument.write(scriptTag('document.F=Object'));
-  iframeDocument.close();
-  return iframeDocument.F;
-};
-
-// Check for document.domain and active x support
-// No need to use active x approach when document.domain is not set
-// see https://github.com/es-shims/es5-shim/issues/150
-// variation of https://github.com/kitcambridge/es5-shim/commit/4f738ac066346
-// avoid IE GC bug
-var activeXDocument;
-var NullProtoObject = function () {
-  try {
-    /* global ActiveXObject -- old IE */
-    activeXDocument = document.domain && new ActiveXObject('htmlfile');
-  } catch (error) { /* ignore */ }
-  NullProtoObject = activeXDocument ? NullProtoObjectViaActiveX(activeXDocument) : NullProtoObjectViaIFrame();
-  var length = enumBugKeys.length;
-  while (length--) delete NullProtoObject[PROTOTYPE][enumBugKeys[length]];
-  return NullProtoObject();
-};
-
-hiddenKeys[IE_PROTO] = true;
-
-// `Object.create` method
-// https://tc39.es/ecma262/#sec-object.create
-module.exports = Object.create || function create(O, Properties) {
-  var result;
-  if (O !== null) {
-    EmptyConstructor[PROTOTYPE] = anObject(O);
-    result = new EmptyConstructor();
-    EmptyConstructor[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
-    result[IE_PROTO] = O;
-  } else result = NullProtoObject();
-  return Properties === undefined ? result : defineProperties(result, Properties);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-define-properties.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-define-properties.js ***!
-  \*********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../node_modules/core-js/internals/descriptors.js");
-var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "../node_modules/core-js/internals/object-define-property.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var objectKeys = __webpack_require__(/*! ../internals/object-keys */ "../node_modules/core-js/internals/object-keys.js");
-
-// `Object.defineProperties` method
-// https://tc39.es/ecma262/#sec-object.defineproperties
-module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperties(O, Properties) {
-  anObject(O);
-  var keys = objectKeys(Properties);
-  var length = keys.length;
-  var index = 0;
-  var key;
-  while (length > index) definePropertyModule.f(O, key = keys[index++], Properties[key]);
-  return O;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-define-property.js":
-/*!*******************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-define-property.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../node_modules/core-js/internals/descriptors.js");
-var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ "../node_modules/core-js/internals/ie8-dom-define.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var toPrimitive = __webpack_require__(/*! ../internals/to-primitive */ "../node_modules/core-js/internals/to-primitive.js");
-
-var nativeDefineProperty = Object.defineProperty;
-
-// `Object.defineProperty` method
-// https://tc39.es/ecma262/#sec-object.defineproperty
-exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, Attributes) {
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if (IE8_DOM_DEFINE) try {
-    return nativeDefineProperty(O, P, Attributes);
-  } catch (error) { /* empty */ }
-  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported');
-  if ('value' in Attributes) O[P] = Attributes.value;
-  return O;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-get-own-property-descriptor.js":
-/*!*******************************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../node_modules/core-js/internals/descriptors.js");
-var propertyIsEnumerableModule = __webpack_require__(/*! ../internals/object-property-is-enumerable */ "../node_modules/core-js/internals/object-property-is-enumerable.js");
-var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "../node_modules/core-js/internals/create-property-descriptor.js");
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "../node_modules/core-js/internals/to-indexed-object.js");
-var toPrimitive = __webpack_require__(/*! ../internals/to-primitive */ "../node_modules/core-js/internals/to-primitive.js");
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ "../node_modules/core-js/internals/ie8-dom-define.js");
-
-var nativeGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-
-// `Object.getOwnPropertyDescriptor` method
-// https://tc39.es/ecma262/#sec-object.getownpropertydescriptor
-exports.f = DESCRIPTORS ? nativeGetOwnPropertyDescriptor : function getOwnPropertyDescriptor(O, P) {
-  O = toIndexedObject(O);
-  P = toPrimitive(P, true);
-  if (IE8_DOM_DEFINE) try {
-    return nativeGetOwnPropertyDescriptor(O, P);
-  } catch (error) { /* empty */ }
-  if (has(O, P)) return createPropertyDescriptor(!propertyIsEnumerableModule.f.call(O, P), O[P]);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-get-own-property-names.js":
-/*!**************************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-get-own-property-names.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var internalObjectKeys = __webpack_require__(/*! ../internals/object-keys-internal */ "../node_modules/core-js/internals/object-keys-internal.js");
-var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ "../node_modules/core-js/internals/enum-bug-keys.js");
-
-var hiddenKeys = enumBugKeys.concat('length', 'prototype');
-
-// `Object.getOwnPropertyNames` method
-// https://tc39.es/ecma262/#sec-object.getownpropertynames
-exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
-  return internalObjectKeys(O, hiddenKeys);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-get-own-property-symbols.js":
-/*!****************************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-get-own-property-symbols.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-exports.f = Object.getOwnPropertySymbols;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-get-prototype-of.js":
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-get-prototype-of.js ***!
-  \********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "../node_modules/core-js/internals/to-object.js");
-var sharedKey = __webpack_require__(/*! ../internals/shared-key */ "../node_modules/core-js/internals/shared-key.js");
-var CORRECT_PROTOTYPE_GETTER = __webpack_require__(/*! ../internals/correct-prototype-getter */ "../node_modules/core-js/internals/correct-prototype-getter.js");
-
-var IE_PROTO = sharedKey('IE_PROTO');
-var ObjectPrototype = Object.prototype;
-
-// `Object.getPrototypeOf` method
-// https://tc39.es/ecma262/#sec-object.getprototypeof
-module.exports = CORRECT_PROTOTYPE_GETTER ? Object.getPrototypeOf : function (O) {
-  O = toObject(O);
-  if (has(O, IE_PROTO)) return O[IE_PROTO];
-  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
-    return O.constructor.prototype;
-  } return O instanceof Object ? ObjectPrototype : null;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-keys-internal.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-keys-internal.js ***!
-  \*****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "../node_modules/core-js/internals/to-indexed-object.js");
-var indexOf = __webpack_require__(/*! ../internals/array-includes */ "../node_modules/core-js/internals/array-includes.js").indexOf;
-var hiddenKeys = __webpack_require__(/*! ../internals/hidden-keys */ "../node_modules/core-js/internals/hidden-keys.js");
-
-module.exports = function (object, names) {
-  var O = toIndexedObject(object);
-  var i = 0;
-  var result = [];
-  var key;
-  for (key in O) !has(hiddenKeys, key) && has(O, key) && result.push(key);
-  // Don't enum bug & hidden keys
-  while (names.length > i) if (has(O, key = names[i++])) {
-    ~indexOf(result, key) || result.push(key);
-  }
-  return result;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-keys.js":
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/internals/object-keys.js ***!
-  \********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var internalObjectKeys = __webpack_require__(/*! ../internals/object-keys-internal */ "../node_modules/core-js/internals/object-keys-internal.js");
-var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ "../node_modules/core-js/internals/enum-bug-keys.js");
-
-// `Object.keys` method
-// https://tc39.es/ecma262/#sec-object.keys
-module.exports = Object.keys || function keys(O) {
-  return internalObjectKeys(O, enumBugKeys);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-property-is-enumerable.js":
-/*!**************************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-property-is-enumerable.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-var nativePropertyIsEnumerable = {}.propertyIsEnumerable;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-
-// Nashorn ~ JDK8 bug
-var NASHORN_BUG = getOwnPropertyDescriptor && !nativePropertyIsEnumerable.call({ 1: 2 }, 1);
-
-// `Object.prototype.propertyIsEnumerable` method implementation
-// https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable
-exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
-  var descriptor = getOwnPropertyDescriptor(this, V);
-  return !!descriptor && descriptor.enumerable;
-} : nativePropertyIsEnumerable;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/object-set-prototype-of.js":
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/internals/object-set-prototype-of.js ***!
-  \********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-/* eslint-disable no-proto -- safe */
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var aPossiblePrototype = __webpack_require__(/*! ../internals/a-possible-prototype */ "../node_modules/core-js/internals/a-possible-prototype.js");
-
-// `Object.setPrototypeOf` method
-// https://tc39.es/ecma262/#sec-object.setprototypeof
-// Works with __proto__ only. Old v8 can't work with null proto objects.
-module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
-  var CORRECT_SETTER = false;
-  var test = {};
-  var setter;
-  try {
-    setter = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__').set;
-    setter.call(test, []);
-    CORRECT_SETTER = test instanceof Array;
-  } catch (error) { /* empty */ }
-  return function setPrototypeOf(O, proto) {
-    anObject(O);
-    aPossiblePrototype(proto);
-    if (CORRECT_SETTER) setter.call(O, proto);
-    else O.__proto__ = proto;
-    return O;
-  };
-}() : undefined);
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/own-keys.js":
-/*!*****************************************************!*\
-  !*** ../node_modules/core-js/internals/own-keys.js ***!
-  \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "../node_modules/core-js/internals/get-built-in.js");
-var getOwnPropertyNamesModule = __webpack_require__(/*! ../internals/object-get-own-property-names */ "../node_modules/core-js/internals/object-get-own-property-names.js");
-var getOwnPropertySymbolsModule = __webpack_require__(/*! ../internals/object-get-own-property-symbols */ "../node_modules/core-js/internals/object-get-own-property-symbols.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-
-// all object keys, includes non-enumerable and symbols
-module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
-  var keys = getOwnPropertyNamesModule.f(anObject(it));
-  var getOwnPropertySymbols = getOwnPropertySymbolsModule.f;
-  return getOwnPropertySymbols ? keys.concat(getOwnPropertySymbols(it)) : keys;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/path.js":
-/*!*************************************************!*\
-  !*** ../node_modules/core-js/internals/path.js ***!
-  \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-
-module.exports = global;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/redefine.js":
-/*!*****************************************************!*\
-  !*** ../node_modules/core-js/internals/redefine.js ***!
-  \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var setGlobal = __webpack_require__(/*! ../internals/set-global */ "../node_modules/core-js/internals/set-global.js");
-var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "../node_modules/core-js/internals/inspect-source.js");
-var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "../node_modules/core-js/internals/internal-state.js");
-
-var getInternalState = InternalStateModule.get;
-var enforceInternalState = InternalStateModule.enforce;
-var TEMPLATE = String(String).split('String');
-
-(module.exports = function (O, key, value, options) {
-  var unsafe = options ? !!options.unsafe : false;
-  var simple = options ? !!options.enumerable : false;
-  var noTargetGet = options ? !!options.noTargetGet : false;
-  var state;
-  if (typeof value == 'function') {
-    if (typeof key == 'string' && !has(value, 'name')) {
-      createNonEnumerableProperty(value, 'name', key);
-    }
-    state = enforceInternalState(value);
-    if (!state.source) {
-      state.source = TEMPLATE.join(typeof key == 'string' ? key : '');
-    }
-  }
-  if (O === global) {
-    if (simple) O[key] = value;
-    else setGlobal(key, value);
-    return;
-  } else if (!unsafe) {
-    delete O[key];
-  } else if (!noTargetGet && O[key]) {
-    simple = true;
-  }
-  if (simple) O[key] = value;
-  else createNonEnumerableProperty(O, key, value);
-// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
-})(Function.prototype, 'toString', function toString() {
-  return typeof this == 'function' && getInternalState(this).source || inspectSource(this);
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/regexp-exec-abstract.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/internals/regexp-exec-abstract.js ***!
-  \*****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var classof = __webpack_require__(/*! ./classof-raw */ "../node_modules/core-js/internals/classof-raw.js");
-var regexpExec = __webpack_require__(/*! ./regexp-exec */ "../node_modules/core-js/internals/regexp-exec.js");
-
-// `RegExpExec` abstract operation
-// https://tc39.es/ecma262/#sec-regexpexec
-module.exports = function (R, S) {
-  var exec = R.exec;
-  if (typeof exec === 'function') {
-    var result = exec.call(R, S);
-    if (typeof result !== 'object') {
-      throw TypeError('RegExp exec method returned something other than an Object or null');
-    }
+exports.groupCommitsBySize = groupCommitsBySize;
+var groupCommitsByUsers = function (commits) {
+    var result = new Map();
+    commits.forEach(function (commit) {
+        var userCommits = result.get(commit.author);
+        if (!userCommits) {
+            userCommits = [];
+            result.set(commit.author, userCommits);
+        }
+        userCommits.push(commit);
+    });
     return result;
-  }
-
-  if (classof(R) !== 'RegExp') {
-    throw TypeError('RegExp#exec called on incompatible receiver');
-  }
-
-  return regexpExec.call(R, S);
 };
-
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/regexp-exec.js":
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/internals/regexp-exec.js ***!
-  \********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var regexpFlags = __webpack_require__(/*! ./regexp-flags */ "../node_modules/core-js/internals/regexp-flags.js");
-var stickyHelpers = __webpack_require__(/*! ./regexp-sticky-helpers */ "../node_modules/core-js/internals/regexp-sticky-helpers.js");
-
-var nativeExec = RegExp.prototype.exec;
-// This always refers to the native implementation, because the
-// String#replace polyfill uses ./fix-regexp-well-known-symbol-logic.js,
-// which loads this file before patching the method.
-var nativeReplace = String.prototype.replace;
-
-var patchedExec = nativeExec;
-
-var UPDATES_LAST_INDEX_WRONG = (function () {
-  var re1 = /a/;
-  var re2 = /b*/g;
-  nativeExec.call(re1, 'a');
-  nativeExec.call(re2, 'a');
-  return re1.lastIndex !== 0 || re2.lastIndex !== 0;
-})();
-
-var UNSUPPORTED_Y = stickyHelpers.UNSUPPORTED_Y || stickyHelpers.BROKEN_CARET;
-
-// nonparticipating capturing group, copied from es5-shim's String#split patch.
-// eslint-disable-next-line regexp/no-assertion-capturing-group, regexp/no-empty-group -- required for testing
-var NPCG_INCLUDED = /()??/.exec('')[1] !== undefined;
-
-var PATCH = UPDATES_LAST_INDEX_WRONG || NPCG_INCLUDED || UNSUPPORTED_Y;
-
-if (PATCH) {
-  patchedExec = function exec(str) {
-    var re = this;
-    var lastIndex, reCopy, match, i;
-    var sticky = UNSUPPORTED_Y && re.sticky;
-    var flags = regexpFlags.call(re);
-    var source = re.source;
-    var charsAdded = 0;
-    var strCopy = str;
-
-    if (sticky) {
-      flags = flags.replace('y', '');
-      if (flags.indexOf('g') === -1) {
-        flags += 'g';
-      }
-
-      strCopy = String(str).slice(re.lastIndex);
-      // Support anchored sticky behavior.
-      if (re.lastIndex > 0 && (!re.multiline || re.multiline && str[re.lastIndex - 1] !== '\n')) {
-        source = '(?: ' + source + ')';
-        strCopy = ' ' + strCopy;
-        charsAdded++;
-      }
-      // ^(? + rx + ) is needed, in combination with some str slicing, to
-      // simulate the 'y' flag.
-      reCopy = new RegExp('^(?:' + source + ')', flags);
-    }
-
-    if (NPCG_INCLUDED) {
-      reCopy = new RegExp('^' + source + '$(?!\\s)', flags);
-    }
-    if (UPDATES_LAST_INDEX_WRONG) lastIndex = re.lastIndex;
-
-    match = nativeExec.call(sticky ? reCopy : re, strCopy);
-
-    if (sticky) {
-      if (match) {
-        match.input = match.input.slice(charsAdded);
-        match[0] = match[0].slice(charsAdded);
-        match.index = re.lastIndex;
-        re.lastIndex += match[0].length;
-      } else re.lastIndex = 0;
-    } else if (UPDATES_LAST_INDEX_WRONG && match) {
-      re.lastIndex = re.global ? match.index + match[0].length : lastIndex;
-    }
-    if (NPCG_INCLUDED && match && match.length > 1) {
-      // Fix browsers whose `exec` methods don't consistently return `undefined`
-      // for NPCG, like IE8. NOTE: This doesn' work for /(.?)?/
-      nativeReplace.call(match[0], reCopy, function () {
-        for (i = 1; i < arguments.length - 2; i++) {
-          if (arguments[i] === undefined) match[i] = undefined;
+exports.groupCommitsByUsers = groupCommitsByUsers;
+var groupCommentsByUsers = function (comments) {
+    var result = new Map();
+    comments.forEach(function (comment) {
+        var userCommits = result.get(comment.author);
+        if (!userCommits) {
+            userCommits = [];
+            result.set(comment.author, userCommits);
         }
-      });
+        userCommits.push(comment);
+    });
+    return result;
+};
+exports.groupCommentsByUsers = groupCommentsByUsers;
+var getOutput = function (number, words) {
+    var num = Math.abs(number) % 100;
+    if (num > 19) {
+        num %= 10;
     }
-
-    return match;
-  };
-}
-
-module.exports = patchedExec;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/regexp-flags.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/internals/regexp-flags.js ***!
-  \*********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-
-// `RegExp.prototype.flags` getter implementation
-// https://tc39.es/ecma262/#sec-get-regexp.prototype.flags
-module.exports = function () {
-  var that = anObject(this);
-  var result = '';
-  if (that.global) result += 'g';
-  if (that.ignoreCase) result += 'i';
-  if (that.multiline) result += 'm';
-  if (that.dotAll) result += 's';
-  if (that.unicode) result += 'u';
-  if (that.sticky) result += 'y';
-  return result;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/regexp-sticky-helpers.js":
-/*!******************************************************************!*\
-  !*** ../node_modules/core-js/internals/regexp-sticky-helpers.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var fails = __webpack_require__(/*! ./fails */ "../node_modules/core-js/internals/fails.js");
-
-// babel-minify transpiles RegExp('a', 'y') -> /a/y and it causes SyntaxError,
-// so we use an intermediate function.
-function RE(s, f) {
-  return RegExp(s, f);
-}
-
-exports.UNSUPPORTED_Y = fails(function () {
-  // babel-minify transpiles RegExp('a', 'y') -> /a/y and it causes SyntaxError
-  var re = RE('a', 'y');
-  re.lastIndex = 2;
-  return re.exec('abcd') != null;
-});
-
-exports.BROKEN_CARET = fails(function () {
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=773687
-  var re = RE('^r', 'gy');
-  re.lastIndex = 2;
-  return re.exec('str') != null;
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/require-object-coercible.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/internals/require-object-coercible.js ***!
-  \*********************************************************************/
-/***/ ((module) => {
-
-// `RequireObjectCoercible` abstract operation
-// https://tc39.es/ecma262/#sec-requireobjectcoercible
-module.exports = function (it) {
-  if (it == undefined) throw TypeError("Can't call method on " + it);
-  return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/set-global.js":
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/internals/set-global.js ***!
-  \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-
-module.exports = function (key, value) {
-  try {
-    createNonEnumerableProperty(global, key, value);
-  } catch (error) {
-    global[key] = value;
-  } return value;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/set-to-string-tag.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/set-to-string-tag.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "../node_modules/core-js/internals/object-define-property.js").f;
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-
-module.exports = function (it, TAG, STATIC) {
-  if (it && !has(it = STATIC ? it : it.prototype, TO_STRING_TAG)) {
-    defineProperty(it, TO_STRING_TAG, { configurable: true, value: TAG });
-  }
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/shared-key.js":
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/internals/shared-key.js ***!
-  \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var shared = __webpack_require__(/*! ../internals/shared */ "../node_modules/core-js/internals/shared.js");
-var uid = __webpack_require__(/*! ../internals/uid */ "../node_modules/core-js/internals/uid.js");
-
-var keys = shared('keys');
-
-module.exports = function (key) {
-  return keys[key] || (keys[key] = uid(key));
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/shared-store.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/internals/shared-store.js ***!
-  \*********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var setGlobal = __webpack_require__(/*! ../internals/set-global */ "../node_modules/core-js/internals/set-global.js");
-
-var SHARED = '__core-js_shared__';
-var store = global[SHARED] || setGlobal(SHARED, {});
-
-module.exports = store;
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/shared.js":
-/*!***************************************************!*\
-  !*** ../node_modules/core-js/internals/shared.js ***!
-  \***************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "../node_modules/core-js/internals/is-pure.js");
-var store = __webpack_require__(/*! ../internals/shared-store */ "../node_modules/core-js/internals/shared-store.js");
-
-(module.exports = function (key, value) {
-  return store[key] || (store[key] = value !== undefined ? value : {});
-})('versions', []).push({
-  version: '3.9.1',
-  mode: IS_PURE ? 'pure' : 'global',
-  copyright: '© 2021 Denis Pushkarev (zloirock.ru)'
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/species-constructor.js":
-/*!****************************************************************!*\
-  !*** ../node_modules/core-js/internals/species-constructor.js ***!
-  \****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var aFunction = __webpack_require__(/*! ../internals/a-function */ "../node_modules/core-js/internals/a-function.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-
-var SPECIES = wellKnownSymbol('species');
-
-// `SpeciesConstructor` abstract operation
-// https://tc39.es/ecma262/#sec-speciesconstructor
-module.exports = function (O, defaultConstructor) {
-  var C = anObject(O).constructor;
-  var S;
-  return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? defaultConstructor : aFunction(S);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/string-multibyte.js":
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/internals/string-multibyte.js ***!
-  \*************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toInteger = __webpack_require__(/*! ../internals/to-integer */ "../node_modules/core-js/internals/to-integer.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "../node_modules/core-js/internals/require-object-coercible.js");
-
-// `String.prototype.{ codePointAt, at }` methods implementation
-var createMethod = function (CONVERT_TO_STRING) {
-  return function ($this, pos) {
-    var S = String(requireObjectCoercible($this));
-    var position = toInteger(pos);
-    var size = S.length;
-    var first, second;
-    if (position < 0 || position >= size) return CONVERT_TO_STRING ? '' : undefined;
-    first = S.charCodeAt(position);
-    return first < 0xD800 || first > 0xDBFF || position + 1 === size
-      || (second = S.charCodeAt(position + 1)) < 0xDC00 || second > 0xDFFF
-        ? CONVERT_TO_STRING ? S.charAt(position) : first
-        : CONVERT_TO_STRING ? S.slice(position, position + 2) : (first - 0xD800 << 10) + (second - 0xDC00) + 0x10000;
-  };
-};
-
-module.exports = {
-  // `String.prototype.codePointAt` method
-  // https://tc39.es/ecma262/#sec-string.prototype.codepointat
-  codeAt: createMethod(false),
-  // `String.prototype.at` method
-  // https://github.com/mathiasbynens/String.prototype.at
-  charAt: createMethod(true)
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/to-absolute-index.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/to-absolute-index.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toInteger = __webpack_require__(/*! ../internals/to-integer */ "../node_modules/core-js/internals/to-integer.js");
-
-var max = Math.max;
-var min = Math.min;
-
-// Helper for a popular repeating case of the spec:
-// Let integer be ? ToInteger(index).
-// If integer < 0, let result be max((length + integer), 0); else let result be min(integer, length).
-module.exports = function (index, length) {
-  var integer = toInteger(index);
-  return integer < 0 ? max(integer + length, 0) : min(integer, length);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/to-indexed-object.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/to-indexed-object.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// toObject with fallback for non-array-like ES3 strings
-var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "../node_modules/core-js/internals/indexed-object.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "../node_modules/core-js/internals/require-object-coercible.js");
-
-module.exports = function (it) {
-  return IndexedObject(requireObjectCoercible(it));
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/to-integer.js":
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/internals/to-integer.js ***!
-  \*******************************************************/
-/***/ ((module) => {
-
-var ceil = Math.ceil;
-var floor = Math.floor;
-
-// `ToInteger` abstract operation
-// https://tc39.es/ecma262/#sec-tointeger
-module.exports = function (argument) {
-  return isNaN(argument = +argument) ? 0 : (argument > 0 ? floor : ceil)(argument);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/to-length.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/to-length.js ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toInteger = __webpack_require__(/*! ../internals/to-integer */ "../node_modules/core-js/internals/to-integer.js");
-
-var min = Math.min;
-
-// `ToLength` abstract operation
-// https://tc39.es/ecma262/#sec-tolength
-module.exports = function (argument) {
-  return argument > 0 ? min(toInteger(argument), 0x1FFFFFFFFFFFFF) : 0; // 2 ** 53 - 1 == 9007199254740991
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/to-object.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/internals/to-object.js ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "../node_modules/core-js/internals/require-object-coercible.js");
-
-// `ToObject` abstract operation
-// https://tc39.es/ecma262/#sec-toobject
-module.exports = function (argument) {
-  return Object(requireObjectCoercible(argument));
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/to-primitive.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/internals/to-primitive.js ***!
-  \*********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isObject = __webpack_require__(/*! ../internals/is-object */ "../node_modules/core-js/internals/is-object.js");
-
-// `ToPrimitive` abstract operation
-// https://tc39.es/ecma262/#sec-toprimitive
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-// and the second argument - flag - preferred type is a string
-module.exports = function (input, PREFERRED_STRING) {
-  if (!isObject(input)) return input;
-  var fn, val;
-  if (PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject(val = fn.call(input))) return val;
-  if (typeof (fn = input.valueOf) == 'function' && !isObject(val = fn.call(input))) return val;
-  if (!PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject(val = fn.call(input))) return val;
-  throw TypeError("Can't convert object to primitive value");
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/uid.js":
-/*!************************************************!*\
-  !*** ../node_modules/core-js/internals/uid.js ***!
-  \************************************************/
-/***/ ((module) => {
-
-var id = 0;
-var postfix = Math.random();
-
-module.exports = function (key) {
-  return 'Symbol(' + String(key === undefined ? '' : key) + ')_' + (++id + postfix).toString(36);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/use-symbol-as-uid.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/use-symbol-as-uid.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "../node_modules/core-js/internals/native-symbol.js");
-
-module.exports = NATIVE_SYMBOL
-  /* global Symbol -- safe */
-  && !Symbol.sham
-  && typeof Symbol.iterator == 'symbol';
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/internals/well-known-symbol.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/internals/well-known-symbol.js ***!
-  \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var shared = __webpack_require__(/*! ../internals/shared */ "../node_modules/core-js/internals/shared.js");
-var has = __webpack_require__(/*! ../internals/has */ "../node_modules/core-js/internals/has.js");
-var uid = __webpack_require__(/*! ../internals/uid */ "../node_modules/core-js/internals/uid.js");
-var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "../node_modules/core-js/internals/native-symbol.js");
-var USE_SYMBOL_AS_UID = __webpack_require__(/*! ../internals/use-symbol-as-uid */ "../node_modules/core-js/internals/use-symbol-as-uid.js");
-
-var WellKnownSymbolsStore = shared('wks');
-var Symbol = global.Symbol;
-var createWellKnownSymbol = USE_SYMBOL_AS_UID ? Symbol : Symbol && Symbol.withoutSetter || uid;
-
-module.exports = function (name) {
-  if (!has(WellKnownSymbolsStore, name) || !(NATIVE_SYMBOL || typeof WellKnownSymbolsStore[name] == 'string')) {
-    if (NATIVE_SYMBOL && has(Symbol, name)) {
-      WellKnownSymbolsStore[name] = Symbol[name];
-    } else {
-      WellKnownSymbolsStore[name] = createWellKnownSymbol('Symbol.' + name);
-    }
-  } return WellKnownSymbolsStore[name];
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es.array.iterator.js":
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/modules/es.array.iterator.js ***!
-  \************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "../node_modules/core-js/internals/to-indexed-object.js");
-var addToUnscopables = __webpack_require__(/*! ../internals/add-to-unscopables */ "../node_modules/core-js/internals/add-to-unscopables.js");
-var Iterators = __webpack_require__(/*! ../internals/iterators */ "../node_modules/core-js/internals/iterators.js");
-var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "../node_modules/core-js/internals/internal-state.js");
-var defineIterator = __webpack_require__(/*! ../internals/define-iterator */ "../node_modules/core-js/internals/define-iterator.js");
-
-var ARRAY_ITERATOR = 'Array Iterator';
-var setInternalState = InternalStateModule.set;
-var getInternalState = InternalStateModule.getterFor(ARRAY_ITERATOR);
-
-// `Array.prototype.entries` method
-// https://tc39.es/ecma262/#sec-array.prototype.entries
-// `Array.prototype.keys` method
-// https://tc39.es/ecma262/#sec-array.prototype.keys
-// `Array.prototype.values` method
-// https://tc39.es/ecma262/#sec-array.prototype.values
-// `Array.prototype[@@iterator]` method
-// https://tc39.es/ecma262/#sec-array.prototype-@@iterator
-// `CreateArrayIterator` internal method
-// https://tc39.es/ecma262/#sec-createarrayiterator
-module.exports = defineIterator(Array, 'Array', function (iterated, kind) {
-  setInternalState(this, {
-    type: ARRAY_ITERATOR,
-    target: toIndexedObject(iterated), // target
-    index: 0,                          // next index
-    kind: kind                         // kind
-  });
-// `%ArrayIteratorPrototype%.next` method
-// https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
-}, function () {
-  var state = getInternalState(this);
-  var target = state.target;
-  var kind = state.kind;
-  var index = state.index++;
-  if (!target || index >= target.length) {
-    state.target = undefined;
-    return { value: undefined, done: true };
-  }
-  if (kind == 'keys') return { value: index, done: false };
-  if (kind == 'values') return { value: target[index], done: false };
-  return { value: [index, target[index]], done: false };
-}, 'values');
-
-// argumentsList[@@iterator] is %ArrayProto_values%
-// https://tc39.es/ecma262/#sec-createunmappedargumentsobject
-// https://tc39.es/ecma262/#sec-createmappedargumentsobject
-Iterators.Arguments = Iterators.Array;
-
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-addToUnscopables('keys');
-addToUnscopables('values');
-addToUnscopables('entries');
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es.array.reduce.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/modules/es.array.reduce.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var $ = __webpack_require__(/*! ../internals/export */ "../node_modules/core-js/internals/export.js");
-var $reduce = __webpack_require__(/*! ../internals/array-reduce */ "../node_modules/core-js/internals/array-reduce.js").left;
-var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "../node_modules/core-js/internals/array-method-is-strict.js");
-var CHROME_VERSION = __webpack_require__(/*! ../internals/engine-v8-version */ "../node_modules/core-js/internals/engine-v8-version.js");
-var IS_NODE = __webpack_require__(/*! ../internals/engine-is-node */ "../node_modules/core-js/internals/engine-is-node.js");
-
-var STRICT_METHOD = arrayMethodIsStrict('reduce');
-// Chrome 80-82 has a critical bug
-// https://bugs.chromium.org/p/chromium/issues/detail?id=1049982
-var CHROME_BUG = !IS_NODE && CHROME_VERSION > 79 && CHROME_VERSION < 83;
-
-// `Array.prototype.reduce` method
-// https://tc39.es/ecma262/#sec-array.prototype.reduce
-$({ target: 'Array', proto: true, forced: !STRICT_METHOD || CHROME_BUG }, {
-  reduce: function reduce(callbackfn /* , initialValue */) {
-    return $reduce(this, callbackfn, arguments.length, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es.array.sort.js":
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/modules/es.array.sort.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var $ = __webpack_require__(/*! ../internals/export */ "../node_modules/core-js/internals/export.js");
-var aFunction = __webpack_require__(/*! ../internals/a-function */ "../node_modules/core-js/internals/a-function.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "../node_modules/core-js/internals/to-object.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "../node_modules/core-js/internals/array-method-is-strict.js");
-
-var test = [];
-var nativeSort = test.sort;
-
-// IE8-
-var FAILS_ON_UNDEFINED = fails(function () {
-  test.sort(undefined);
-});
-// V8 bug
-var FAILS_ON_NULL = fails(function () {
-  test.sort(null);
-});
-// Old WebKit
-var STRICT_METHOD = arrayMethodIsStrict('sort');
-
-var FORCED = FAILS_ON_UNDEFINED || !FAILS_ON_NULL || !STRICT_METHOD;
-
-// `Array.prototype.sort` method
-// https://tc39.es/ecma262/#sec-array.prototype.sort
-$({ target: 'Array', proto: true, forced: FORCED }, {
-  sort: function sort(comparefn) {
-    return comparefn === undefined
-      ? nativeSort.call(toObject(this))
-      : nativeSort.call(toObject(this), aFunction(comparefn));
-  }
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es.regexp.exec.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/modules/es.regexp.exec.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var $ = __webpack_require__(/*! ../internals/export */ "../node_modules/core-js/internals/export.js");
-var exec = __webpack_require__(/*! ../internals/regexp-exec */ "../node_modules/core-js/internals/regexp-exec.js");
-
-// `RegExp.prototype.exec` method
-// https://tc39.es/ecma262/#sec-regexp.prototype.exec
-$({ target: 'RegExp', proto: true, forced: /./.exec !== exec }, {
-  exec: exec
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es.regexp.to-string.js":
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/modules/es.regexp.to-string.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var redefine = __webpack_require__(/*! ../internals/redefine */ "../node_modules/core-js/internals/redefine.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-var flags = __webpack_require__(/*! ../internals/regexp-flags */ "../node_modules/core-js/internals/regexp-flags.js");
-
-var TO_STRING = 'toString';
-var RegExpPrototype = RegExp.prototype;
-var nativeToString = RegExpPrototype[TO_STRING];
-
-var NOT_GENERIC = fails(function () { return nativeToString.call({ source: 'a', flags: 'b' }) != '/a/b'; });
-// FF44- RegExp#toString has a wrong name
-var INCORRECT_NAME = nativeToString.name != TO_STRING;
-
-// `RegExp.prototype.toString` method
-// https://tc39.es/ecma262/#sec-regexp.prototype.tostring
-if (NOT_GENERIC || INCORRECT_NAME) {
-  redefine(RegExp.prototype, TO_STRING, function toString() {
-    var R = anObject(this);
-    var p = String(R.source);
-    var rf = R.flags;
-    var f = String(rf === undefined && R instanceof RegExp && !('flags' in RegExpPrototype) ? flags.call(R) : rf);
-    return '/' + p + '/' + f;
-  }, { unsafe: true });
-}
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es.string.split.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/modules/es.string.split.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var fixRegExpWellKnownSymbolLogic = __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "../node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js");
-var isRegExp = __webpack_require__(/*! ../internals/is-regexp */ "../node_modules/core-js/internals/is-regexp.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "../node_modules/core-js/internals/an-object.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "../node_modules/core-js/internals/require-object-coercible.js");
-var speciesConstructor = __webpack_require__(/*! ../internals/species-constructor */ "../node_modules/core-js/internals/species-constructor.js");
-var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "../node_modules/core-js/internals/advance-string-index.js");
-var toLength = __webpack_require__(/*! ../internals/to-length */ "../node_modules/core-js/internals/to-length.js");
-var callRegExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "../node_modules/core-js/internals/regexp-exec-abstract.js");
-var regexpExec = __webpack_require__(/*! ../internals/regexp-exec */ "../node_modules/core-js/internals/regexp-exec.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "../node_modules/core-js/internals/fails.js");
-
-var arrayPush = [].push;
-var min = Math.min;
-var MAX_UINT32 = 0xFFFFFFFF;
-
-// babel-minify transpiles RegExp('x', 'y') -> /x/y and it causes SyntaxError
-var SUPPORTS_Y = !fails(function () { return !RegExp(MAX_UINT32, 'y'); });
-
-// @@split logic
-fixRegExpWellKnownSymbolLogic('split', 2, function (SPLIT, nativeSplit, maybeCallNative) {
-  var internalSplit;
-  if (
-    'abbc'.split(/(b)*/)[1] == 'c' ||
-    // eslint-disable-next-line regexp/no-empty-group -- required for testing
-    'test'.split(/(?:)/, -1).length != 4 ||
-    'ab'.split(/(?:ab)*/).length != 2 ||
-    '.'.split(/(.?)(.?)/).length != 4 ||
-    // eslint-disable-next-line regexp/no-assertion-capturing-group, regexp/no-empty-group -- required for testing
-    '.'.split(/()()/).length > 1 ||
-    ''.split(/.?/).length
-  ) {
-    // based on es5-shim implementation, need to rework it
-    internalSplit = function (separator, limit) {
-      var string = String(requireObjectCoercible(this));
-      var lim = limit === undefined ? MAX_UINT32 : limit >>> 0;
-      if (lim === 0) return [];
-      if (separator === undefined) return [string];
-      // If `separator` is not a regex, use native split
-      if (!isRegExp(separator)) {
-        return nativeSplit.call(string, separator, lim);
-      }
-      var output = [];
-      var flags = (separator.ignoreCase ? 'i' : '') +
-                  (separator.multiline ? 'm' : '') +
-                  (separator.unicode ? 'u' : '') +
-                  (separator.sticky ? 'y' : '');
-      var lastLastIndex = 0;
-      // Make `global` and avoid `lastIndex` issues by working with a copy
-      var separatorCopy = new RegExp(separator.source, flags + 'g');
-      var match, lastIndex, lastLength;
-      while (match = regexpExec.call(separatorCopy, string)) {
-        lastIndex = separatorCopy.lastIndex;
-        if (lastIndex > lastLastIndex) {
-          output.push(string.slice(lastLastIndex, match.index));
-          if (match.length > 1 && match.index < string.length) arrayPush.apply(output, match.slice(1));
-          lastLength = match[0].length;
-          lastLastIndex = lastIndex;
-          if (output.length >= lim) break;
+    switch (num) {
+        case 1: {
+            return number + " " + words[0];
         }
-        if (separatorCopy.lastIndex === match.index) separatorCopy.lastIndex++; // Avoid an infinite loop
-      }
-      if (lastLastIndex === string.length) {
-        if (lastLength || !separatorCopy.test('')) output.push('');
-      } else output.push(string.slice(lastLastIndex));
-      return output.length > lim ? output.slice(0, lim) : output;
-    };
-  // Chakra, V8
-  } else if ('0'.split(undefined, 0).length) {
-    internalSplit = function (separator, limit) {
-      return separator === undefined && limit === 0 ? [] : nativeSplit.call(this, separator, limit);
-    };
-  } else internalSplit = nativeSplit;
-
-  return [
-    // `String.prototype.split` method
-    // https://tc39.es/ecma262/#sec-string.prototype.split
-    function split(separator, limit) {
-      var O = requireObjectCoercible(this);
-      var splitter = separator == undefined ? undefined : separator[SPLIT];
-      return splitter !== undefined
-        ? splitter.call(separator, O, limit)
-        : internalSplit.call(String(O), separator, limit);
-    },
-    // `RegExp.prototype[@@split]` method
-    // https://tc39.es/ecma262/#sec-regexp.prototype-@@split
-    //
-    // NOTE: This cannot be properly polyfilled in engines that don't support
-    // the 'y' flag.
-    function (regexp, limit) {
-      var res = maybeCallNative(internalSplit, regexp, this, limit, internalSplit !== nativeSplit);
-      if (res.done) return res.value;
-
-      var rx = anObject(regexp);
-      var S = String(this);
-      var C = speciesConstructor(rx, RegExp);
-
-      var unicodeMatching = rx.unicode;
-      var flags = (rx.ignoreCase ? 'i' : '') +
-                  (rx.multiline ? 'm' : '') +
-                  (rx.unicode ? 'u' : '') +
-                  (SUPPORTS_Y ? 'y' : 'g');
-
-      // ^(? + rx + ) is needed, in combination with some S slicing, to
-      // simulate the 'y' flag.
-      var splitter = new C(SUPPORTS_Y ? rx : '^(?:' + rx.source + ')', flags);
-      var lim = limit === undefined ? MAX_UINT32 : limit >>> 0;
-      if (lim === 0) return [];
-      if (S.length === 0) return callRegExpExec(splitter, S) === null ? [S] : [];
-      var p = 0;
-      var q = 0;
-      var A = [];
-      while (q < S.length) {
-        splitter.lastIndex = SUPPORTS_Y ? q : 0;
-        var z = callRegExpExec(splitter, SUPPORTS_Y ? S : S.slice(q));
-        var e;
-        if (
-          z === null ||
-          (e = min(toLength(splitter.lastIndex + (SUPPORTS_Y ? 0 : q)), S.length)) === p
-        ) {
-          q = advanceStringIndex(S, q, unicodeMatching);
-        } else {
-          A.push(S.slice(p, q));
-          if (A.length === lim) return A;
-          for (var i = 1; i <= z.length - 1; i++) {
-            A.push(z[i]);
-            if (A.length === lim) return A;
-          }
-          q = p = e;
+        case 2:
+        case 3:
+        case 4: {
+            return number + " " + words[1];
         }
-      }
-      A.push(S.slice(p));
-      return A;
+        default: {
+            return number + " " + words[2];
+        }
     }
-  ];
-}, !SUPPORTS_Y);
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/web.dom-collections.iterator.js":
-/*!***********************************************************************!*\
-  !*** ../node_modules/core-js/modules/web.dom-collections.iterator.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ../internals/global */ "../node_modules/core-js/internals/global.js");
-var DOMIterables = __webpack_require__(/*! ../internals/dom-iterables */ "../node_modules/core-js/internals/dom-iterables.js");
-var ArrayIteratorMethods = __webpack_require__(/*! ../modules/es.array.iterator */ "../node_modules/core-js/modules/es.array.iterator.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "../node_modules/core-js/internals/create-non-enumerable-property.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../node_modules/core-js/internals/well-known-symbol.js");
-
-var ITERATOR = wellKnownSymbol('iterator');
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-var ArrayValues = ArrayIteratorMethods.values;
-
-for (var COLLECTION_NAME in DOMIterables) {
-  var Collection = global[COLLECTION_NAME];
-  var CollectionPrototype = Collection && Collection.prototype;
-  if (CollectionPrototype) {
-    // some Chrome versions have non-configurable methods on DOMTokenList
-    if (CollectionPrototype[ITERATOR] !== ArrayValues) try {
-      createNonEnumerableProperty(CollectionPrototype, ITERATOR, ArrayValues);
-    } catch (error) {
-      CollectionPrototype[ITERATOR] = ArrayValues;
-    }
-    if (!CollectionPrototype[TO_STRING_TAG]) {
-      createNonEnumerableProperty(CollectionPrototype, TO_STRING_TAG, COLLECTION_NAME);
-    }
-    if (DOMIterables[COLLECTION_NAME]) for (var METHOD_NAME in ArrayIteratorMethods) {
-      // some Chrome versions have non-configurable methods on DOMTokenList
-      if (CollectionPrototype[METHOD_NAME] !== ArrayIteratorMethods[METHOD_NAME]) try {
-        createNonEnumerableProperty(CollectionPrototype, METHOD_NAME, ArrayIteratorMethods[METHOD_NAME]);
-      } catch (error) {
-        CollectionPrototype[METHOD_NAME] = ArrayIteratorMethods[METHOD_NAME];
-      }
-    }
-  }
-}
+};
+exports.getOutput = getOutput;
 
 
 /***/ })
@@ -3490,148 +636,20 @@ for (var COLLECTION_NAME in DOMIterables) {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./prepareData.ts");
+/******/ 	module.exports = __webpack_exports__;
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/*!************************!*\
-  !*** ./prepareData.ts ***!
-  \************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "prepareData": () => (/* binding */ prepareData)
-/* harmony export */ });
-/* harmony import */ var _processEntities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./processEntities */ "./processEntities.ts");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "./util.ts");
-/* harmony import */ var _getLeadersData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getLeadersData */ "./getLeadersData.ts");
-/* harmony import */ var _getVoteData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getVoteData */ "./getVoteData.ts");
-/* harmony import */ var _getChartData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./getChartData */ "./getChartData.ts");
-/* harmony import */ var _getDiagramData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./getDiagramData */ "./getDiagramData.ts");
-/* harmony import */ var _getActivityData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./getActivityData */ "./getActivityData.ts");
-
-
-
-
-
-
- // const timeOffset = -4 * 60 * 60 * 1000; // для тестов
-
-var timeOffset = 0; // eslint-disable-next-line import/prefer-default-export
-
-function prepareData(entityArray, _ref) {
-  var selectedSprintId = _ref.sprintId;
-  // группирую сущности по типу и привожу их более удобному виду
-  // теперь сущности ссылаются на другие сущности только по id
-  var entities = (0,_processEntities__WEBPACK_IMPORTED_MODULE_0__.default)(entityArray); // группирую коммиты по спринтам. На выходе Map<SprintId, Set<CommitId>>
-
-  var groupedCommits = (0,_util__WEBPACK_IMPORTED_MODULE_1__.groupCommitsBySprints)(entities);
-  var leadersData = (0,_getLeadersData__WEBPACK_IMPORTED_MODULE_2__.default)({
-    entities: entities,
-    groupedCommits: groupedCommits,
-    selectedSprintId: selectedSprintId
-  });
-  var voteData = (0,_getVoteData__WEBPACK_IMPORTED_MODULE_3__.default)({
-    entities: entities,
-    selectedSprintId: selectedSprintId
-  }); // в чарт передаю готовый список лидеров
-
-  var chartData = (0,_getChartData__WEBPACK_IMPORTED_MODULE_4__.default)({
-    entities: entities,
-    groupedCommits: groupedCommits,
-    selectedSprintId: selectedSprintId,
-    outputUsers: leadersData.users
-  });
-  var diagramData = (0,_getDiagramData__WEBPACK_IMPORTED_MODULE_5__.default)({
-    entities: entities,
-    groupedCommits: groupedCommits,
-    selectedSprintId: selectedSprintId
-  });
-  var activityData = (0,_getActivityData__WEBPACK_IMPORTED_MODULE_6__.default)({
-    entities: entities,
-    groupedCommits: groupedCommits,
-    selectedSprintId: selectedSprintId,
-    timeOffset: timeOffset
-  });
-  return [{
-    alias: 'leaders',
-    data: leadersData
-  }, {
-    alias: 'vote',
-    data: voteData
-  }, {
-    alias: 'chart',
-    data: chartData
-  }, {
-    alias: 'diagram',
-    data: diagramData
-  }, {
-    alias: 'activity',
-    data: activityData
-  }];
-}
-})();
-
-module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9nZXRBY3Rpdml0eURhdGEudHMiLCJ3ZWJwYWNrOi8vLy4vZ2V0Q2hhcnREYXRhLnRzIiwid2VicGFjazovLy8uL2dldERpYWdyYW1EYXRhLnRzIiwid2VicGFjazovLy8uL2dldExlYWRlcnNEYXRhLnRzIiwid2VicGFjazovLy8uL2dldFZvdGVEYXRhLnRzIiwid2VicGFjazovLy8uL3ByZXBhcmVEYXRhLnRzIiwid2VicGFjazovLy8uL3Byb2Nlc3NFbnRpdGllcy50cyIsIndlYnBhY2s6Ly8vLi91dGlsLnRzIiwid2VicGFjazovLy93ZWJwYWNrL2Jvb3RzdHJhcCIsIndlYnBhY2s6Ly8vd2VicGFjay9zdGFydHVwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBYTtBQUNiLDhDQUE2QyxDQUFDLGNBQWMsRUFBQztBQUM3RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWU7Ozs7Ozs7Ozs7O0FDekNGO0FBQ2IsOENBQTZDLENBQUMsY0FBYyxFQUFDO0FBQzdEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZTs7Ozs7Ozs7Ozs7QUMvQkY7QUFDYiw4Q0FBNkMsQ0FBQyxjQUFjLEVBQUM7QUFDN0QsYUFBYSxtQkFBTyxDQUFDLHlCQUFRO0FBQzdCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0ZBQXNGLGtCQUFrQixFQUFFO0FBQzFHO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZ0ZBQWdGLHVCQUF1QixFQUFFO0FBQ3pHO0FBQ0E7QUFDQSxrRkFBa0YsdUJBQXVCLEVBQUU7QUFDM0c7QUFDQSxtQkFBbUIsT0FBTztBQUMxQjtBQUNBO0FBQ0E7QUFDQTtBQUNBLDRIQUE0SDtBQUM1SDtBQUNBO0FBQ0E7QUFDQSxLQUFLLEVBQUUsRUFBRTtBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlOzs7Ozs7Ozs7OztBQ25DRjtBQUNiO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1CLE1BQU0sZ0JBQWdCO0FBQ3pDO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCLHNCQUFzQjtBQUN2QztBQUNBO0FBQ0E7QUFDQSw4Q0FBNkMsQ0FBQyxjQUFjLEVBQUM7QUFDN0QsYUFBYSxtQkFBTyxDQUFDLHlCQUFRO0FBQzdCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWU7Ozs7Ozs7Ozs7O0FDckRGO0FBQ2I7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtQkFBbUIsTUFBTSxnQkFBZ0I7QUFDekM7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQkFBaUIsc0JBQXNCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBLDhDQUE2QyxDQUFDLGNBQWMsRUFBQztBQUM3RCxhQUFhLG1CQUFPLENBQUMseUJBQVE7QUFDN0I7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrR0FBa0csa0dBQWtHLEVBQUU7QUFDdE07QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLCtEQUErRCxxQ0FBcUMsRUFBRTtBQUN0RztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWU7Ozs7Ozs7Ozs7O0FDckRGO0FBQ2I7QUFDQSw0Q0FBNEM7QUFDNUM7QUFDQSw4Q0FBNkMsQ0FBQyxjQUFjLEVBQUM7QUFDN0QsbUJBQW1CO0FBQ25CLHdDQUF3QyxtQkFBTyxDQUFDLCtDQUFtQjtBQUNuRSxhQUFhLG1CQUFPLENBQUMseUJBQVE7QUFDN0IsdUNBQXVDLG1CQUFPLENBQUMsNkNBQWtCO0FBQ2pFLG9DQUFvQyxtQkFBTyxDQUFDLHVDQUFlO0FBQzNELHFDQUFxQyxtQkFBTyxDQUFDLHlDQUFnQjtBQUM3RCx1Q0FBdUMsbUJBQU8sQ0FBQyw2Q0FBa0I7QUFDakUsd0NBQXdDLG1CQUFPLENBQUMsK0NBQW1CO0FBQ25FLDBDQUEwQztBQUMxQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnREFBZ0QseUZBQXlGO0FBQ3pJLDBDQUEwQyx5REFBeUQ7QUFDbkc7QUFDQSw0Q0FBNEMseUhBQXlIO0FBQ3JLLGdEQUFnRCx5RkFBeUY7QUFDekksa0RBQWtELGlIQUFpSDtBQUNuSztBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBQVM7QUFDVDtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBLFNBQVM7QUFDVDtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBLG1CQUFtQjs7Ozs7Ozs7Ozs7QUNwRE47QUFDYjtBQUNBO0FBQ0EsZ0RBQWdELE9BQU87QUFDdkQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDhDQUE2QyxDQUFDLGNBQWMsRUFBQztBQUM3RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwwQ0FBMEM7QUFDMUM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUhBQWlILHdDQUF3QyxFQUFFO0FBQzNKO0FBQ0EscURBQXFELGFBQWEscUJBQXFCO0FBQ3ZGO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDZEQUE2RCx3Q0FBd0MsRUFBRTtBQUN2RztBQUNBLG1EQUFtRCxZQUFZLHVDQUF1QztBQUN0RztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtREFBbUQsa0NBQWtDLEVBQUU7QUFDdkY7QUFDQSxvREFBb0QsYUFBYSwrQkFBK0I7QUFDaEc7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsK0dBQStHLHdDQUF3QyxFQUFFO0FBQ3pKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrREFBa0QsV0FBVyw2Q0FBNkM7QUFDMUc7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0RBQXNELG9DQUFvQyxFQUFFO0FBQzVGLDhHQUE4Ryx3Q0FBd0MsRUFBRTtBQUN4SiwyR0FBMkcsc0NBQXNDLEVBQUU7QUFDbko7QUFDQSxpREFBaUQsVUFBVSx5REFBeUQ7QUFDcEg7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGdFQUFnRSxvQ0FBb0MsRUFBRTtBQUN0RyxzREFBc0Qsb0NBQW9DLEVBQUU7QUFDNUYseURBQXlELHNDQUFzQyxFQUFFO0FBQ2pHO0FBQ0Esb0RBQW9ELGFBQWEsK0RBQStEO0FBQ2hJO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLGVBQWU7Ozs7Ozs7Ozs7O0FDeklGO0FBQ2I7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtQkFBbUIsTUFBTSxnQkFBZ0I7QUFDekM7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQkFBaUIsc0JBQXNCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esb0RBQW9ELFFBQVE7QUFDNUQ7QUFDQTtBQUNBO0FBQ0EsOENBQTZDLENBQUMsY0FBYyxFQUFDO0FBQzdELGlCQUFpQixHQUFHLDRCQUE0QixHQUFHLDJCQUEyQixHQUFHLDBCQUEwQixHQUFHLDZCQUE2QjtBQUMzSTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBQVM7QUFDVDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQSw2QkFBNkI7QUFDN0I7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxhQUFhO0FBQ2I7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLDBCQUEwQjtBQUMxQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLDJCQUEyQjtBQUMzQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLDRCQUE0QjtBQUM1QjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQjs7Ozs7OztVQzVIakI7VUFDQTs7VUFFQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTs7VUFFQTtVQUNBOztVQUVBO1VBQ0E7VUFDQTs7OztVQ3RCQTtVQUNBO1VBQ0E7VUFDQSIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xyXG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XHJcbmZ1bmN0aW9uIGdldEFjdGl2aXR5RGF0YShfYSkge1xyXG4gICAgdmFyIGVudGl0aWVzID0gX2EuZW50aXRpZXMsIGdyb3VwZWRDb21taXRzID0gX2EuZ3JvdXBlZENvbW1pdHMsIHNlbGVjdGVkU3ByaW50SWQgPSBfYS5zZWxlY3RlZFNwcmludElkLCB0aW1lT2Zmc2V0ID0gX2EudGltZU9mZnNldDtcclxuICAgIHZhciBjdXJyZW50U3ByaW50ID0gZW50aXRpZXMuc3ByaW50cy5nZXQoc2VsZWN0ZWRTcHJpbnRJZCk7XHJcbiAgICB2YXIgY3VycmVudENvbW1pdHMgPSBncm91cGVkQ29tbWl0cy5nZXQoc2VsZWN0ZWRTcHJpbnRJZCk7XHJcbiAgICAvLyBjb25zdCBhcnJheUhlYXRNYXAgPSBBcnJheSg3KS5maWxsKEFycmF5KDI0KS5maWxsKDApKTtcclxuICAgIHZhciBhcnJheUhlYXRNYXAgPSBbXHJcbiAgICAgICAgWzAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDBdLFxyXG4gICAgICAgIFswLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwXSxcclxuICAgICAgICBbMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMF0sXHJcbiAgICAgICAgWzAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDBdLFxyXG4gICAgICAgIFswLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwXSxcclxuICAgICAgICBbMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMCwgMF0sXHJcbiAgICAgICAgWzAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDBdLFxyXG4gICAgXTtcclxuICAgIGN1cnJlbnRDb21taXRzLmZvckVhY2goZnVuY3Rpb24gKGNvbW1pdCkge1xyXG4gICAgICAgIHZhciBkYXRlID0gbmV3IERhdGUoY29tbWl0LnRpbWVzdGFtcCArIHRpbWVPZmZzZXQpO1xyXG4gICAgICAgIHZhciBob3VycyA9IGRhdGUuZ2V0SG91cnMoKTtcclxuICAgICAgICB2YXIgZGF5ID0gZGF0ZS5nZXREYXkoKTtcclxuICAgICAgICBpZiAoZGF5ID09PSAwKVxyXG4gICAgICAgICAgICBkYXkgPSA2O1xyXG4gICAgICAgIGVsc2VcclxuICAgICAgICAgICAgZGF5IC09IDE7XHJcbiAgICAgICAgYXJyYXlIZWF0TWFwW2RheV1baG91cnNdICs9IDE7XHJcbiAgICB9KTtcclxuICAgIHZhciBoZWF0TWFwID0ge1xyXG4gICAgICAgIG1vbjogYXJyYXlIZWF0TWFwWzBdLFxyXG4gICAgICAgIHR1ZTogYXJyYXlIZWF0TWFwWzFdLFxyXG4gICAgICAgIHdlZDogYXJyYXlIZWF0TWFwWzJdLFxyXG4gICAgICAgIHRodTogYXJyYXlIZWF0TWFwWzNdLFxyXG4gICAgICAgIGZyaTogYXJyYXlIZWF0TWFwWzRdLFxyXG4gICAgICAgIHNhdDogYXJyYXlIZWF0TWFwWzVdLFxyXG4gICAgICAgIHN1bjogYXJyYXlIZWF0TWFwWzZdLFxyXG4gICAgfTtcclxuICAgIHJldHVybiB7XHJcbiAgICAgICAgdGl0bGU6ICfQmtC+0LzQvNC40YLRiycsXHJcbiAgICAgICAgc3VidGl0bGU6IGN1cnJlbnRTcHJpbnQubmFtZSxcclxuICAgICAgICBkYXRhOiBoZWF0TWFwLFxyXG4gICAgfTtcclxufVxyXG5leHBvcnRzLmRlZmF1bHQgPSBnZXRBY3Rpdml0eURhdGE7XHJcbiIsIlwidXNlIHN0cmljdFwiO1xyXG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XHJcbmZ1bmN0aW9uIGdldENoYXJ0RGF0YShfYSkge1xyXG4gICAgdmFyIGVudGl0aWVzID0gX2EuZW50aXRpZXMsIGdyb3VwZWRDb21taXRzID0gX2EuZ3JvdXBlZENvbW1pdHMsIHNlbGVjdGVkU3ByaW50SWQgPSBfYS5zZWxlY3RlZFNwcmludElkLCBvdXRwdXRVc2VycyA9IF9hLm91dHB1dFVzZXJzO1xyXG4gICAgdmFyIGN1cnJlbnRTcHJpbnQgPSBlbnRpdGllcy5zcHJpbnRzLmdldChzZWxlY3RlZFNwcmludElkKTtcclxuICAgIHZhciBzb3J0ZWRTcHJpbnRzID0gQXJyYXkuZnJvbShlbnRpdGllcy5zcHJpbnRzLnZhbHVlcygpKS5zb3J0KGZ1bmN0aW9uIChfYSwgX2IpIHtcclxuICAgICAgICB2YXIgaWQxID0gX2EuaWQ7XHJcbiAgICAgICAgdmFyIGlkMiA9IF9iLmlkO1xyXG4gICAgICAgIHJldHVybiBpZDEgLSBpZDI7XHJcbiAgICB9KTtcclxuICAgIHZhciBvdXRwdXRWYWx1ZXMgPSBzb3J0ZWRTcHJpbnRzLm1hcChmdW5jdGlvbiAoc3ByaW50KSB7XHJcbiAgICAgICAgdmFyIGdyb3VwID0gZ3JvdXBlZENvbW1pdHMuZ2V0KHNwcmludC5pZCk7XHJcbiAgICAgICAgdmFyIHJlc3VsdCA9IHtcclxuICAgICAgICAgICAgdGl0bGU6IHNwcmludC5pZC50b1N0cmluZygpLFxyXG4gICAgICAgICAgICB2YWx1ZTogZ3JvdXAubGVuZ3RoLFxyXG4gICAgICAgIH07XHJcbiAgICAgICAgaWYgKHNwcmludC5uYW1lKSB7XHJcbiAgICAgICAgICAgIHJlc3VsdC5oaW50ID0gc3ByaW50Lm5hbWU7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGlmIChzcHJpbnQuaWQgPT09IHNlbGVjdGVkU3ByaW50SWQpIHtcclxuICAgICAgICAgICAgcmVzdWx0LmFjdGl2ZSA9IHRydWU7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIHJldHVybiByZXN1bHQ7XHJcbiAgICB9KTtcclxuICAgIHJldHVybiB7XHJcbiAgICAgICAgdGl0bGU6ICfQmtC+0LzQvNC40YLRiycsXHJcbiAgICAgICAgc3VidGl0bGU6IGN1cnJlbnRTcHJpbnQubmFtZSxcclxuICAgICAgICB2YWx1ZXM6IG91dHB1dFZhbHVlcyxcclxuICAgICAgICB1c2Vyczogb3V0cHV0VXNlcnMsXHJcbiAgICB9O1xyXG59XHJcbmV4cG9ydHMuZGVmYXVsdCA9IGdldENoYXJ0RGF0YTtcclxuIiwiXCJ1c2Ugc3RyaWN0XCI7XHJcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcclxudmFyIHV0aWxfMSA9IHJlcXVpcmUoXCIuL3V0aWxcIik7XHJcbmZ1bmN0aW9uIGdldERpYWdyYW1EYXRhKF9hKSB7XHJcbiAgICB2YXIgX2IsIF9jO1xyXG4gICAgdmFyIGVudGl0aWVzID0gX2EuZW50aXRpZXMsIGdyb3VwZWRDb21taXRzID0gX2EuZ3JvdXBlZENvbW1pdHMsIHNlbGVjdGVkU3ByaW50SWQgPSBfYS5zZWxlY3RlZFNwcmludElkO1xyXG4gICAgdmFyIGN1cnJlbnRTcHJpbnQgPSBlbnRpdGllcy5zcHJpbnRzLmdldChzZWxlY3RlZFNwcmludElkKTtcclxuICAgIHZhciBzb3J0ZWRTcHJpbnRzID0gQXJyYXkuZnJvbShlbnRpdGllcy5zcHJpbnRzLmtleXMoKSkuc29ydChmdW5jdGlvbiAoaWQxLCBpZDIpIHsgcmV0dXJuIGlkMSAtIGlkMjsgfSk7XHJcbiAgICB2YXIgY3VycmVudFNwcmludEluZGV4ID0gc29ydGVkU3ByaW50cy5pbmRleE9mKHNlbGVjdGVkU3ByaW50SWQpO1xyXG4gICAgdmFyIHByZXZpb3VzU3ByaW50SWQgPSBzb3J0ZWRTcHJpbnRzW2N1cnJlbnRTcHJpbnRJbmRleCAtIDFdO1xyXG4gICAgdmFyIGN1cnJlbnRDb21taXRzID0gKF9iID0gZ3JvdXBlZENvbW1pdHMuZ2V0KHNlbGVjdGVkU3ByaW50SWQpKSAhPT0gbnVsbCAmJiBfYiAhPT0gdm9pZCAwID8gX2IgOiBbXTtcclxuICAgIHZhciBzaXplR3JvdXBlZEN1cnJlbnRDb21taXRzID0gdXRpbF8xLmdyb3VwQ29tbWl0c0J5U2l6ZShlbnRpdGllcywgY3VycmVudENvbW1pdHMpO1xyXG4gICAgdmFyIGN1cnJlbnRDb21taXRzVG90YWwgPSBzaXplR3JvdXBlZEN1cnJlbnRDb21taXRzLm1hcChmdW5jdGlvbiAoY29tbWl0cykgeyByZXR1cm4gY29tbWl0cy5sZW5ndGg7IH0pO1xyXG4gICAgdmFyIHByZXZpb3VzQ29tbWl0cyA9IChfYyA9IGdyb3VwZWRDb21taXRzLmdldChwcmV2aW91c1NwcmludElkKSkgIT09IG51bGwgJiYgX2MgIT09IHZvaWQgMCA/IF9jIDogW107XHJcbiAgICB2YXIgc2l6ZUdyb3VwZWRQcmV2aW91c0NvbW1pdHMgPSB1dGlsXzEuZ3JvdXBDb21taXRzQnlTaXplKGVudGl0aWVzLCBwcmV2aW91c0NvbW1pdHMpO1xyXG4gICAgdmFyIHByZXZpb3VzQ29tbWl0c1RvdGFsID0gc2l6ZUdyb3VwZWRQcmV2aW91c0NvbW1pdHMubWFwKGZ1bmN0aW9uIChjb21taXRzKSB7IHJldHVybiBjb21taXRzLmxlbmd0aDsgfSk7XHJcbiAgICB2YXIgZGlmZmVyZW5jZXMgPSBbXTtcclxuICAgIGZvciAodmFyIGkgPSAwOyBpIDwgNDsgKytpKSB7XHJcbiAgICAgICAgdmFyIGRpZmYgPSBjdXJyZW50Q29tbWl0c1RvdGFsW2ldIC0gcHJldmlvdXNDb21taXRzVG90YWxbaV07XHJcbiAgICAgICAgZGlmZmVyZW5jZXMucHVzaChkaWZmKTtcclxuICAgIH1cclxuICAgIHZhciB0b3RhbERpZmZlcmVuY2UgPSBjdXJyZW50Q29tbWl0cy5sZW5ndGggLSBwcmV2aW91c0NvbW1pdHMubGVuZ3RoO1xyXG4gICAgdmFyIGNhdGVnb3JpZXMgPSBbJz4gMTAwMSDRgdGC0YDQvtC60LgnLCAnNTAxIOKAlCAxMDAwINGB0YLRgNC+0LonLCAnMTAxIOKAlCA1MDAg0YHRgtGA0L7QuicsICcxIOKAlCAxMDAg0YHRgtGA0L7QuiddLm1hcChmdW5jdGlvbiAodGl0bGUsIGluZGV4KSB7IHJldHVybiAoe1xyXG4gICAgICAgIHRpdGxlOiB0aXRsZSxcclxuICAgICAgICB2YWx1ZVRleHQ6IHV0aWxfMS5nZXRPdXRwdXQoc2l6ZUdyb3VwZWRDdXJyZW50Q29tbWl0c1tpbmRleF0ubGVuZ3RoLCBbJ9C60L7QvNC80LjRgicsICfQutC+0LzQvNC40YLQsCcsICfQutC+0LzQvNC40YLQvtCyJ10pLFxyXG4gICAgICAgIGRpZmZlcmVuY2VUZXh0OiB1dGlsXzEuZ2V0T3V0cHV0KGRpZmZlcmVuY2VzW2luZGV4XSwgWyfQutC+0LzQvNC40YInLCAn0LrQvtC80LzQuNGC0LAnLCAn0LrQvtC80LzQuNGC0L7QsiddKSxcclxuICAgIH0pOyB9KTtcclxuICAgIHJldHVybiB7XHJcbiAgICAgICAgdGl0bGU6ICfQoNCw0LfQvNC10YAg0LrQvtC80LzQuNGC0L7QsicsXHJcbiAgICAgICAgc3VidGl0bGU6IGN1cnJlbnRTcHJpbnQubmFtZSxcclxuICAgICAgICB0b3RhbFRleHQ6IHV0aWxfMS5nZXRPdXRwdXQoY3VycmVudENvbW1pdHMubGVuZ3RoLCBbJ9C60L7QvNC80LjRgicsICfQutC+0LzQvNC40YLQsCcsICfQutC+0LzQvNC40YLQvtCyJ10pLFxyXG4gICAgICAgIGRpZmZlcmVuY2VUZXh0OiB0b3RhbERpZmZlcmVuY2UgKyBcIiBcXHUwNDQxIFxcdTA0M0ZcXHUwNDQwXFx1MDQzRVxcdTA0NDhcXHUwNDNCXFx1MDQzRVxcdTA0MzNcXHUwNDNFIFxcdTA0NDFcXHUwNDNGXFx1MDQ0MFxcdTA0MzhcXHUwNDNEXFx1MDQ0MlxcdTA0MzBcIixcclxuICAgICAgICBjYXRlZ29yaWVzOiBjYXRlZ29yaWVzLFxyXG4gICAgfTtcclxufVxyXG5leHBvcnRzLmRlZmF1bHQgPSBnZXREaWFncmFtRGF0YTtcclxuIiwiXCJ1c2Ugc3RyaWN0XCI7XHJcbnZhciBfX3JlYWQgPSAodGhpcyAmJiB0aGlzLl9fcmVhZCkgfHwgZnVuY3Rpb24gKG8sIG4pIHtcclxuICAgIHZhciBtID0gdHlwZW9mIFN5bWJvbCA9PT0gXCJmdW5jdGlvblwiICYmIG9bU3ltYm9sLml0ZXJhdG9yXTtcclxuICAgIGlmICghbSkgcmV0dXJuIG87XHJcbiAgICB2YXIgaSA9IG0uY2FsbChvKSwgciwgYXIgPSBbXSwgZTtcclxuICAgIHRyeSB7XHJcbiAgICAgICAgd2hpbGUgKChuID09PSB2b2lkIDAgfHwgbi0tID4gMCkgJiYgIShyID0gaS5uZXh0KCkpLmRvbmUpIGFyLnB1c2goci52YWx1ZSk7XHJcbiAgICB9XHJcbiAgICBjYXRjaCAoZXJyb3IpIHsgZSA9IHsgZXJyb3I6IGVycm9yIH07IH1cclxuICAgIGZpbmFsbHkge1xyXG4gICAgICAgIHRyeSB7XHJcbiAgICAgICAgICAgIGlmIChyICYmICFyLmRvbmUgJiYgKG0gPSBpW1wicmV0dXJuXCJdKSkgbS5jYWxsKGkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBmaW5hbGx5IHsgaWYgKGUpIHRocm93IGUuZXJyb3I7IH1cclxuICAgIH1cclxuICAgIHJldHVybiBhcjtcclxufTtcclxuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xyXG52YXIgdXRpbF8xID0gcmVxdWlyZShcIi4vdXRpbFwiKTtcclxuZnVuY3Rpb24gZ2V0TGVhZGVyc0RhdGEoX2EpIHtcclxuICAgIHZhciBlbnRpdGllcyA9IF9hLmVudGl0aWVzLCBncm91cGVkQ29tbWl0cyA9IF9hLmdyb3VwZWRDb21taXRzLCBzZWxlY3RlZFNwcmludElkID0gX2Euc2VsZWN0ZWRTcHJpbnRJZDtcclxuICAgIHZhciBjdXJyZW50U3ByaW50ID0gZW50aXRpZXMuc3ByaW50cy5nZXQoc2VsZWN0ZWRTcHJpbnRJZCk7XHJcbiAgICAvLyBpZHMg0LrQvtC80LzQuNGC0L7QsiDRgtC10LrRg9GJ0LXQs9C+INGB0L/RgNC40L3RgtCwXHJcbiAgICB2YXIgY3VycmVudENvbW1pdHMgPSBncm91cGVkQ29tbWl0cy5nZXQoc2VsZWN0ZWRTcHJpbnRJZCk7XHJcbiAgICB2YXIgY29tbWl0c0dyb3VwZWRCeVVzZXJzID0gdXRpbF8xLmdyb3VwQ29tbWl0c0J5VXNlcnMoY3VycmVudENvbW1pdHMpO1xyXG4gICAgdmFyIG91dHB1dFVzZXJzID0gQXJyYXkuZnJvbShjb21taXRzR3JvdXBlZEJ5VXNlcnMsIGZ1bmN0aW9uIChfYSkge1xyXG4gICAgICAgIHZhciBfYiA9IF9fcmVhZChfYSwgMiksIHVzZXJJZCA9IF9iWzBdLCBjb21taXRzID0gX2JbMV07XHJcbiAgICAgICAgdmFyIHVzZXJFbnRpdHkgPSBlbnRpdGllcy51c2Vycy5nZXQodXNlcklkKTtcclxuICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICBpZDogdXNlcklkLFxyXG4gICAgICAgICAgICBuYW1lOiB1c2VyRW50aXR5Lm5hbWUsXHJcbiAgICAgICAgICAgIGF2YXRhcjogdXNlckVudGl0eS5hdmF0YXIsXHJcbiAgICAgICAgICAgIHZhbHVlVGV4dDogU3RyaW5nKGNvbW1pdHMubGVuZ3RoKSxcclxuICAgICAgICB9O1xyXG4gICAgfSk7XHJcbiAgICAvLyDRgdC+0YDRgtC40YDRg9C10Lwg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9C10Lkg0L/QviDQutC+0LvQuNGH0LXRgdGC0LLRgyDQutC+0LzQvNC40YLQvtCyXHJcbiAgICAvLyDQtdGB0LvQuCDRgyDQv9C+0LvRjNC30L7QstCw0YLQtdC70LXQuSDQvtC00LjQvdCw0LrQvtCy0L7QtSDQutC+0LvQuNGH0LXRgdGC0LLQviDQutC+0LzQvNC40YLQvtCyLCDRgtC+INGB0L7RgNGC0LjRgNGD0LXQvCDQv9C+INC40YUgaWRcclxuICAgIG91dHB1dFVzZXJzLnNvcnQoZnVuY3Rpb24gKHVzZXIxLCB1c2VyMikge1xyXG4gICAgICAgIHZhciB2YWwxID0gTnVtYmVyKHVzZXIxLnZhbHVlVGV4dCk7XHJcbiAgICAgICAgdmFyIHZhbDIgPSBOdW1iZXIodXNlcjIudmFsdWVUZXh0KTtcclxuICAgICAgICBpZiAodmFsMSA9PT0gdmFsMikge1xyXG4gICAgICAgICAgICB2YWwxID0gdXNlcjIuaWQ7XHJcbiAgICAgICAgICAgIHZhbDIgPSB1c2VyMS5pZDtcclxuICAgICAgICB9XHJcbiAgICAgICAgcmV0dXJuIHZhbDIgLSB2YWwxO1xyXG4gICAgfSk7XHJcbiAgICByZXR1cm4ge1xyXG4gICAgICAgIHRpdGxlOiAn0JHQvtC70YzRiNC1INCy0YHQtdCz0L4g0LrQvtC80LzQuNGC0L7QsicsXHJcbiAgICAgICAgc3VidGl0bGU6IGN1cnJlbnRTcHJpbnQubmFtZSxcclxuICAgICAgICBlbW9qaTogJ/CfkZEnLFxyXG4gICAgICAgIHVzZXJzOiBvdXRwdXRVc2VycyxcclxuICAgIH07XHJcbn1cclxuZXhwb3J0cy5kZWZhdWx0ID0gZ2V0TGVhZGVyc0RhdGE7XHJcbiIsIlwidXNlIHN0cmljdFwiO1xyXG52YXIgX19yZWFkID0gKHRoaXMgJiYgdGhpcy5fX3JlYWQpIHx8IGZ1bmN0aW9uIChvLCBuKSB7XHJcbiAgICB2YXIgbSA9IHR5cGVvZiBTeW1ib2wgPT09IFwiZnVuY3Rpb25cIiAmJiBvW1N5bWJvbC5pdGVyYXRvcl07XHJcbiAgICBpZiAoIW0pIHJldHVybiBvO1xyXG4gICAgdmFyIGkgPSBtLmNhbGwobyksIHIsIGFyID0gW10sIGU7XHJcbiAgICB0cnkge1xyXG4gICAgICAgIHdoaWxlICgobiA9PT0gdm9pZCAwIHx8IG4tLSA+IDApICYmICEociA9IGkubmV4dCgpKS5kb25lKSBhci5wdXNoKHIudmFsdWUpO1xyXG4gICAgfVxyXG4gICAgY2F0Y2ggKGVycm9yKSB7IGUgPSB7IGVycm9yOiBlcnJvciB9OyB9XHJcbiAgICBmaW5hbGx5IHtcclxuICAgICAgICB0cnkge1xyXG4gICAgICAgICAgICBpZiAociAmJiAhci5kb25lICYmIChtID0gaVtcInJldHVyblwiXSkpIG0uY2FsbChpKTtcclxuICAgICAgICB9XHJcbiAgICAgICAgZmluYWxseSB7IGlmIChlKSB0aHJvdyBlLmVycm9yOyB9XHJcbiAgICB9XHJcbiAgICByZXR1cm4gYXI7XHJcbn07XHJcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcclxudmFyIHV0aWxfMSA9IHJlcXVpcmUoXCIuL3V0aWxcIik7XHJcbmZ1bmN0aW9uIGdldFZvdGVEYXRhKF9hKSB7XHJcbiAgICB2YXIgZW50aXRpZXMgPSBfYS5lbnRpdGllcywgc2VsZWN0ZWRTcHJpbnRJZCA9IF9hLnNlbGVjdGVkU3ByaW50SWQ7XHJcbiAgICB2YXIgY3VycmVudFNwcmludCA9IGVudGl0aWVzLnNwcmludHMuZ2V0KHNlbGVjdGVkU3ByaW50SWQpO1xyXG4gICAgLy8g0LrQvtC80LzQtdC90YLQsNGA0LjQuCDQt9CwINGC0LXQutGD0YnQuNC5INGB0L/RgNC40L3RglxyXG4gICAgdmFyIGN1cnJlbnRTcHJpbnRDb21tZW50cyA9IEFycmF5LmZyb20oZW50aXRpZXMuY29tbWVudHMudmFsdWVzKCkpLmZpbHRlcihmdW5jdGlvbiAoY29tbWVudCkgeyByZXR1cm4gY3VycmVudFNwcmludC5zdGFydEF0IDw9IGNvbW1lbnQuY3JlYXRlZEF0ICYmIGNvbW1lbnQuY3JlYXRlZEF0IDw9IGN1cnJlbnRTcHJpbnQuZmluaXNoQXQ7IH0pO1xyXG4gICAgLy8g0LPRgNGD0L/Qv9C40YDRg9GOINC60L7QvNC80LXQvdGC0LDRgNC40Lgg0L/QviDQsNCy0YLQvtGA0LDQvFxyXG4gICAgdmFyIGNvbW1lbnRzR3JvdXBlZEJ5VXNlcnMgPSB1dGlsXzEuZ3JvdXBDb21tZW50c0J5VXNlcnMoY3VycmVudFNwcmludENvbW1lbnRzKTtcclxuICAgIHZhciBvdXRwdXRVc2VycyA9IEFycmF5LmZyb20oY29tbWVudHNHcm91cGVkQnlVc2VycywgZnVuY3Rpb24gKF9hKSB7XHJcbiAgICAgICAgdmFyIF9iID0gX19yZWFkKF9hLCAyKSwgdXNlcklkID0gX2JbMF0sIGNvbW1lbnRzID0gX2JbMV07XHJcbiAgICAgICAgdmFyIHVzZXJFbnRpdHkgPSBlbnRpdGllcy51c2Vycy5nZXQodXNlcklkKTtcclxuICAgICAgICB2YXIgdmFsdWUgPSBjb21tZW50cy5yZWR1Y2UoZnVuY3Rpb24gKHRvdGFsLCBjb21tZW50KSB7IHJldHVybiB0b3RhbCArIGNvbW1lbnQubGlrZXMubGVuZ3RoOyB9LCAwKTtcclxuICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICBpZDogdXNlcklkLFxyXG4gICAgICAgICAgICBuYW1lOiB1c2VyRW50aXR5Lm5hbWUsXHJcbiAgICAgICAgICAgIGF2YXRhcjogdXNlckVudGl0eS5hdmF0YXIsXHJcbiAgICAgICAgICAgIHZhbHVlVGV4dDogdXRpbF8xLmdldE91dHB1dCh2YWx1ZSwgWyfQs9C+0LvQvtGBJywgJ9Cz0L7Qu9C+0YHQsCcsICfQs9C+0LvQvtGB0L7QsiddKSxcclxuICAgICAgICB9O1xyXG4gICAgfSk7XHJcbiAgICBvdXRwdXRVc2Vycy5zb3J0KGZ1bmN0aW9uICh1c2VyMSwgdXNlcjIpIHtcclxuICAgICAgICB2YXIgdmFsMSA9IE51bWJlcih1c2VyMS52YWx1ZVRleHQuc3BsaXQoJyAnKVswXSk7XHJcbiAgICAgICAgdmFyIHZhbDIgPSBOdW1iZXIodXNlcjIudmFsdWVUZXh0LnNwbGl0KCcgJylbMF0pO1xyXG4gICAgICAgIGlmICh2YWwxID09PSB2YWwyKSB7XHJcbiAgICAgICAgICAgIHZhbDEgPSB1c2VyMi5pZDtcclxuICAgICAgICAgICAgdmFsMiA9IHVzZXIxLmlkO1xyXG4gICAgICAgIH1cclxuICAgICAgICByZXR1cm4gdmFsMiAtIHZhbDE7XHJcbiAgICB9KTtcclxuICAgIHJldHVybiB7XHJcbiAgICAgICAgdGl0bGU6ICfQodCw0LzRi9C5IPCflI4g0LLQvdC40LzQsNGC0LXQu9GM0L3Ri9C5INGA0LDQt9GA0LDQsdC+0YLRh9C40LonLFxyXG4gICAgICAgIHN1YnRpdGxlOiBjdXJyZW50U3ByaW50Lm5hbWUsXHJcbiAgICAgICAgZW1vamk6ICfwn5SOJyxcclxuICAgICAgICB1c2Vyczogb3V0cHV0VXNlcnMsXHJcbiAgICB9O1xyXG59XHJcbmV4cG9ydHMuZGVmYXVsdCA9IGdldFZvdGVEYXRhO1xyXG4iLCJcInVzZSBzdHJpY3RcIjtcclxudmFyIF9faW1wb3J0RGVmYXVsdCA9ICh0aGlzICYmIHRoaXMuX19pbXBvcnREZWZhdWx0KSB8fCBmdW5jdGlvbiAobW9kKSB7XHJcbiAgICByZXR1cm4gKG1vZCAmJiBtb2QuX19lc01vZHVsZSkgPyBtb2QgOiB7IFwiZGVmYXVsdFwiOiBtb2QgfTtcclxufTtcclxuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xyXG5leHBvcnRzLnByZXBhcmVEYXRhID0gdm9pZCAwO1xyXG52YXIgcHJvY2Vzc0VudGl0aWVzXzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIi4vcHJvY2Vzc0VudGl0aWVzXCIpKTtcclxudmFyIHV0aWxfMSA9IHJlcXVpcmUoXCIuL3V0aWxcIik7XHJcbnZhciBnZXRMZWFkZXJzRGF0YV8xID0gX19pbXBvcnREZWZhdWx0KHJlcXVpcmUoXCIuL2dldExlYWRlcnNEYXRhXCIpKTtcclxudmFyIGdldFZvdGVEYXRhXzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIi4vZ2V0Vm90ZURhdGFcIikpO1xyXG52YXIgZ2V0Q2hhcnREYXRhXzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIi4vZ2V0Q2hhcnREYXRhXCIpKTtcclxudmFyIGdldERpYWdyYW1EYXRhXzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIi4vZ2V0RGlhZ3JhbURhdGFcIikpO1xyXG52YXIgZ2V0QWN0aXZpdHlEYXRhXzEgPSBfX2ltcG9ydERlZmF1bHQocmVxdWlyZShcIi4vZ2V0QWN0aXZpdHlEYXRhXCIpKTtcclxuLy8gY29uc3QgdGltZU9mZnNldCA9IC00ICogNjAgKiA2MCAqIDEwMDA7IC8vINC00LvRjyDRgtC10YHRgtC+0LJcclxudmFyIHRpbWVPZmZzZXQgPSAwO1xyXG4vLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgaW1wb3J0L3ByZWZlci1kZWZhdWx0LWV4cG9ydFxyXG5mdW5jdGlvbiBwcmVwYXJlRGF0YShlbnRpdHlBcnJheSwgX2EpIHtcclxuICAgIHZhciBzZWxlY3RlZFNwcmludElkID0gX2Euc3ByaW50SWQ7XHJcbiAgICAvLyDQs9GA0YPQv9C/0LjRgNGD0Y4g0YHRg9GJ0L3QvtGB0YLQuCDQv9C+INGC0LjQv9GDINC4INC/0YDQuNCy0L7QttGDINC40YUg0LHQvtC70LXQtSDRg9C00L7QsdC90L7QvNGDINCy0LjQtNGDXHJcbiAgICAvLyDRgtC10L/QtdGA0Ywg0YHRg9GJ0L3QvtGB0YLQuCDRgdGB0YvQu9Cw0Y7RgtGB0Y8g0L3QsCDQtNGA0YPQs9C40LUg0YHRg9GJ0L3QvtGB0YLQuCDRgtC+0LvRjNC60L4g0L/QviBpZFxyXG4gICAgdmFyIGVudGl0aWVzID0gcHJvY2Vzc0VudGl0aWVzXzEuZGVmYXVsdChlbnRpdHlBcnJheSk7XHJcbiAgICAvLyDQs9GA0YPQv9C/0LjRgNGD0Y4g0LrQvtC80LzQuNGC0Ysg0L/QviDRgdC/0YDQuNC90YLQsNC8LiDQndCwINCy0YvRhdC+0LTQtSBNYXA8U3ByaW50SWQsIFNldDxDb21taXRJZD4+XHJcbiAgICB2YXIgZ3JvdXBlZENvbW1pdHMgPSB1dGlsXzEuZ3JvdXBDb21taXRzQnlTcHJpbnRzKGVudGl0aWVzKTtcclxuICAgIHZhciBsZWFkZXJzRGF0YSA9IGdldExlYWRlcnNEYXRhXzEuZGVmYXVsdCh7IGVudGl0aWVzOiBlbnRpdGllcywgZ3JvdXBlZENvbW1pdHM6IGdyb3VwZWRDb21taXRzLCBzZWxlY3RlZFNwcmludElkOiBzZWxlY3RlZFNwcmludElkIH0pO1xyXG4gICAgdmFyIHZvdGVEYXRhID0gZ2V0Vm90ZURhdGFfMS5kZWZhdWx0KHsgZW50aXRpZXM6IGVudGl0aWVzLCBzZWxlY3RlZFNwcmludElkOiBzZWxlY3RlZFNwcmludElkIH0pO1xyXG4gICAgLy8g0LIg0YfQsNGA0YIg0L/QtdGA0LXQtNCw0Y4g0LPQvtGC0L7QstGL0Lkg0YHQv9C40YHQvtC6INC70LjQtNC10YDQvtCyXHJcbiAgICB2YXIgY2hhcnREYXRhID0gZ2V0Q2hhcnREYXRhXzEuZGVmYXVsdCh7IGVudGl0aWVzOiBlbnRpdGllcywgZ3JvdXBlZENvbW1pdHM6IGdyb3VwZWRDb21taXRzLCBzZWxlY3RlZFNwcmludElkOiBzZWxlY3RlZFNwcmludElkLCBvdXRwdXRVc2VyczogbGVhZGVyc0RhdGEudXNlcnMgfSk7XHJcbiAgICB2YXIgZGlhZ3JhbURhdGEgPSBnZXREaWFncmFtRGF0YV8xLmRlZmF1bHQoeyBlbnRpdGllczogZW50aXRpZXMsIGdyb3VwZWRDb21taXRzOiBncm91cGVkQ29tbWl0cywgc2VsZWN0ZWRTcHJpbnRJZDogc2VsZWN0ZWRTcHJpbnRJZCB9KTtcclxuICAgIHZhciBhY3Rpdml0eURhdGEgPSBnZXRBY3Rpdml0eURhdGFfMS5kZWZhdWx0KHsgZW50aXRpZXM6IGVudGl0aWVzLCBncm91cGVkQ29tbWl0czogZ3JvdXBlZENvbW1pdHMsIHNlbGVjdGVkU3ByaW50SWQ6IHNlbGVjdGVkU3ByaW50SWQsIHRpbWVPZmZzZXQ6IHRpbWVPZmZzZXQgfSk7XHJcbiAgICByZXR1cm4gW1xyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgYWxpYXM6ICdsZWFkZXJzJyxcclxuICAgICAgICAgICAgZGF0YTogbGVhZGVyc0RhdGEsXHJcbiAgICAgICAgfSxcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIGFsaWFzOiAndm90ZScsXHJcbiAgICAgICAgICAgIGRhdGE6IHZvdGVEYXRhLFxyXG4gICAgICAgIH0sXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBhbGlhczogJ2NoYXJ0JyxcclxuICAgICAgICAgICAgZGF0YTogY2hhcnREYXRhLFxyXG4gICAgICAgIH0sXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBhbGlhczogJ2RpYWdyYW0nLFxyXG4gICAgICAgICAgICBkYXRhOiBkaWFncmFtRGF0YSxcclxuICAgICAgICB9LFxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgYWxpYXM6ICdhY3Rpdml0eScsXHJcbiAgICAgICAgICAgIGRhdGE6IGFjdGl2aXR5RGF0YSxcclxuICAgICAgICB9LFxyXG4gICAgXTtcclxufVxyXG5leHBvcnRzLnByZXBhcmVEYXRhID0gcHJlcGFyZURhdGE7XHJcbiIsIlwidXNlIHN0cmljdFwiO1xyXG52YXIgX19hc3NpZ24gPSAodGhpcyAmJiB0aGlzLl9fYXNzaWduKSB8fCBmdW5jdGlvbiAoKSB7XHJcbiAgICBfX2Fzc2lnbiA9IE9iamVjdC5hc3NpZ24gfHwgZnVuY3Rpb24odCkge1xyXG4gICAgICAgIGZvciAodmFyIHMsIGkgPSAxLCBuID0gYXJndW1lbnRzLmxlbmd0aDsgaSA8IG47IGkrKykge1xyXG4gICAgICAgICAgICBzID0gYXJndW1lbnRzW2ldO1xyXG4gICAgICAgICAgICBmb3IgKHZhciBwIGluIHMpIGlmIChPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGwocywgcCkpXHJcbiAgICAgICAgICAgICAgICB0W3BdID0gc1twXTtcclxuICAgICAgICB9XHJcbiAgICAgICAgcmV0dXJuIHQ7XHJcbiAgICB9O1xyXG4gICAgcmV0dXJuIF9fYXNzaWduLmFwcGx5KHRoaXMsIGFyZ3VtZW50cyk7XHJcbn07XHJcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcclxuZnVuY3Rpb24gcHJvY2Vzc1NwcmludChyZXN1bHQsIHNwcmludCkge1xyXG4gICAgaWYgKHR5cGVvZiBzcHJpbnQgPT09ICdudW1iZXInKSB7XHJcbiAgICAgICAgcmV0dXJuIHNwcmludDtcclxuICAgIH1cclxuICAgIHZhciBpZCA9IHNwcmludC5pZDtcclxuICAgIGlmICghcmVzdWx0LnNwcmludHMuaGFzKGlkKSkge1xyXG4gICAgICAgIHJlc3VsdC5zcHJpbnRzLnNldChpZCwgX19hc3NpZ24oe30sIHNwcmludCkpO1xyXG4gICAgfVxyXG4gICAgcmV0dXJuIGlkO1xyXG59XHJcbmZ1bmN0aW9uIHByb2Nlc3NTdW1tYXJ5KHJlc3VsdCwgc3VtbWFyeSkge1xyXG4gICAgdmFyIF9hLCBfYjtcclxuICAgIGlmICh0eXBlb2Ygc3VtbWFyeSA9PT0gJ251bWJlcicpIHtcclxuICAgICAgICByZXR1cm4gc3VtbWFyeTtcclxuICAgIH1cclxuICAgIHZhciBpZCA9IHN1bW1hcnkuaWQ7XHJcbiAgICB2YXIgY29tbWVudHMgPSAoX2IgPSAoX2EgPSBzdW1tYXJ5LmNvbW1lbnRzKSA9PT0gbnVsbCB8fCBfYSA9PT0gdm9pZCAwID8gdm9pZCAwIDogX2EubWFwKGZ1bmN0aW9uIChjb21tZW50KSB7IHJldHVybiBwcm9jZXNzQ29tbWVudChyZXN1bHQsIGNvbW1lbnQpOyB9KSkgIT09IG51bGwgJiYgX2IgIT09IHZvaWQgMCA/IF9iIDogW107XHJcbiAgICBpZiAoIXJlc3VsdC5zdW1tYXJpZXMuaGFzKGlkKSkge1xyXG4gICAgICAgIHJlc3VsdC5zdW1tYXJpZXMuc2V0KGlkLCBfX2Fzc2lnbihfX2Fzc2lnbih7fSwgc3VtbWFyeSksIHsgY29tbWVudHM6IGNvbW1lbnRzIH0pKTtcclxuICAgIH1cclxuICAgIHJldHVybiBpZDtcclxufVxyXG5mdW5jdGlvbiBwcm9jZXNzQ29tbWl0KHJlc3VsdCwgY29tbWl0KSB7XHJcbiAgICBpZiAodHlwZW9mIGNvbW1pdCA9PT0gJ3N0cmluZycpIHtcclxuICAgICAgICByZXR1cm4gY29tbWl0O1xyXG4gICAgfVxyXG4gICAgdmFyIGlkID0gY29tbWl0LmlkO1xyXG4gICAgdmFyIGF1dGhvciA9IHByb2Nlc3NVc2VyKHJlc3VsdCwgY29tbWl0LmF1dGhvcik7XHJcbiAgICB2YXIgc3VtbWFyaWVzID0gY29tbWl0LnN1bW1hcmllcy5tYXAoZnVuY3Rpb24gKHN1bW1hcnkpIHsgcmV0dXJuIHByb2Nlc3NTdW1tYXJ5KHJlc3VsdCwgc3VtbWFyeSk7IH0pO1xyXG4gICAgaWYgKCFyZXN1bHQuY29tbWl0cy5oYXMoaWQpKSB7XHJcbiAgICAgICAgcmVzdWx0LmNvbW1pdHMuc2V0KGlkLCBfX2Fzc2lnbihfX2Fzc2lnbih7fSwgY29tbWl0KSwgeyBhdXRob3I6IGF1dGhvciwgc3VtbWFyaWVzOiBzdW1tYXJpZXMgfSkpO1xyXG4gICAgfVxyXG4gICAgcmV0dXJuIGlkO1xyXG59XHJcbmZ1bmN0aW9uIHByb2Nlc3NDb21tZW50KHJlc3VsdCwgY29tbWVudCkge1xyXG4gICAgaWYgKHR5cGVvZiBjb21tZW50ID09PSAnc3RyaW5nJykge1xyXG4gICAgICAgIHJldHVybiBjb21tZW50O1xyXG4gICAgfVxyXG4gICAgdmFyIGlkID0gY29tbWVudC5pZDtcclxuICAgIHZhciBhdXRob3IgPSBwcm9jZXNzVXNlcihyZXN1bHQsIGNvbW1lbnQuYXV0aG9yKTtcclxuICAgIHZhciBsaWtlcyA9IGNvbW1lbnQubGlrZXMubWFwKGZ1bmN0aW9uICh1c2VyKSB7IHJldHVybiBwcm9jZXNzVXNlcihyZXN1bHQsIHVzZXIpOyB9KTtcclxuICAgIGlmICghcmVzdWx0LmNvbW1lbnRzLmhhcyhpZCkpIHtcclxuICAgICAgICByZXN1bHQuY29tbWVudHMuc2V0KGlkLCBfX2Fzc2lnbihfX2Fzc2lnbih7fSwgY29tbWVudCksIHsgYXV0aG9yOiBhdXRob3IsIGxpa2VzOiBsaWtlcyB9KSk7XHJcbiAgICB9XHJcbiAgICByZXR1cm4gaWQ7XHJcbn1cclxuZnVuY3Rpb24gcHJvY2Vzc0lzc3VlKHJlc3VsdCwgaXNzdWUpIHtcclxuICAgIHZhciBfYSwgX2I7XHJcbiAgICBpZiAodHlwZW9mIGlzc3VlID09PSAnc3RyaW5nJykge1xyXG4gICAgICAgIHJldHVybiBpc3N1ZTtcclxuICAgIH1cclxuICAgIHZhciBpZCA9IGlzc3VlLmlkO1xyXG4gICAgdmFyIGNvbW1lbnRzID0gKF9iID0gKF9hID0gaXNzdWUuY29tbWVudHMpID09PSBudWxsIHx8IF9hID09PSB2b2lkIDAgPyB2b2lkIDAgOiBfYS5tYXAoZnVuY3Rpb24gKGNvbW1lbnQpIHsgcmV0dXJuIHByb2Nlc3NDb21tZW50KHJlc3VsdCwgY29tbWVudCk7IH0pKSAhPT0gbnVsbCAmJiBfYiAhPT0gdm9pZCAwID8gX2IgOiBbXTtcclxuICAgIHZhciByZXNvbHZlZEJ5O1xyXG4gICAgaWYgKGlzc3VlLnJlc29sdmVkQnkpIHtcclxuICAgICAgICByZXNvbHZlZEJ5ID0gcHJvY2Vzc1VzZXIocmVzdWx0LCBpc3N1ZS5yZXNvbHZlZEJ5KTtcclxuICAgIH1cclxuICAgIGlmICghcmVzdWx0Lmlzc3Vlcy5oYXMoaWQpKSB7XHJcbiAgICAgICAgcmVzdWx0Lmlzc3Vlcy5zZXQoaWQsIF9fYXNzaWduKF9fYXNzaWduKHt9LCBpc3N1ZSksIHsgY29tbWVudHM6IGNvbW1lbnRzLCByZXNvbHZlZEJ5OiByZXNvbHZlZEJ5IH0pKTtcclxuICAgIH1cclxuICAgIHJldHVybiBpZDtcclxufVxyXG5mdW5jdGlvbiBwcm9jZXNzVXNlcihyZXN1bHQsIHVzZXIpIHtcclxuICAgIHZhciBfYSwgX2IsIF9jLCBfZDtcclxuICAgIGlmICh0eXBlb2YgdXNlciA9PT0gJ251bWJlcicpIHtcclxuICAgICAgICByZXR1cm4gdXNlcjtcclxuICAgIH1cclxuICAgIHZhciBpZCA9IHVzZXIuaWQ7XHJcbiAgICB2YXIgZnJpZW5kcyA9IHVzZXIuZnJpZW5kcy5tYXAoZnVuY3Rpb24gKGZyaWVuZCkgeyByZXR1cm4gcHJvY2Vzc1VzZXIocmVzdWx0LCBmcmllbmQpOyB9KTtcclxuICAgIHZhciBjb21tZW50cyA9IChfYiA9IChfYSA9IHVzZXIuY29tbWVudHMpID09PSBudWxsIHx8IF9hID09PSB2b2lkIDAgPyB2b2lkIDAgOiBfYS5tYXAoZnVuY3Rpb24gKGNvbW1lbnQpIHsgcmV0dXJuIHByb2Nlc3NDb21tZW50KHJlc3VsdCwgY29tbWVudCk7IH0pKSAhPT0gbnVsbCAmJiBfYiAhPT0gdm9pZCAwID8gX2IgOiBbXTtcclxuICAgIHZhciBjb21taXRzID0gKF9kID0gKF9jID0gdXNlci5jb21taXRzKSA9PT0gbnVsbCB8fCBfYyA9PT0gdm9pZCAwID8gdm9pZCAwIDogX2MubWFwKGZ1bmN0aW9uIChjb21taXQpIHsgcmV0dXJuIHByb2Nlc3NDb21taXQocmVzdWx0LCBjb21taXQpOyB9KSkgIT09IG51bGwgJiYgX2QgIT09IHZvaWQgMCA/IF9kIDogW107XHJcbiAgICBpZiAoIXJlc3VsdC51c2Vycy5oYXMoaWQpKSB7XHJcbiAgICAgICAgcmVzdWx0LnVzZXJzLnNldChpZCwgX19hc3NpZ24oX19hc3NpZ24oe30sIHVzZXIpLCB7IGZyaWVuZHM6IGZyaWVuZHMsIGNvbW1lbnRzOiBjb21tZW50cywgY29tbWl0czogY29tbWl0cyB9KSk7XHJcbiAgICB9XHJcbiAgICByZXR1cm4gaWQ7XHJcbn1cclxuZnVuY3Rpb24gcHJvY2Vzc1Byb2plY3QocmVzdWx0LCBwcm9qZWN0KSB7XHJcbiAgICBpZiAodHlwZW9mIHByb2plY3QgPT09ICdzdHJpbmcnKSB7XHJcbiAgICAgICAgcmV0dXJuIHByb2plY3Q7XHJcbiAgICB9XHJcbiAgICB2YXIgaWQgPSBwcm9qZWN0LmlkO1xyXG4gICAgdmFyIGRlcGVuZGVuY2llcyA9IHByb2plY3QuZGVwZW5kZW5jaWVzLm1hcChmdW5jdGlvbiAoZGVwKSB7IHJldHVybiBwcm9jZXNzUHJvamVjdChyZXN1bHQsIGRlcCk7IH0pO1xyXG4gICAgdmFyIGlzc3VlcyA9IHByb2plY3QuaXNzdWVzLm1hcChmdW5jdGlvbiAoaXNzdWUpIHsgcmV0dXJuIHByb2Nlc3NJc3N1ZShyZXN1bHQsIGlzc3VlKTsgfSk7XHJcbiAgICB2YXIgY29tbWl0cyA9IHByb2plY3QuY29tbWl0cy5tYXAoZnVuY3Rpb24gKGNvbW1pdCkgeyByZXR1cm4gcHJvY2Vzc0NvbW1pdChyZXN1bHQsIGNvbW1pdCk7IH0pO1xyXG4gICAgaWYgKCFyZXN1bHQucHJvamVjdHMuaGFzKGlkKSkge1xyXG4gICAgICAgIHJlc3VsdC5wcm9qZWN0cy5zZXQoaWQsIF9fYXNzaWduKF9fYXNzaWduKHt9LCBwcm9qZWN0KSwgeyBkZXBlbmRlbmNpZXM6IGRlcGVuZGVuY2llcywgaXNzdWVzOiBpc3N1ZXMsIGNvbW1pdHM6IGNvbW1pdHMgfSkpO1xyXG4gICAgfVxyXG4gICAgcmV0dXJuIGlkO1xyXG59XHJcbmZ1bmN0aW9uIHByb2Nlc3NFbnRpdGllcyhlbnRpdGllcykge1xyXG4gICAgdmFyIHJlc3VsdCA9IHtcclxuICAgICAgICBwcm9qZWN0czogbmV3IE1hcCgpLFxyXG4gICAgICAgIHVzZXJzOiBuZXcgTWFwKCksXHJcbiAgICAgICAgaXNzdWVzOiBuZXcgTWFwKCksXHJcbiAgICAgICAgY29tbWVudHM6IG5ldyBNYXAoKSxcclxuICAgICAgICBjb21taXRzOiBuZXcgTWFwKCksXHJcbiAgICAgICAgc3VtbWFyaWVzOiBuZXcgTWFwKCksXHJcbiAgICAgICAgc3ByaW50czogbmV3IE1hcCgpLFxyXG4gICAgfTtcclxuICAgIGVudGl0aWVzLmZvckVhY2goZnVuY3Rpb24gKGVudGl0eSkge1xyXG4gICAgICAgIGlmIChlbnRpdHkudHlwZSA9PT0gJ1Byb2plY3QnKSB7XHJcbiAgICAgICAgICAgIHByb2Nlc3NQcm9qZWN0KHJlc3VsdCwgZW50aXR5KTtcclxuICAgICAgICB9XHJcbiAgICAgICAgZWxzZSBpZiAoZW50aXR5LnR5cGUgPT09ICdVc2VyJykge1xyXG4gICAgICAgICAgICBwcm9jZXNzVXNlcihyZXN1bHQsIGVudGl0eSk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2UgaWYgKGVudGl0eS50eXBlID09PSAnSXNzdWUnKSB7XHJcbiAgICAgICAgICAgIHByb2Nlc3NJc3N1ZShyZXN1bHQsIGVudGl0eSk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2UgaWYgKGVudGl0eS50eXBlID09PSAnQ29tbWVudCcpIHtcclxuICAgICAgICAgICAgcHJvY2Vzc0NvbW1lbnQocmVzdWx0LCBlbnRpdHkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBlbHNlIGlmIChlbnRpdHkudHlwZSA9PT0gJ0NvbW1pdCcpIHtcclxuICAgICAgICAgICAgcHJvY2Vzc0NvbW1pdChyZXN1bHQsIGVudGl0eSk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2UgaWYgKGVudGl0eS50eXBlID09PSAnU3VtbWFyeScpIHtcclxuICAgICAgICAgICAgcHJvY2Vzc1N1bW1hcnkocmVzdWx0LCBlbnRpdHkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBlbHNlIGlmIChlbnRpdHkudHlwZSA9PT0gJ1NwcmludCcpIHtcclxuICAgICAgICAgICAgcHJvY2Vzc1NwcmludChyZXN1bHQsIGVudGl0eSk7XHJcbiAgICAgICAgfVxyXG4gICAgfSk7XHJcbiAgICByZXR1cm4gcmVzdWx0O1xyXG59XHJcbmV4cG9ydHMuZGVmYXVsdCA9IHByb2Nlc3NFbnRpdGllcztcclxuIiwiXCJ1c2Ugc3RyaWN0XCI7XHJcbnZhciBfX3JlYWQgPSAodGhpcyAmJiB0aGlzLl9fcmVhZCkgfHwgZnVuY3Rpb24gKG8sIG4pIHtcclxuICAgIHZhciBtID0gdHlwZW9mIFN5bWJvbCA9PT0gXCJmdW5jdGlvblwiICYmIG9bU3ltYm9sLml0ZXJhdG9yXTtcclxuICAgIGlmICghbSkgcmV0dXJuIG87XHJcbiAgICB2YXIgaSA9IG0uY2FsbChvKSwgciwgYXIgPSBbXSwgZTtcclxuICAgIHRyeSB7XHJcbiAgICAgICAgd2hpbGUgKChuID09PSB2b2lkIDAgfHwgbi0tID4gMCkgJiYgIShyID0gaS5uZXh0KCkpLmRvbmUpIGFyLnB1c2goci52YWx1ZSk7XHJcbiAgICB9XHJcbiAgICBjYXRjaCAoZXJyb3IpIHsgZSA9IHsgZXJyb3I6IGVycm9yIH07IH1cclxuICAgIGZpbmFsbHkge1xyXG4gICAgICAgIHRyeSB7XHJcbiAgICAgICAgICAgIGlmIChyICYmICFyLmRvbmUgJiYgKG0gPSBpW1wicmV0dXJuXCJdKSkgbS5jYWxsKGkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBmaW5hbGx5IHsgaWYgKGUpIHRocm93IGUuZXJyb3I7IH1cclxuICAgIH1cclxuICAgIHJldHVybiBhcjtcclxufTtcclxudmFyIF9fc3ByZWFkQXJyYXkgPSAodGhpcyAmJiB0aGlzLl9fc3ByZWFkQXJyYXkpIHx8IGZ1bmN0aW9uICh0bywgZnJvbSkge1xyXG4gICAgZm9yICh2YXIgaSA9IDAsIGlsID0gZnJvbS5sZW5ndGgsIGogPSB0by5sZW5ndGg7IGkgPCBpbDsgaSsrLCBqKyspXHJcbiAgICAgICAgdG9bal0gPSBmcm9tW2ldO1xyXG4gICAgcmV0dXJuIHRvO1xyXG59O1xyXG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XHJcbmV4cG9ydHMuZ2V0T3V0cHV0ID0gZXhwb3J0cy5ncm91cENvbW1lbnRzQnlVc2VycyA9IGV4cG9ydHMuZ3JvdXBDb21taXRzQnlVc2VycyA9IGV4cG9ydHMuZ3JvdXBDb21taXRzQnlTaXplID0gZXhwb3J0cy5ncm91cENvbW1pdHNCeVNwcmludHMgPSB2b2lkIDA7XHJcbnZhciBncm91cENvbW1pdHNCeVNwcmludHMgPSBmdW5jdGlvbiAoZW50aXRpZXMpIHtcclxuICAgIHZhciBzb3J0ZWRTcHJpbnRzID0gQXJyYXkuZnJvbShlbnRpdGllcy5zcHJpbnRzLnZhbHVlcygpKS5zb3J0KGZ1bmN0aW9uIChfYSwgX2IpIHtcclxuICAgICAgICB2YXIgaWQxID0gX2EuaWQ7XHJcbiAgICAgICAgdmFyIGlkMiA9IF9iLmlkO1xyXG4gICAgICAgIHJldHVybiBpZDEgLSBpZDI7XHJcbiAgICB9KTtcclxuICAgIHZhciBzb3J0ZWRDb21taXRzID0gQXJyYXkuZnJvbShlbnRpdGllcy5jb21taXRzLnZhbHVlcygpKS5zb3J0KGZ1bmN0aW9uIChfYSwgX2IpIHtcclxuICAgICAgICB2YXIgdGltZXN0YW1wMSA9IF9hLnRpbWVzdGFtcDtcclxuICAgICAgICB2YXIgdGltZXN0YW1wMiA9IF9iLnRpbWVzdGFtcDtcclxuICAgICAgICByZXR1cm4gdGltZXN0YW1wMSAtIHRpbWVzdGFtcDI7XHJcbiAgICB9KTtcclxuICAgIHJldHVybiBuZXcgTWFwKHNvcnRlZFNwcmludHMubWFwKGZ1bmN0aW9uIChzcHJpbnQpIHtcclxuICAgICAgICB2YXIgc3RhcnRBdCA9IHNwcmludC5zdGFydEF0LCBmaW5pc2hBdCA9IHNwcmludC5maW5pc2hBdDtcclxuICAgICAgICB2YXIgbGVuID0gc29ydGVkQ29tbWl0cy5sZW5ndGg7XHJcbiAgICAgICAgdmFyIHN0YXJ0ID0gc29ydGVkQ29tbWl0cy5maW5kSW5kZXgoZnVuY3Rpb24gKF9hKSB7XHJcbiAgICAgICAgICAgIHZhciB0aW1lc3RhbXAgPSBfYS50aW1lc3RhbXA7XHJcbiAgICAgICAgICAgIHJldHVybiBzdGFydEF0IDw9IHRpbWVzdGFtcDtcclxuICAgICAgICB9KTtcclxuICAgICAgICB2YXIgc3ByaW50Q29tbWl0cyA9IFtdO1xyXG4gICAgICAgIGlmIChzdGFydCAhPT0gLTEpIHtcclxuICAgICAgICAgICAgdmFyIGZpbmlzaCA9IHN0YXJ0ICsgMTtcclxuICAgICAgICAgICAgd2hpbGUgKGZpbmlzaCA8IGxlbiAmJiBzb3J0ZWRDb21taXRzW2ZpbmlzaF0udGltZXN0YW1wIDw9IGZpbmlzaEF0KVxyXG4gICAgICAgICAgICAgICAgZmluaXNoICs9IDE7XHJcbiAgICAgICAgICAgIHNwcmludENvbW1pdHMgPSBzb3J0ZWRDb21taXRzLnNsaWNlKHN0YXJ0LCBmaW5pc2gpO1xyXG4gICAgICAgICAgICBzb3J0ZWRDb21taXRzID0gX19zcHJlYWRBcnJheShfX3NwcmVhZEFycmF5KFtdLCBfX3JlYWQoc29ydGVkQ29tbWl0cy5zbGljZSgwLCBzdGFydCkpKSwgX19yZWFkKHNvcnRlZENvbW1pdHMuc2xpY2UoZmluaXNoKSkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICByZXR1cm4gW3NwcmludC5pZCwgc3ByaW50Q29tbWl0c107XHJcbiAgICB9KSk7XHJcbn07XHJcbmV4cG9ydHMuZ3JvdXBDb21taXRzQnlTcHJpbnRzID0gZ3JvdXBDb21taXRzQnlTcHJpbnRzO1xyXG52YXIgZ3JvdXBDb21taXRzQnlTaXplID0gZnVuY3Rpb24gKGVudGl0aWVzLCBjb21taXRzKSB7XHJcbiAgICB2YXIgZ3JvdXBzID0gW1tdLCBbXSwgW10sIFtdXTtcclxuICAgIGNvbW1pdHMuZm9yRWFjaChmdW5jdGlvbiAoY29tbWl0KSB7XHJcbiAgICAgICAgaWYgKGNvbW1pdCkge1xyXG4gICAgICAgICAgICB2YXIgY29tbWl0U2l6ZSA9IGNvbW1pdC5zdW1tYXJpZXMucmVkdWNlKGZ1bmN0aW9uIChhY2N1bSwgc3VtbWFyeUlkKSB7XHJcbiAgICAgICAgICAgICAgICB2YXIgc3VtbWFyeSA9IGVudGl0aWVzLnN1bW1hcmllcy5nZXQoc3VtbWFyeUlkKTtcclxuICAgICAgICAgICAgICAgIHJldHVybiBzdW1tYXJ5ID8gYWNjdW0gKyBzdW1tYXJ5LnJlbW92ZWQgKyBzdW1tYXJ5LmFkZGVkIDogYWNjdW07XHJcbiAgICAgICAgICAgIH0sIDApO1xyXG4gICAgICAgICAgICBpZiAoY29tbWl0U2l6ZSA8PSAxMDApIHtcclxuICAgICAgICAgICAgICAgIGdyb3Vwc1szXS5wdXNoKGNvbW1pdC5pZCk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgZWxzZSBpZiAoY29tbWl0U2l6ZSA8PSA1MDApIHtcclxuICAgICAgICAgICAgICAgIGdyb3Vwc1syXS5wdXNoKGNvbW1pdC5pZCk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgZWxzZSBpZiAoY29tbWl0U2l6ZSA8PSAxMDAwKSB7XHJcbiAgICAgICAgICAgICAgICBncm91cHNbMV0ucHVzaChjb21taXQuaWQpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGVsc2Uge1xyXG4gICAgICAgICAgICAgICAgZ3JvdXBzWzBdLnB1c2goY29tbWl0LmlkKTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICAgIH0pO1xyXG4gICAgcmV0dXJuIGdyb3VwcztcclxufTtcclxuZXhwb3J0cy5ncm91cENvbW1pdHNCeVNpemUgPSBncm91cENvbW1pdHNCeVNpemU7XHJcbnZhciBncm91cENvbW1pdHNCeVVzZXJzID0gZnVuY3Rpb24gKGNvbW1pdHMpIHtcclxuICAgIHZhciByZXN1bHQgPSBuZXcgTWFwKCk7XHJcbiAgICBjb21taXRzLmZvckVhY2goZnVuY3Rpb24gKGNvbW1pdCkge1xyXG4gICAgICAgIHZhciB1c2VyQ29tbWl0cyA9IHJlc3VsdC5nZXQoY29tbWl0LmF1dGhvcik7XHJcbiAgICAgICAgaWYgKCF1c2VyQ29tbWl0cykge1xyXG4gICAgICAgICAgICB1c2VyQ29tbWl0cyA9IFtdO1xyXG4gICAgICAgICAgICByZXN1bHQuc2V0KGNvbW1pdC5hdXRob3IsIHVzZXJDb21taXRzKTtcclxuICAgICAgICB9XHJcbiAgICAgICAgdXNlckNvbW1pdHMucHVzaChjb21taXQpO1xyXG4gICAgfSk7XHJcbiAgICByZXR1cm4gcmVzdWx0O1xyXG59O1xyXG5leHBvcnRzLmdyb3VwQ29tbWl0c0J5VXNlcnMgPSBncm91cENvbW1pdHNCeVVzZXJzO1xyXG52YXIgZ3JvdXBDb21tZW50c0J5VXNlcnMgPSBmdW5jdGlvbiAoY29tbWVudHMpIHtcclxuICAgIHZhciByZXN1bHQgPSBuZXcgTWFwKCk7XHJcbiAgICBjb21tZW50cy5mb3JFYWNoKGZ1bmN0aW9uIChjb21tZW50KSB7XHJcbiAgICAgICAgdmFyIHVzZXJDb21taXRzID0gcmVzdWx0LmdldChjb21tZW50LmF1dGhvcik7XHJcbiAgICAgICAgaWYgKCF1c2VyQ29tbWl0cykge1xyXG4gICAgICAgICAgICB1c2VyQ29tbWl0cyA9IFtdO1xyXG4gICAgICAgICAgICByZXN1bHQuc2V0KGNvbW1lbnQuYXV0aG9yLCB1c2VyQ29tbWl0cyk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIHVzZXJDb21taXRzLnB1c2goY29tbWVudCk7XHJcbiAgICB9KTtcclxuICAgIHJldHVybiByZXN1bHQ7XHJcbn07XHJcbmV4cG9ydHMuZ3JvdXBDb21tZW50c0J5VXNlcnMgPSBncm91cENvbW1lbnRzQnlVc2VycztcclxudmFyIGdldE91dHB1dCA9IGZ1bmN0aW9uIChudW1iZXIsIHdvcmRzKSB7XHJcbiAgICB2YXIgbnVtID0gTWF0aC5hYnMobnVtYmVyKSAlIDEwMDtcclxuICAgIGlmIChudW0gPiAxOSkge1xyXG4gICAgICAgIG51bSAlPSAxMDtcclxuICAgIH1cclxuICAgIHN3aXRjaCAobnVtKSB7XHJcbiAgICAgICAgY2FzZSAxOiB7XHJcbiAgICAgICAgICAgIHJldHVybiBudW1iZXIgKyBcIiBcIiArIHdvcmRzWzBdO1xyXG4gICAgICAgIH1cclxuICAgICAgICBjYXNlIDI6XHJcbiAgICAgICAgY2FzZSAzOlxyXG4gICAgICAgIGNhc2UgNDoge1xyXG4gICAgICAgICAgICByZXR1cm4gbnVtYmVyICsgXCIgXCIgKyB3b3Jkc1sxXTtcclxuICAgICAgICB9XHJcbiAgICAgICAgZGVmYXVsdDoge1xyXG4gICAgICAgICAgICByZXR1cm4gbnVtYmVyICsgXCIgXCIgKyB3b3Jkc1syXTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn07XHJcbmV4cG9ydHMuZ2V0T3V0cHV0ID0gZ2V0T3V0cHV0O1xyXG4iLCIvLyBUaGUgbW9kdWxlIGNhY2hlXG52YXIgX193ZWJwYWNrX21vZHVsZV9jYWNoZV9fID0ge307XG5cbi8vIFRoZSByZXF1aXJlIGZ1bmN0aW9uXG5mdW5jdGlvbiBfX3dlYnBhY2tfcmVxdWlyZV9fKG1vZHVsZUlkKSB7XG5cdC8vIENoZWNrIGlmIG1vZHVsZSBpcyBpbiBjYWNoZVxuXHR2YXIgY2FjaGVkTW9kdWxlID0gX193ZWJwYWNrX21vZHVsZV9jYWNoZV9fW21vZHVsZUlkXTtcblx0aWYgKGNhY2hlZE1vZHVsZSAhPT0gdW5kZWZpbmVkKSB7XG5cdFx0cmV0dXJuIGNhY2hlZE1vZHVsZS5leHBvcnRzO1xuXHR9XG5cdC8vIENyZWF0ZSBhIG5ldyBtb2R1bGUgKGFuZCBwdXQgaXQgaW50byB0aGUgY2FjaGUpXG5cdHZhciBtb2R1bGUgPSBfX3dlYnBhY2tfbW9kdWxlX2NhY2hlX19bbW9kdWxlSWRdID0ge1xuXHRcdC8vIG5vIG1vZHVsZS5pZCBuZWVkZWRcblx0XHQvLyBubyBtb2R1bGUubG9hZGVkIG5lZWRlZFxuXHRcdGV4cG9ydHM6IHt9XG5cdH07XG5cblx0Ly8gRXhlY3V0ZSB0aGUgbW9kdWxlIGZ1bmN0aW9uXG5cdF9fd2VicGFja19tb2R1bGVzX19bbW9kdWxlSWRdLmNhbGwobW9kdWxlLmV4cG9ydHMsIG1vZHVsZSwgbW9kdWxlLmV4cG9ydHMsIF9fd2VicGFja19yZXF1aXJlX18pO1xuXG5cdC8vIFJldHVybiB0aGUgZXhwb3J0cyBvZiB0aGUgbW9kdWxlXG5cdHJldHVybiBtb2R1bGUuZXhwb3J0cztcbn1cblxuIiwiLy8gc3RhcnR1cFxuLy8gTG9hZCBlbnRyeSBtb2R1bGUgYW5kIHJldHVybiBleHBvcnRzXG4vLyBUaGlzIGVudHJ5IG1vZHVsZSBpcyByZWZlcmVuY2VkIGJ5IG90aGVyIG1vZHVsZXMgc28gaXQgY2FuJ3QgYmUgaW5saW5lZFxudmFyIF9fd2VicGFja19leHBvcnRzX18gPSBfX3dlYnBhY2tfcmVxdWlyZV9fKFwiLi9wcmVwYXJlRGF0YS50c1wiKTtcbiJdLCJzb3VyY2VSb290IjoiIn0=

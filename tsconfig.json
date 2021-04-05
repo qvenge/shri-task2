@@ -11,12 +11,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "declaration": true,
-    "declarationDir": "./build/types",
-    "declarationMap": true,
     "resolveJsonModule": true,
     "downlevelIteration": true
   },
-  "include": ["src"],
+  "include": ["src", "test"],
   "exclude": ["node_modules", "dist", "build", ".vscode"]
 }

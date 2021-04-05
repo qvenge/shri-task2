@@ -1,4 +1,4 @@
-import { Sprint, SprintId, CommitId, EntityGroups } from './types';
+import { Sprint, SprintId, Commit, EntityGroups } from './types';
 import { ChartData, OutputSprint, OutputUser } from './stories';
 
 export default function getChartData({
@@ -8,17 +8,17 @@ export default function getChartData({
   outputUsers,
 }: {
   entities: EntityGroups;
-  groupedCommits: Map<SprintId, Set<CommitId>>;
+  groupedCommits: Map<SprintId, Commit[]>;
   selectedSprintId: SprintId;
   outputUsers: OutputUser[];
 }): ChartData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
   const sortedSprints = Array.from(entities.sprints.values()).sort(({ id: id1 }, { id: id2 }) => id1 - id2);
   const outputValues: OutputSprint[] = sortedSprints.map((sprint) => {
-    const group = groupedCommits.get(sprint.id) as Set<CommitId>;
+    const group = groupedCommits.get(sprint.id) as Commit[];
     const result: OutputSprint = {
       title: sprint.id.toString(),
-      value: group.size,
+      value: group.length,
     };
 
     if (sprint.name) {

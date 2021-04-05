@@ -1,4 +1,4 @@
-import { Sprint, SprintId, CommitId, EntityGroups } from './types';
+import { Sprint, SprintId, Commit, EntityGroups } from './types';
 import { DiagramData } from './stories';
 import { getOutput, groupCommitsBySize } from './util';
 
@@ -8,7 +8,7 @@ export default function getDiagramData({
   selectedSprintId,
 }: {
   entities: EntityGroups;
-  groupedCommits: Map<SprintId, Set<CommitId>>;
+  groupedCommits: Map<SprintId, Commit[]>;
   selectedSprintId: number;
 }): DiagramData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
@@ -16,11 +16,11 @@ export default function getDiagramData({
   const currentSprintIndex = sortedSprints.indexOf(selectedSprintId);
   const previousSprintId = sortedSprints[currentSprintIndex - 1];
 
-  const currentCommits = groupedCommits.get(selectedSprintId) as Set<CommitId>;
+  const currentCommits = groupedCommits.get(selectedSprintId) ?? [];
   const sizeGroupedCurrentCommits = groupCommitsBySize(entities, currentCommits);
   const currentCommitsTotal = sizeGroupedCurrentCommits.map((commits) => commits.length);
 
-  const previousCommits = groupedCommits.get(previousSprintId) ?? new Set();
+  const previousCommits = groupedCommits.get(previousSprintId) ?? [];
   const sizeGroupedPreviousCommits = groupCommitsBySize(entities, previousCommits);
   const previousCommitsTotal = sizeGroupedPreviousCommits.map((commits) => commits.length);
 
@@ -31,8 +31,7 @@ export default function getDiagramData({
     differences.push(diff);
   }
 
-  // const totalDifference = differences.reduce((accum, diff) => accum + diff);
-  const totalDifference = currentCommits.size - previousCommits.size;
+  const totalDifference = currentCommits.length - previousCommits.length;
   const categories = ['> 1001 строки', '501 — 1000 строк', '101 — 500 строк', '1 — 100 строк'].map((title, index) => ({
     title,
     valueText: getOutput(sizeGroupedCurrentCommits[index].length, ['коммит', 'коммита', 'коммитов']),
@@ -42,7 +41,7 @@ export default function getDiagramData({
   return {
     title: 'Размер коммитов',
     subtitle: currentSprint.name,
-    totalText: getOutput(currentCommits.size, ['коммит', 'коммита', 'коммитов']),
+    totalText: getOutput(currentCommits.length, ['коммит', 'коммита', 'коммитов']),
     differenceText: `${totalDifference} с прошлого спринта`,
     categories,
   };

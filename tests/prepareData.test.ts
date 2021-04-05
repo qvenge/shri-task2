@@ -2,12 +2,12 @@ import { prepareData } from '../build/index.js';
 // import { prepareData } from '../src/prepareData';
 import testInput from './input.json';
 import expectedOutput from './output.json';
-import { Entity } from '../src/types';
+import { RawEntity } from '../src/raw-types';
 import { HeatMap, LeadersData, VoteData, ChartData, DiagramData, ActivityData, StoryData } from '../src/stories';
 
 describe('prepareData', () => {
   const sprintId = 977;
-  let output = prepareData(testInput as Entity[], { sprintId });
+  let output = prepareData(testInput as RawEntity[], { sprintId });
 
   describe('Leaders', () => {
     const expectedTemplate = expectedOutput[0].data as LeadersData;

@@ -1,6 +1,6 @@
-import { Sprint, CommentId, UserId, EntityGroups, Comment, User } from './types';
+import { Sprint, EntityGroups, User } from './types';
 import { VoteData } from './stories';
-import { getOutput } from './util';
+import { getOutput, groupCommentsByUsers } from './util';
 
 export default function getVoteData({
   entities,
@@ -10,35 +10,16 @@ export default function getVoteData({
   selectedSprintId: number;
 }): VoteData {
   const currentSprint = entities.sprints.get(selectedSprintId) as Sprint;
-  const sprintComments: Set<CommentId> = new Set();
-
-  entities.comments.forEach((comment) => {
-    if (currentSprint.startAt <= comment.createdAt && comment.createdAt <= currentSprint.finishAt) {
-      sprintComments.add(comment.id);
-    }
-  });
-
-  const commentsGroupedByUsers = new Map() as Map<UserId, Set<CommentId>>;
-
-  sprintComments.forEach((commentId) => {
-    const comment = entities.comments.get(commentId) as Comment;
-    let comments = commentsGroupedByUsers.get(comment.author);
-
-    if (!comments) {
-      commentsGroupedByUsers.set(comment.author, (comments = new Set()));
-    }
-
-    comments.add(commentId);
-  });
+  // комментарии за текущий спринт
+  const currentSprintComments = Array.from(entities.comments.values()).filter(
+    (comment) => currentSprint.startAt <= comment.createdAt && comment.createdAt <= currentSprint.finishAt,
+  );
+  // группирую комментарии по авторам
+  const commentsGroupedByUsers = groupCommentsByUsers(currentSprintComments);
 
   const outputUsers = Array.from(commentsGroupedByUsers, ([userId, comments]) => {
     const userEntity = entities.users.get(userId) as User;
-    let value = 0;
-
-    comments.forEach((commentId) => {
-      const comment = entities.comments.get(commentId) as Comment;
-      value += comment.likes.length;
-    });
+    const value = comments.reduce((total, comment) => total + comment.likes.length, 0);
 
     return {
       id: userId,
@@ -48,6 +29,8 @@ export default function getVoteData({
     };
   });
 
+  // сортируем пользователей по количеству голосов
+  // если у пользователей одинаковое количество голосов, то сортируем их по id
   outputUsers.sort((user1, user2) => {
     let val1 = Number(user1.valueText.split(' ')[0]);
     let val2 = Number(user2.valueText.split(' ')[0]);
