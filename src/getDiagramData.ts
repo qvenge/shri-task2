@@ -16,15 +16,15 @@ export default function getDiagramData({
   const sortedSprints = Array.from(entities.sprints.values())
     .sort(({ startAt: start1 }, { startAt: start2 }) => start1 - start2)
     .map((sprint) => sprint.id);
-  // нахожу индекс текущего спринта
   const currentSprintIndex = sortedSprints.indexOf(selectedSprintId);
-  // id предыдущего спринта
   const previousSprintId = sortedSprints[currentSprintIndex - 1];
 
+  // все коммиты за текущий спринт
   const currentCommits = groupedCommits.get(selectedSprintId) ?? [];
   const sizeGroupedCurrentCommits = groupCommitsBySize(entities, currentCommits);
   const currentCommitsTotal = sizeGroupedCurrentCommits.map((commits) => commits.length);
 
+  // все коммиты за предыдущий спринт
   const previousCommits = groupedCommits.get(previousSprintId) ?? [];
   const sizeGroupedPreviousCommits = groupCommitsBySize(entities, previousCommits);
   const previousCommitsTotal = sizeGroupedPreviousCommits.map((commits) => commits.length);
